@@ -1,9 +1,35 @@
-body {
-  font-size: 14px;
-  color: #333;
-  font-family: Arial, sans-serif; }
+#slide1 {
+  background: url(../images/slide-1-bg.jpg) 0 0 no-repeat;
+  background-size: cover; }
 
-#wrapper {
-  width: 1300px;
-  margin: 0 auto;
-  background: #0f0; }
+#slide2 {
+  background: url(../images/slide-2-bg.jpg) 0 0 no-repeat;
+  background-size: cover; }
+
+#slide3 {
+  background: url(../images/slide-3-bg.jpg) 0 0 no-repeat;
+  background-size: cover; }
+
+#slide4 {
+  background: url(../images/slide-4-bg.jpg) 0 0 no-repeat;
+  background-size: cover; }
+
+#slide5 {
+  background: url(../images/slide-5-bg.jpg) 0 0 no-repeat;
+  background-size: cover; }
+
+#slide6 {
+  background: url(../images/slide-6-bg.jpg) 0 0 no-repeat;
+  background-size: cover; }
+
+#slide7 {
+  background: url(../images/slide-7-bg.jpg) 0 0 no-repeat;
+  background-size: cover; }
+
+#slide8 {
+  background: url(../images/slide-8-bg.jpg) 0 0 no-repeat;
+  background-size: cover; }
+
+#slide9 {
+  background: url(../images/slide-9-bg.jpg) 0 0 no-repeat;
+  background-size: cover; }
