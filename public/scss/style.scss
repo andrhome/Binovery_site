@@ -1,3 +1,39 @@
+// ************************GotamPro_fonts**********************
+@font-face {
+	font-family: 'Conv_GothaProIta';
+	src: url('../fonts/GothaProIta.eot');
+	src: local('☺'), url('../fonts/GothaProIta.woff') format('woff'), 
+	url('../fonts/GothaProIta.ttf') format('truetype'), 
+	url('../fonts/GothaProIta.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_GothaProMed';
+	src: url('../fonts/GothaProMed.eot');
+	src: local('☺'), url('fonts/GothaProMed.woff') format('woff'), 
+	rl('../fonts/GothaProMed.ttf') format('truetype'), 
+	url('../fonts/GothaProMed.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_GothaProReg';
+	src: url('fonts/GothaProReg.eot');
+	src: local('☺'), url('../fonts/GothaProReg.woff') format('woff'), 
+	url('../fonts/GothaProReg.ttf') format('truetype'), 
+	url('../fonts/GothaProReg.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+	font-size: 14px;
+	font-family: 'Conv_GothaProReg', Arial, sans-serif;
+	color: #fff;
+}
+
+// ************************************SLIDE'S BACKGROUND*********************************
 #slide1{
 	background: url(../images/slide-1-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
@@ -34,3 +70,63 @@
 	background: url(../images/slide-9-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
 }
+
+// ************************************Navigation*********************************
+#nav-wrap{
+	width: 250px; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    position: fixed;
+    background: rgba(0,0,0, 0.3);
+    right: 0;
+    top: 0;
+    z-index: 999;
+
+    #fsvs-pagination{
+    	margin: 0;
+    	padding-left: 18px;
+
+    	li{
+    		display: flex;
+		    flex-direction: row;
+		    align-items: center;
+
+    		i{
+    			display: inline-block;
+    			font-size: 12px;
+    			line-height: 12px;
+    			letter-spacing: 0.6px;
+    			padding-left: 22px;
+    		}
+    	}
+    	li > span{
+			position: relative;
+
+			&:after{
+    			content: '';
+    			width: 11px;
+    			height: 1px;
+    			background: rgba(255, 255, 255, 0);
+    			position: absolute;
+    			top: 7px;
+    			right: -23px;
+    			overflow: hidden;
+    			margin-right: -23px;
+    			-webkit-transition: all .3s ease-in-out;
+    			transition: all .3s ease-in-out;
+    		}
+    	}
+    	li.active > span{
+    		margin-right: 11px; 
+    		-webkit-transition: all .3s ease-in-out;
+    		transition: all .3s ease-in-out;
+    		&:after{ 
+    			margin-right: 0;
+    			background: rgba(255, 255, 255, 1);
+    		}
+    	}
+    }
+} 

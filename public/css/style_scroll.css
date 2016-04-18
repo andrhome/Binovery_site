@@ -178,18 +178,7 @@ th {
   overflow: hidden;
   top: -10px; }
 
-h1, h2, h3, h4, h5, h6,
-ul, ol, dl,
-blockquote, p, address,
-table,
-fieldset, figure,
-pre {
-  margin-bottom: 21px;
-  margin-bottom: 1.5rem; }
 
-ul, ol, dd {
-  margin-left: 42px;
-  margin-left: 3rem; }
 
 .sep {
   margin: 0 11px; }
@@ -492,18 +481,7 @@ html.fsvs {
       -webkit-backface-visibility: hidden;
       -webkit-perspective: 1000; }
   html.fsvs #fsvs-pagination {
-    width: 50px; 
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding-top: 30%;
-    position: fixed;
-    background: rgba(0,0,0, 0.3);
-    right: 0;
-    top: 0;
-    z-index: 999;}
+    display: inline-block;}
     html.fsvs #fsvs-pagination li {
       list-style: none;
       width: 20px;

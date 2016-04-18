@@ -466,15 +466,18 @@
 			 */
 
 			addPagination : function() {
+				var navWrap = $('<div id="nav-wrap"></div>');
 				pagination = $('<ul id="fsvs-pagination"></ul>');
 				$( options.selector, body ).each( function(i) {
 					var linkClass = currentSlideIndex === i ? 'pagination-link active' : 'pagination-link';
-					$('<li class="' + linkClass + '"><span><span></span></span></li>').appendTo( pagination );
+					$('<li class="' + linkClass + '"></li>').appendTo( pagination );
 				});
 				if( $('#fsvs-pagination').length !== 0 ) {
 					$('#fsvs-pagination').remove();
 				}
-				pagination.appendTo( $('body') );
+
+				navWrap.appendTo( $('#wrapper') );
+				pagination.appendTo( $('#nav-wrap') );
 				var paginationHeight = pagination.height();
 				var speed = options.speed/1000;
 				$('span', pagination).css({
@@ -485,13 +488,13 @@
 				});
 
 				//Pagination vertical position
-				pagination.css({
-					paddingTop : $(window).height() / 2.5 + 'px',
+				navWrap.css({
+					paddingTop : $(window).height() / 2 - ( $('#fsvs-pagination').height() / 2) + 'px',
 					right : '0px'
 				});
 				$(window).resize( function(){
-					pagination.css({
-						paddingTop : $(window).height() / 2.5 + 'px',
+					navWrap.css({
+						paddingTop : $(window).height() / 2 - ( $('#fsvs-pagination').height() / 2) + 'px',
 						right : '0px'
 					});
 				});
@@ -502,6 +505,13 @@
 					$(this).addClass( 'active' );
 					app.slideToIndex( $(this).index(), e );
 				});
+
+				var fsvsPagination = document.getElementById('fsvs-pagination');
+				var li = fsvsPagination.children;
+				var liText = ["Home", "Web", "Mobile", "Marketing", "Portfolio", "Team", "Framework", "Blog", "Reviews", "Contacts"];
+				for(var i = 0; i < li.length; i++) {
+					li[i].innerHTML = '<span><span></span></span>' + '<i>' + liText[i] + '</i>';
+				};
 			},
 
 			/**
@@ -688,6 +698,8 @@
 			}
 
 		};
+
+
 
 		if( app.shouldRun() ) {
 			app.init();
