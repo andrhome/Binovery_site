@@ -62,7 +62,7 @@ body {
   background-size: cover; }
 
 #nav-wrap {
-  width: 250px;
+  width: 50px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -72,10 +72,14 @@ body {
   background: rgba(0, 0, 0, 0.3);
   right: 0;
   top: 0;
-  z-index: 999; }
+  z-index: 999;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out; }
   #nav-wrap #fsvs-pagination {
     margin: 0;
-    padding-left: 18px; }
+    padding-left: 17px;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out; }
     #nav-wrap #fsvs-pagination li {
       display: flex;
       flex-direction: row;
@@ -85,10 +89,11 @@ body {
         font-size: 12px;
         line-height: 12px;
         letter-spacing: 0.6px;
-        padding-left: 22px; }
+        padding-left: 16px; }
     #nav-wrap #fsvs-pagination li > span {
       position: relative; }
       #nav-wrap #fsvs-pagination li > span:after {
+        display: none;
         content: '';
         width: 11px;
         height: 1px;
@@ -107,3 +112,92 @@ body {
       #nav-wrap #fsvs-pagination li.active > span:after {
         margin-right: 0;
         background: white; }
+
+#burgerBtn {
+  width: 38px;
+  text-align: center;
+  border-radius: 4px;
+  padding: 10px 0 12px 0;
+  cursor: pointer;
+  position: absolute;
+  top: 1.8%;
+  left: 5px; }
+  #burgerBtn:hover {
+    background: rgba(0, 0, 0, 0.15); }
+  #burgerBtn span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 23px;
+    height: 1.5px;
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.7) 0%, white 25%, white 49%, white 75%, rgba(255, 255, 255, 0.7) 100%);
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.7) 0%, white 25%, white 49%, white 75%, rgba(255, 255, 255, 0.7) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.7) 0%, white 25%, white 49%, white 75%, rgba(255, 255, 255, 0.7) 100%);
+    position: relative; }
+    #burgerBtn span:before {
+      content: '';
+      width: 100%;
+      height: 1.5px;
+      background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.7) 0%, white 25%, white 49%, white 75%, rgba(255, 255, 255, 0.7) 100%);
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.7) 0%, white 25%, white 49%, white 75%, rgba(255, 255, 255, 0.7) 100%);
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.7) 0%, white 25%, white 49%, white 75%, rgba(255, 255, 255, 0.7) 100%);
+      position: absolute;
+      top: -5px;
+      left: 0; }
+    #burgerBtn span:after {
+      content: '';
+      width: 100%;
+      height: 1.5px;
+      background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.7) 0%, white 25%, white 49%, white 75%, rgba(255, 255, 255, 0.7) 100%);
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.7) 0%, white 25%, white 49%, white 75%, rgba(255, 255, 255, 0.7) 100%);
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.7) 0%, white 25%, white 49%, white 75%, rgba(255, 255, 255, 0.7) 100%);
+      position: absolute;
+      bottom: -5px;
+      left: 0; }
+
+#nav-wrap.open {
+  width: 130px;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out; }
+  #nav-wrap.open #fsvs-pagination {
+    padding-left: 10px;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out; }
+    #nav-wrap.open #fsvs-pagination li > span:after {
+      display: block !important; }
+  #nav-wrap.open #burgerBtn {
+    background: rgba(0, 0, 0, 0.15); }
+
+#langNavHolder {
+  width: 39px;
+  text-align: center;
+  position: absolute;
+  top: 11%;
+  left: 5px; }
+  #langNavHolder a {
+    font-size: 12px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 5px 0; }
+    #langNavHolder a:hover {
+      background: rgba(0, 0, 0, 0.15); }
+  #langNavHolder .engl {
+    margin-bottom: 8px; }
+
+#socialLinksBox {
+  width: 39px;
+  text-align: center;
+  position: absolute;
+  bottom: 8.5%;
+  left: 5px; }
+  #socialLinksBox a {
+    font-size: 14px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 3px 0; }
+    #socialLinksBox a:hover {
+      background: rgba(0, 0, 0, 0.15); }
+  #socialLinksBox .fb, #socialLinksBox .in {
+    margin-bottom: 5px; }

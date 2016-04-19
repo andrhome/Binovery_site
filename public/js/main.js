@@ -1,7 +1,14 @@
 
-jQuery(document).ready( function($) {
+// jQuery(document).ready( function($) {
 
-	var slider = $.fn.fsvs({
+	
+
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    //Code for main scroll plugin "FSVS"
+    var slider = $.fn.fsvs({
         autoPlay            : false,
         speed               : 1000,
         bodyID              : 'fsvs-body',
@@ -19,5 +26,57 @@ jQuery(document).ready( function($) {
         nthClasses          : 2,
         detectHash          : true
     });
+    //END
 
+
+    //Adding burger-button in the navWrap
+    var navWrap = document.getElementById('nav-wrap'),
+        burgerButton = "<div id='burgerBtn'><span></span></div>";
+
+    navWrap.insertAdjacentHTML('afterBegin', burgerButton);
+
+    var burgerBtn = document.getElementById('burgerBtn');
+    //Opening navWrap and adding text in the elements of fsvsPagination (in the 'li');
+    function openPagination() {
+
+        navWrap.classList.toggle('open');
+
+        var fsvsPagination = document.getElementById('fsvs-pagination'),
+            li = fsvsPagination.children,
+            liText = ["Home", "Web", "Mobile", "Marketing", "Portfolio", "Team", "Framework", "Blog", "Reviews", "Contacts"];
+        
+        if(navWrap.classList.contains('open')) {
+            for(var i = 0; i < li.length; i++) {
+                li[i].innerHTML = '<span><span></span></span>' + '<i>' + liText[i] + '</i>';
+            };
+        } else{
+            for(var i = 0; i < li.length; i++) {
+                li[i].innerHTML = '<span><span></span></span>';
+            };
+        };
+    };
+    burgerBtn.addEventListener("click", openPagination);
+
+    //Adding language navigation
+    var langLinks = "<div id='langNavHolder'><a href='#' class='engl'>EN</a><a href='#' class='ital'>IT</a></div>";
+    burgerBtn.insertAdjacentHTML('afterEnd', langLinks);
+
+    //Adding links of social networks (f, in, Be)
+    var socialLinks = "<div id='socialLinksBox'><a href='#' class='fb'><i class='fa fa-facebook' aria-hidden='true'></i></a><a href='#' class='in'><i class='fa fa-linkedin' aria-hidden='true'></i></a><a href='#'><i class='fa fa-behance' aria-hidden='true'></i></a></div>"
+    navWrap.insertAdjacentHTML('beforeEnd', socialLinks);
+    //END
+
+    
+    //
+
+
+
+    
+    
+ 
+
+
+
+    console.log(performance.now());
 });
+
