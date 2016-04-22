@@ -1,35 +1,36 @@
 // ************************GotamPro_fonts**********************
-@font-face {
-	font-family: 'Conv_GothaProIta';
-	src: url('../fonts/GothaProIta.eot');
-	src: local('☺'), url('../fonts/GothaProIta.woff') format('woff'), 
-	url('../fonts/GothaProIta.ttf') format('truetype'), 
-	url('../fonts/GothaProIta.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Conv_GothaProMed';
-	src: url('../fonts/GothaProMed.eot');
-	src: local('☺'), url('fonts/GothaProMed.woff') format('woff'), 
-	rl('../fonts/GothaProMed.ttf') format('truetype'), 
-	url('../fonts/GothaProMed.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Conv_GothaProReg';
-	src: url('fonts/GothaProReg.eot');
-	src: local('☺'), url('../fonts/GothaProReg.woff') format('woff'), 
-	url('../fonts/GothaProReg.ttf') format('truetype'), 
-	url('../fonts/GothaProReg.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+// @font-face {
+// 	font-family: 'Conv_GothaProIta';
+// 	src: url('../fonts/GothaProIta.eot');
+// 	src: local('☺'), url('../fonts/GothaProIta.woff') format('woff'), 
+// 	url('../fonts/GothaProIta.ttf') format('truetype'), 
+// 	url('../fonts/GothaProIta.svg') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+// @font-face {
+// 	font-family: 'Conv_GothaProMed';
+// 	src: url('../fonts/GothaProMed.eot');
+// 	src: local('☺'), url('fonts/GothaProMed.woff') format('woff'), 
+// 	rl('../fonts/GothaProMed.ttf') format('truetype'), 
+// 	url('../fonts/GothaProMed.svg') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+// @font-face {
+// 	font-family: 'Conv_GothaProReg';
+// 	src: url('fonts/GothaProReg.eot');
+// 	src: local('☺'), url('../fonts/GothaProReg.woff') format('woff'), 
+// 	url('../fonts/GothaProReg.ttf') format('truetype'), 
+// 	url('../fonts/GothaProReg.svg') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
 
 body{
 	font-size: 14px;
-	font-family: 'Conv_GothaProReg', Arial, sans-serif;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-weight: 300;
 	color: #fff;
 }
 
@@ -41,6 +42,7 @@ body{
 #slide2{
 	background: url(../images/slide-2-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
+	background-position: 50%; 
 }
 #slide3{
 	background: url(../images/slide-3-bg.jpg) 0 0 no-repeat;
@@ -85,12 +87,16 @@ body{
     top: 0;
     z-index: 999;
     -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out; 
 
     #fsvs-pagination{
     	margin: 0;
     	padding-left: 17px;
     	-webkit-transition: all .1s ease-in-out;
+    	-moz-transition: all .1s ease-in-out;
+    	-ms-transition: all .1s ease-in-out;
     	transition: all .1s ease-in-out;
 
     	li{
@@ -121,12 +127,16 @@ body{
     			overflow: hidden;
     			margin-right: -23px;
     			-webkit-transition: all .3s ease-in-out;
+    			-moz-transition: all .3s ease-in-out;
+    			-ms-transition: all .3s ease-in-out;
     			transition: all .3s ease-in-out;
     		}
     	}
     	li.active > span{
     		margin-right: 11px; 
     		-webkit-transition: all .3s ease-in-out;
+    		-moz-transition: all .3s ease-in-out;
+    		-ms-transition: all .3s ease-in-out;
     		transition: all .3s ease-in-out;
     		&:after{ 
     			margin-right: 0;
@@ -184,11 +194,15 @@ body{
 #nav-wrap.open{
 	width: 130px;
 	-webkit-transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-ms-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
 
     #fsvs-pagination{
     	padding-left: 10px; 
     	-webkit-transition: all .25s ease-in-out;
+    	-moz-transition: all .25s ease-in-out;
+    	-ms-transition: all .25s ease-in-out;
     	transition: all .25s ease-in-out;
 
     	li > span:after{
@@ -241,4 +255,111 @@ body{
 	.fb, .in{
 		margin-bottom: 5px;
 	}
+}
+
+// ************************************SLIDE 2*********************************
+.logo{
+	display: block;
+	width: 150px;
+	padding: 15px;
+
+	img{
+		width: 100%;
+	}
+}
+.web-content{
+	width: 67.5%;
+	margin: 0 auto; 
+	overflow: hidden;
+	position: relative;
+
+	.glass {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+		background: rgba(255, 255, 255, 0.4);
+		transform: translateY(100%) translateY(-7rem);
+  		transform: translateY(100%) translateY(-7rem) translateZ(0);
+		&:before {
+			width: 100%;
+			height: 100%;
+			overflow: hidden; 
+			z-index: -1;
+			display: block;
+			position: absolute;
+			content: ' ';
+			background-image: url('../images/slide-2-bg.jpg');
+			// background-size: cover; 
+			background-position: 50%;
+			-webkit-filter: url('#blur');
+			-moz-filter: url('#blur');
+			-ms-filter: url('#blur');
+			-o-filter: url('#blur');
+			filter: url('#blur');
+			-webkit-filter: blur(5px);
+			-moz-filter: blur(5px);
+			-ms-filter: blur(5px);
+			-o-filter: blur(5px);
+			filter: blur(5px);
+			opacity: 0.4; 
+			transform: translateY(-100%) translateY(7rem);
+  			transform: translateY(-100%) translateY(7rem) translateZ(0);
+		}
+		.colums-content{
+			padding-bottom: 25px;
+			position: relative;
+			overflow: hidden; 
+			&:before, &:after{
+				content: '';
+				width: 5px;
+				height: 5px;
+				background: #fff;
+				border-radius: 50%;
+				position: absolute;
+				bottom: 5px;
+			}
+			&:before{
+				left: 5px;
+			}
+			&:after{  
+				right: 5px; 
+			}
+			 
+			h2{
+				font-size: 18px;
+				font-weight: 600;
+				color: #fff;
+				text-align: center;
+				margin-bottom: 40px;
+				padding: 25px 10px 0 10px;
+				position: relative;
+				&:before{
+					content: '';
+					width: 5px;
+					height: 5px;
+					background: #fff;
+					border-radius: 50%;
+					position: absolute;
+					top: 5px;
+					left: 5px;
+				}
+			}
+			.text{
+				line-height: 22px;
+				padding: 0 25px;
+				p{
+					margin-bottom: 23px;
+				}
+			}
+			.left-part{
+				width: 49%;
+				float: left;
+			}
+			.right-part{
+				width: 49%;
+				float: right;
+			}
+		}
+	} 
 }

@@ -1,4 +1,12 @@
 
+/*!
+* 	FSVS - Full Screen Vertical Scroller
+* 	https://github.com/lukesnowden/FSVS
+* 	Copyright 2014 Luke Snowden
+* 	Released under the MIT license:
+* 	http://www.opensource.org/licenses/mit-license.php
+*/
+
 ;( function($){
 
 	$.fn.fsvs = function( options ) {
@@ -466,7 +474,6 @@
 			 */
 
 			addPagination : function() {
-				var navWrap = $('<div id="nav-wrap"></div>');
 				pagination = $('<ul id="fsvs-pagination"></ul>');
 				$( options.selector, body ).each( function(i) {
 					var linkClass = currentSlideIndex === i ? 'pagination-link active' : 'pagination-link';
@@ -475,28 +482,19 @@
 				if( $('#fsvs-pagination').length !== 0 ) {
 					$('#fsvs-pagination').remove();
 				}
-
-				navWrap.appendTo( $('#wrapper') );
-				pagination.appendTo( $('#nav-wrap') );
+				pagination.appendTo( $('body') );
 				var paginationHeight = pagination.height();
 				var speed = options.speed/1000;
 				$('span', pagination).css({
-					'-webkit-transition': 'all ' + speed + 's ease-in-out',
-					'-moz-transition'	: 'all ' + speed + 's ease-in-out',
-					'-o-transition'		: 'all ' + speed + 's ease-in-out',
-					'transition'		: 'all ' + speed + 's ease-in-out'
+					'-webkit-transition': 'all ' + speed + 's',
+					'-moz-transition'	: 'all ' + speed + 's',
+					'-o-transition'		: 'all ' + speed + 's',
+					'transition'		: 'all ' + speed + 's'
 				});
-
-				//Pagination vertical position
-				navWrap.css({
-					paddingTop : $(window).height() / 2 - ( $('#fsvs-pagination').height() / 2) + 'px'
+				pagination.css({
+					marginTop : '-' + (paginationHeight/2) + 'px',
+					right : '25px'
 				});
-				$(window).resize( function(){
-					navWrap.css({
-						paddingTop : $(window).height() / 2 - ( $('#fsvs-pagination').height() / 2) + 'px'
-					});
-				});
-
 				$('li', pagination).bind( 'click.fsvs', function(e){
 					ignoreHashChange = true;
 					$('.active', pagination).removeClass( 'active' );
@@ -513,10 +511,10 @@
 			setSpeed : function( _speed ) {
 				speed = _speed/1000;
 				body.css({
-					'-webkit-transition': 'all ' + speed + 's ease-in-out',
-					'-moz-transition'	: 'all ' + speed + 's ease-in-out',
-					'-o-transition'		: 'all ' + speed + 's ease-in-out',
-					'transition'		: 'all ' + speed + 's ease-in-out'
+					'-webkit-transition': 'all ' + speed + 's',
+					'-moz-transition'	: 'all ' + speed + 's',
+					'-o-transition'		: 'all ' + speed + 's',
+					'transition'		: 'all ' + speed + 's'
 				});
 			},
 
@@ -619,15 +617,9 @@
 			 */
 
 			slideDown : function(e) {
-				var brouser = navigator.userAgent,// для провеки FireFox
-				regV = /firefox/i;// для провеки FireFox
-
 				if( app.canSlideDown() ) {
 					ignoreHashChange = true;
 					app.slideToIndex( (currentSlideIndex+1), e );
-				    if(brouser.search(regV) != -1) { // Проверяем если FireFox
-				        app.slideToIndex( (currentSlideIndex-1), e );
-				    }
 				} else {
 					scrolling = false;
 				}
@@ -639,15 +631,9 @@
 			 */
 
 			slideUp : function(e) {
-				var brouser = navigator.userAgent,// для провеки FireFox
-				regV = /firefox/i;// для провеки FireFox
-
 				if( app.canSlideUp() ) {
 					ignoreHashChange = true;
 					app.slideToIndex( (currentSlideIndex-1), e );
-				    if(brouser.search(regV) != -1) { // Проверяем если FireFox
-				        app.slideToIndex( (currentSlideIndex+1), e );
-				    }
 				} else {
 					scrolling = false;
 				}
@@ -701,8 +687,6 @@
 			}
 
 		};
-
-
 
 		if( app.shouldRun() ) {
 			app.init();

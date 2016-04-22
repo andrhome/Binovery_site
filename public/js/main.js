@@ -8,24 +8,47 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     //Code for main scroll plugin "FSVS"
-    var slider = $.fn.fsvs({
-        autoPlay            : false,
-        speed               : 1000,
-        bodyID              : 'fsvs-body',
-        selector            : '> .slide',
-        mouseSwipeDisance   : 40,
-        afterSlide          : function(){},
-        beforeSlide         : function(){},
-        endSlide            : function(){},
-        mouseWheelEvents    : true,
-        mouseWheelDelay     : false,
-        mouseDragEvents     : true,
-        touchEvents         : true,
-        arrowKeyEvents      : true,
-        pagination          : true,
-        nthClasses          : 2,
-        detectHash          : true
-    });
+    var brouser = navigator.userAgent;
+    var regV = /firefox/i;
+    if(brouser.search(regV) != -1) {
+        var slider = $.fn.fsvs({
+            autoPlay            : false,
+            speed               : 1000,
+            bodyID              : 'fsvs-body',
+            selector            : '> .slide',
+            mouseSwipeDisance   : 40,
+            afterSlide          : function(){},
+            beforeSlide         : function(){},
+            endSlide            : function(){},
+            mouseWheelEvents    : false, // в FireFox отменяем скролл
+            mouseWheelDelay     : false,
+            mouseDragEvents     : true,
+            touchEvents         : true,
+            arrowKeyEvents      : true,
+            pagination          : true,
+            nthClasses          : 2,
+            detectHash          : true
+        });
+    } else{
+        slider = $.fn.fsvs({
+            autoPlay            : false,
+            speed               : 1000,
+            bodyID              : 'fsvs-body',
+            selector            : '> .slide',
+            mouseSwipeDisance   : 40,
+            afterSlide          : function(){},
+            beforeSlide         : function(){},
+            endSlide            : function(){},
+            mouseWheelEvents    : true,
+            mouseWheelDelay     : false,
+            mouseDragEvents     : true,
+            touchEvents         : true,
+            arrowKeyEvents      : true,
+            pagination          : true,
+            nthClasses          : 2,
+            detectHash          : true
+        });
+    };
     //END
 
 
@@ -68,7 +91,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
     //
+    var webContent = $('.web-content'),
+        slide2Height = $('#slide2').height(),
+        webContHeight = $(webContent).height(),
+        logoHeight = $('logo').height();
 
+    webContent.css({marginTop : slide2Height / 2 - webContHeight / 2 - logoHeight + 'px'});
+
+    $(window).resize( function() {
+        console.log(slide2Height);
+        webContent.css({marginTop : slide2Height / 2 - webContHeight / 2 - logoHeight + 'px'});
+    });
+    
+
+    
+    
 
 
     
