@@ -90,18 +90,36 @@ document.addEventListener("DOMContentLoaded", function () {
     //END
 
     
-    //
-    var webContent = $('.web-content'),
-        slide2Height = $('#slide2').height(),
-        webContHeight = $(webContent).height(),
-        logoHeight = $('logo').height();
+    //MarginTop for '.web-content' on the slide2
+    ;(function() {
+        var webContent = document.querySelector('.web-content'),
+            slide2Height = document.getElementById('slide2').offsetHeight,
+            webContHeight = webContent.offsetHeight,
+            logoHeight = document.querySelector('.logo').offsetHeight;
 
-    webContent.css({marginTop : slide2Height / 2 - webContHeight / 2 - logoHeight + 'px'});
+        webContent.style.cssText = "margin-top:" + parseInt((slide2Height / 2) - (webContHeight / 2) - (logoHeight)) + "px";
+        
+        window.addEventListener('resize', function() {
+            webContent.style.cssText = "margin-top:" + parseInt((slide2Height / 2) - (webContHeight / 2) - (logoHeight)) + "px";
+        });
+    }());
 
-    $(window).resize( function() {
-        console.log(slide2Height);
-        webContent.css({marginTop : slide2Height / 2 - webContHeight / 2 - logoHeight + 'px'});
-    });
+
+    //MarginTop for '.mobile-content' on the slide3
+    ;(function() {
+        var mobileContent = document.querySelector('.mobile-content'),
+            slide3Height = document.getElementById('slide3').offsetHeight,
+            mobileContHeight = mobileContent.offsetHeight,
+            logoHeight = document.querySelector('.logo').offsetHeight;
+
+        mobileContent.style.cssText = "margin-top:" + parseInt((slide3Height / 2) - (mobileContHeight / 2) - (logoHeight)) + "px";
+        
+        window.addEventListener('resize', function() {
+            mobileContent.style.cssText = "margin-top:" + parseInt((slide2Height / 2) - (mobileContHeight / 2) - (logoHeight)) + "px";
+        });
+    }());
+
+    
     
 
     
@@ -117,3 +135,20 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(performance.now());
 });
 
+$(document).ready(function() {
+    //Vertical carousel on the slide2
+    $('.bxslider-dom-wf').bxSlider({
+        mode: 'vertical',
+        nextSelector: '.slider-next',
+        prevSelector: '.slider-prev',
+        slideMargin: 5
+    });
+
+    //Vertical carousel on the slide3
+    $('.bxslider-iphone').bxSlider({
+        mode: 'vertical',
+        nextSelector: '.slider-next_mob',
+        prevSelector: '.slider-prev_mob',
+        slideMargin: 5
+    });
+});
