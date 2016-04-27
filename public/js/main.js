@@ -1,10 +1,4 @@
 
-// jQuery(document).ready( function($) {
-
-	
-
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
 
     //Code for main scroll plugin "FSVS"
@@ -115,9 +109,86 @@ document.addEventListener("DOMContentLoaded", function () {
         mobileContent.style.cssText = "margin-top:" + parseInt((slide3Height / 2) - (mobileContHeight / 2) - (logoHeight)) + "px";
         
         window.addEventListener('resize', function() {
-            mobileContent.style.cssText = "margin-top:" + parseInt((slide2Height / 2) - (mobileContHeight / 2) - (logoHeight)) + "px";
+            mobileContent.style.cssText = "margin-top:" + parseInt((slide3Height / 2) - (mobileContHeight / 2) - (logoHeight)) + "px";
         });
     }());
+
+
+    //MarginTop for '.portfolio-content' on the slide5
+    ;(function() {
+        var portfolioContent = document.querySelector('.portfolio-content'),
+            slide5Height = document.getElementById('slide5').offsetHeight,
+            portfolioContHeight = portfolioContent.offsetHeight,
+            logoHeight = document.querySelector('.logo').offsetHeight;
+
+        portfolioContent.style.cssText = "margin-top:" + parseInt((slide5Height / 2) - (portfolioContHeight / 2) - (logoHeight)) + "px";
+        
+        window.addEventListener('resize', function() {
+            portfolioContent.style.cssText = "margin-top:" + parseInt((slide5Height / 2) - (portfolioContHeight / 2) - (logoHeight)) + "px";
+        });
+    }());
+
+
+    //MarginTop for '.framework-content' on the slide7
+    ;(function() {
+        var frameworkContent = document.querySelector('.framework-content'),
+            slide7Height = document.getElementById('slide7').offsetHeight,
+            frameworkContHeight = frameworkContent.offsetHeight,
+            logoHeight = document.querySelector('.logo').offsetHeight;
+
+        frameworkContent.style.cssText = "margin-top:" + parseInt((slide7Height / 2) - (frameworkContHeight / 2) - (logoHeight)) + "px";
+        
+        window.addEventListener('resize', function() {
+            frameworkContent.style.cssText = "margin-top:" + parseInt((slide7Height / 2) - (frameworkContHeight / 2) - (logoHeight)) + "px";
+        });
+    }());
+
+
+    // //Creating own event for animation PART_1
+    // (function(){
+    //     //Сохраняем ссылку на стандартный метод jQuery
+    //     var originalAddClassMethod = jQuery.fn.addClass;
+    //     //Переопределяем
+    //     $.fn.addClass = function(){
+    //         var result = originalAddClassMethod.apply(this, arguments);
+    //         //Инициализируем событие смены класса
+    //         $(this).trigger('cssClassChanged');
+    //         return result;
+    //     }
+    // })();
+    // //PART_2: Adding class for animation element (animetion on slide2)
+    // $(function(){
+    //     $("#slide2").bind('cssClassChanged', function(){ 
+    //         if( $("#slide2").hasClass('active-slide') ) {
+    //             setTimeout(function() {
+    //                 $('#slide2 .left-col').addClass('fadeInUp'); //animation name
+    //                 $('#slide2 .right-col').addClass('fadeInUp');
+    //             }, 1);
+    //         } else{
+    //             setTimeout(function() {
+    //                 $('#slide2 .left-col').removeClass('fadeInUp');
+    //                 $('#slide2 .right-col').removeClass('fadeInUp');
+    //             }, 1);
+    //         }
+    //     });
+    // });
+    // //PART_2: Adding class for animation element (animetion on slide3)
+    // $(function(){
+    //     $("#slide3").bind('cssClassChanged', function(){ 
+    //         if( $("#slide3").hasClass('active-slide') ) {
+    //             setTimeout(function() {
+    //                 $('#slide3 .left-col').addClass('fadeInUp'); //animation name
+    //                 $('#slide3 .right-col').addClass('fadeInUp');
+    //             }, 1);
+    //         } else{
+    //             setTimeout(function() {
+    //                 $('#slide3 .left-col').removeClass('fadeInUp');
+    //                 $('#slide3 .right-col').removeClass('fadeInUp');
+    //             }, 1);
+    //         }
+    //     });
+    // });
+    
 
     
     
@@ -151,4 +222,23 @@ $(document).ready(function() {
         prevSelector: '.slider-prev_mob',
         slideMargin: 5
     });
+
+    //Vertical carousel on the slide7
+    $('.bxslider-framework').bxSlider({
+        mode: 'vertical',
+        nextSelector: '.slider-next_frame',
+        prevSelector: '.slider-prev_frame',
+        slideMargin: 5
+    });
+
+    //Vertical carousel on the slide9
+    $('.bxslider-reviews').bxSlider({
+        adaptiveHeight: true,
+        mode: 'horizontal',
+        auto: true,
+        pause: 5000,
+        speed: 700,
+        slideMargin: 5
+    });
+
 });

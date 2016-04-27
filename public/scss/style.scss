@@ -1,31 +1,3 @@
-// ************************GotamPro_fonts**********************
-// @font-face {
-// 	font-family: 'Conv_GothaProIta';
-// 	src: url('../fonts/GothaProIta.eot');
-// 	src: local('☺'), url('../fonts/GothaProIta.woff') format('woff'), 
-// 	url('../fonts/GothaProIta.ttf') format('truetype'), 
-// 	url('../fonts/GothaProIta.svg') format('svg');
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
-// @font-face {
-// 	font-family: 'Conv_GothaProMed';
-// 	src: url('../fonts/GothaProMed.eot');
-// 	src: local('☺'), url('fonts/GothaProMed.woff') format('woff'), 
-// 	rl('../fonts/GothaProMed.ttf') format('truetype'), 
-// 	url('../fonts/GothaProMed.svg') format('svg');
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
-// @font-face {
-// 	font-family: 'Conv_GothaProReg';
-// 	src: url('fonts/GothaProReg.eot');
-// 	src: local('☺'), url('../fonts/GothaProReg.woff') format('woff'), 
-// 	url('../fonts/GothaProReg.ttf') format('truetype'), 
-// 	url('../fonts/GothaProReg.svg') format('svg');
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
 @import 'reset.css';
 
 body{
@@ -45,6 +17,7 @@ body{
 	position: absolute;
 	top: 5px;
 	left: 5px;
+	z-index: 1;
 }
 .afterPointTop{
 	content: '';
@@ -55,6 +28,7 @@ body{
 	position: absolute;
 	top: 5px;  
 	right: 5px; 
+	z-index: 1;
 }
 .beforePointBottom{
 	content: '';
@@ -65,6 +39,7 @@ body{
 	position: absolute;
 	bottom: 5px;
 	left: 5px;
+	z-index: 1;
 }
 .afterPointBottom{
 	content: '';
@@ -75,7 +50,24 @@ body{
 	position: absolute;
 	bottom: 5px;  
 	right: 5px; 
+	z-index: 1;
 }
+//**********animation Inheritance***********
+// .animation-1.5s{
+// 	-webkit-transition: all 1.5s ease-in-out;
+// 	-moz-transition: all 1.5s ease-in-out;
+// 	-ms-transition: all 1.5s ease-in-out;
+// 	-o-transition: all 1.5s ease-in-out;
+// 	transition: all 1.5s ease-in-out;
+// }
+// .fadeAnimateElement-1.5s{
+// 	opacity: 0;
+// 	-webkit-transition: all 1.5s ease-in-out;
+// 	-moz-transition: all 1.5s ease-in-out;
+// 	-ms-transition: all 1.5s ease-in-out;
+// 	-o-transition: all 1.5s ease-in-out;
+// 	transition: all 1.5s ease-in-out;
+// }
 
 // ************************************SLIDE'S BACKGROUND*********************************
 #slide1{
@@ -310,8 +302,41 @@ body{
 		width: 100%;
 	}
 }
+
+// ***************animation START***************
+#slide2{
+	position: relative;
+}
+@keyframes fadeUp {
+		from {
+			bottom: -1000px;
+			opacity: 0;
+		} 
+		50%{
+			bottom: -70px;
+			opacity: 0;
+		}
+		85%{
+			opacity: .95;
+		}
+		to{
+			opacity: 1;
+			bottom: 0;
+		}
+	}
+#slide2.active-slide .web-content{
+	animation: fadeUp 1.5s;
+}
+#slide2.active-slide .web-content .right-col{
+	animation: fadeUp 1.8s;
+}
+#slide2 .web-content{ 
+	position: relative;
+}
+// ***************animation END***************
+
 .web-content{
-	max-width: 810px;
+	max-width: 810px; 
 	margin: 0 auto; 
 	overflow: hidden;
 	
@@ -324,7 +349,7 @@ body{
 		background-size: cover;
 		background-position: 50%;
 		position: relative;
-		overflow: hidden; 
+		overflow: hidden;
 		&:before{
 			@extend .beforePointBottom;
 		}
@@ -337,7 +362,7 @@ body{
 			font-weight: 600;
 			color: #fff;
 			text-align: center;
-			margin-bottom: 40px;
+			margin-bottom: 25px;
 			padding: 25px 10px 0 10px;
 			position: relative;
 			&:before{
@@ -348,10 +373,10 @@ body{
 			}
 		}
 		.text{
-			line-height: 22px;
+			line-height: 25px;
 			padding: 0 25px;
 			p{
-				margin-bottom: 23px;
+				margin-bottom: 20px;
 			}
 		}
 	}
@@ -361,13 +386,14 @@ body{
 		float: right;
 		padding-bottom: 25px;
 		position: relative;
-		overflow: hidden; 
+		overflow: hidden;
 		&:before{
 			@extend .beforePointTop;
 		}
 		&:after{  
 			@extend .afterPointTop; 
 		}
+
 		.carousel-dom-wf-holder{
 			background: url(../images/web-bg-2.jpg) 0 0 no-repeat;
 			background-size: cover;
@@ -447,97 +473,6 @@ body{
 			}
 		}
 	}
-
-
-	// .glass {
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	overflow: hidden;
-	// 	position: relative;
-	// 	background: rgba(255, 255, 255, 0.4);
-	// 	transform: translateY(100%) translateY(-7rem);
- //  		transform: translateY(100%) translateY(-7rem) translateZ(0);
-	// 	&:before {
-	// 		width: 100%;
-	// 		height: 100%;
-	// 		overflow: hidden; 
-	// 		z-index: -1;
-	// 		display: block;
-	// 		position: absolute;
-	// 		content: ' ';
-	// 		background-image: url('../images/slide-2-bg.jpg');
-	// 		// background-size: cover; 
-	// 		background-position: 50%;
-	// 		-webkit-filter: url('#blur');
-	// 		-moz-filter: url('#blur');
-	// 		-ms-filter: url('#blur');
-	// 		-o-filter: url('#blur');
-	// 		filter: url('#blur');
-	// 		-webkit-filter: blur(5px);
-	// 		-moz-filter: blur(5px);
-	// 		-ms-filter: blur(5px);
-	// 		-o-filter: blur(5px);
-	// 		filter: blur(5px);
-	// 		opacity: 0.4; 
-	// 		transform: translateY(-100%) translateY(7rem);
- //  			transform: translateY(-100%) translateY(7rem) translateZ(0);
-	// 	}
-	// 	.colums-content{
-	// 		padding-bottom: 25px;
-	// 		position: relative;
-	// 		overflow: hidden; 
-	// 		&:before, &:after{
-	// 			content: '';
-	// 			width: 5px;
-	// 			height: 5px;
-	// 			background: #fff;
-	// 			border-radius: 50%;
-	// 			position: absolute;
-	// 			bottom: 5px;
-	// 		}
-	// 		&:before{
-	// 			left: 5px;
-	// 		}
-	// 		&:after{  
-	// 			right: 5px; 
-	// 		}
-			 
-	// 		h2{
-	// 			font-size: 18px;
-	// 			font-weight: 600;
-	// 			color: #fff;
-	// 			text-align: center;
-	// 			margin-bottom: 40px;
-	// 			padding: 25px 10px 0 10px;
-	// 			position: relative;
-	// 			&:before{
-	// 				content: '';
-	// 				width: 5px;
-	// 				height: 5px;
-	// 				background: #fff;
-	// 				border-radius: 50%;
-	// 				position: absolute;
-	// 				top: 5px;
-	// 				left: 5px;
-	// 			}
-	// 		}
-	// 		.text{
-	// 			line-height: 22px;
-	// 			padding: 0 25px;
-	// 			p{
-	// 				margin-bottom: 23px;
-	// 			}
-	// 		}
-	// 		.left-part{
-	// 			width: 49%;
-	// 			float: left;
-	// 		}
-	// 		.right-part{
-	// 			width: 49%;
-	// 			float: right;
-	// 		}
-	// 	}
-	// } 
 }
 .behance-btn{
 	display: block;
@@ -554,9 +489,14 @@ body{
 	position: relative;
 	-webkit-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
+	-webkit-animation-duration: 2.5s;
+	-moz-animation-duration: 2.5s;
+	-ms-animation-duration: 2.5s;
+	-o-animation-duration: 2.5s;
+	animation-duration: 2.5s;
 	&:hover{
-		opacity: .95;
-		color: #f1f1f1;
+		opacity: .9;
+		color: #ccc;
 	}
 	&:before{
 		@extend .beforePointTop;
@@ -582,14 +522,29 @@ body{
 	}
 }
 // ************************************SLIDE 3*********************************
+#slide3.active-slide .mobile-content{
+	opacity: 1;
+	-webkit-transition: all 1.5s ease-in-out;
+	-moz-transition: all 1.5s ease-in-out;
+	-ms-transition: all 1.5s ease-in-out;
+	-o-transition: all 1.5s ease-in-out;
+	transition: all 1.5s ease-in-out;
+}
+
 .mobile-content{
 	max-width: 810px;
 	margin: 0 auto; 
 	overflow: hidden;
+	opacity: 0;
+	-webkit-transition: all 1.5s ease-in-out;
+	-moz-transition: all 1.5s ease-in-out;
+	-ms-transition: all 1.5s ease-in-out;
+	-o-transition: all 1.5s ease-in-out;
+	transition: all 1.5s ease-in-out;
 
 	.left-col{
 		width: 49.4%;
-		float: left;		
+		float: left;	
 
 		.text-holder{
 			height: 390px;
@@ -611,7 +566,7 @@ body{
 				font-weight: 600;
 				color: #fff;
 				text-align: center;
-				margin-bottom: 40px;
+				margin-bottom: 25px;
 				padding: 25px 10px 0 10px;
 				position: relative;
 				&:before{
@@ -622,10 +577,10 @@ body{
 				}
 			}
 			.text{
-				line-height: 22px;
+				line-height: 26px;
 				padding: 0 25px;
 				p{
-					margin-bottom: 23px;
+					margin-bottom: 20px;
 				}
 			}
 		}
@@ -727,7 +682,21 @@ body{
 }
 
 // ************************************SLIDE 4*********************************
+#slide4.active-slide .marketing-block{
+	opacity: 1;
+	-webkit-transition: all 1.5s ease-in-out;
+	-moz-transition: all 1.5s ease-in-out;
+	-ms-transition: all 1.5s ease-in-out;
+	-o-transition: all 1.5s ease-in-out;
+	transition: all 1.5s ease-in-out;
+}
 .marketing-block{
+	opacity: 0;
+	-webkit-transition: all 1.5s ease-in-out;
+	-moz-transition: all 1.5s ease-in-out;
+	-ms-transition: all 1.5s ease-in-out;
+	-o-transition: all 1.5s ease-in-out;
+	transition: all 1.5s ease-in-out;
 	max-width: 810px;
 	margin: 9% auto 0 auto; 
 	overflow: hidden;
@@ -773,8 +742,8 @@ body{
 		.colum{
 			width: 32.8%;
 			font-size: 14px;
-			line-height: 22px;
-			padding-bottom: 44px;
+			line-height: 26px;
+			padding-bottom: 40px;
 			position: relative;
 			&:before{
 				@extend .beforePointBottom;
@@ -785,11 +754,11 @@ body{
 
 			h2{
 				padding-top: 30px;
-				margin-bottom: 30px;
+				margin-bottom: 20px;
 			}
 
 			p{
-				margin-bottom: 23px;
+				margin-bottom: 20px;
 				padding: 0 25px;
 			}
 		}
@@ -808,5 +777,254 @@ body{
 			background-size: cover;
 			background-position: 50%;
 		}
+	}
+}
+
+// ************************************SLIDE 5*********************************
+.portfolio-content{
+	width: 67.5%;
+	margin: 0 auto;
+	overflow: hidden;
+
+
+}
+
+
+
+// ************************************SLIDE 7*********************************
+#slide7{
+	position: relative;
+}
+#slide7.active-slide .framework-content{
+	animation: fadeUp 1.5s;
+}
+#slide7.active-slide .framework-content .right-col{
+	animation: fadeUp 1.8s;
+}
+#slide7 .framework-content{ 
+	position: relative;
+}
+// ***************animation END***************
+
+.framework-content{
+	max-width: 810px;
+	margin: 0 auto; 
+	overflow: hidden;
+	
+	.left-col{
+		width: 49.4%;
+		float: left;
+		padding-bottom: 40px;
+		background: url(../images/frame-bg-1.jpg) 0 0 no-repeat;
+		background-size: cover;
+		background-position: 50%;
+		position: relative;
+		overflow: hidden; 
+		&:before{
+			@extend .beforePointBottom;
+		}
+		&:after{  
+			@extend .afterPointBottom; 
+		}
+
+		h2{
+			font-size: 18px;
+			font-weight: 600;
+			color: #fff;
+			text-align: center;
+			margin-bottom: 25px;
+			padding: 25px 10px 0 10px;
+			position: relative;
+			&:before{
+				@extend .beforePointTop;
+			}
+			&:after{  
+				@extend .afterPointTop; 
+			}
+		}
+		.text{
+			line-height: 26px;
+			padding: 0 25px;
+			p{
+				margin-bottom: 20px;
+			}
+		}
+	}
+	.right-col{
+		width: 49.4%;
+		float: right;
+		background: url(../images/frame-bg-2.jpg) 0 0 no-repeat;
+		background-size: cover;
+		background-position: 50%;
+		padding-bottom: 110.5px;
+		position: relative;
+		&:before{
+			@extend .beforePointBottom;
+		}
+		&:after{  
+			@extend .afterPointBottom; 
+		}
+		.framework-carousel-holder{
+			padding-top: 106px;
+			position: relative;
+			&:before{
+				@extend .beforePointTop;
+			}
+			&:after{  
+				@extend .afterPointTop;
+			}
+
+			.carousel-container{
+				width: 332px !important;
+				height: 191px;
+				margin: 0 auto;
+				background: url(../images/carousel-bg.png) 0 0 no-repeat;
+				background-size: contain;
+				background-position: 50%;
+				position: relative;
+				padding-top: 11px;
+				&:after{
+					content: '';
+					width: 130%;
+					height: 25px;
+					background: url(../images/shadow.png) 0 0 no-repeat;
+					background-position: 50%;
+					position: absolute;
+					bottom: -5px;
+    				left: -14%;
+				}
+
+				.framework-carousel{
+					.bx-controls{
+						display: none;
+					}
+					.bx-wrapper img{
+						width: 245px !important;
+						margin: 0 auto;
+					}
+					.outside{
+						position: absolute;
+						top: 35%;
+    					right: -13px;
+						span{
+							display: block;
+							width: 23px;
+							height: 22px;
+							color: transparent;
+							cursor: pointer;
+							opacity: .4;
+							-webkit-transition: all .3s ease-in-out;
+							transition: all .3s ease-in-out;
+							&:hover{
+								opacity: 1;
+							}
+							a{
+								display: inline-block;
+								width: 100%;
+								height: 100%;
+								text-indent: -9999px;
+							}
+						}
+						.slider-prev_frame{
+							background: url(../images/ico-prev.png) 0 0 no-repeat;
+							margin-bottom: 3px;
+						}
+						.slider-next_frame{
+							background: url(../images/ico-prev.png) 0 0 no-repeat;
+							-webkit-transform: rotate(180deg);
+							transform: rotate(180deg);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+// ************************************SLIDE 9*********************************
+#slide9{
+	position: relative;
+}
+
+.reviews-content{
+	max-width: 665px;
+	margin: 16% auto 0 auto;
+
+	.bxslider-reviews li{
+		position: relative; 
+		&:before{
+			@extend .beforePointTop;
+		}
+		&:after{  
+			@extend .afterPointTop; 
+		}
+
+		.review{
+			font-size: 16px;
+			line-height: 26px;
+			font-style: italic;
+			background: url(../images/review-bg-1.jpg) 0 0 no-repeat;
+			background-size: cover;
+			background-position: 50%;
+			padding: 25px 30px;
+			position: relative; 
+			&:before{
+				@extend .beforePointBottom;
+			}
+			&:after{  
+				@extend .afterPointBottom; 
+			}
+			p{
+				margin-bottom: 15px;
+			}
+			.author{
+				font-size: 14px;
+				font-style: normal;
+			}
+		}
+	}
+	.bx-wrapper .bx-pager.bx-default-pager a{
+		width: 16px;
+    	height: 16px;
+		background: transparent;
+		border: 1px solid transparent;
+		border-radius: 50%;
+		margin: 0 3px;
+		position: relative;
+		-webkit-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;
+		&:after{
+			content: '';
+			width: 10px;
+			height: 10px;
+			background: #fff;
+			border-radius: 50%;
+			position: absolute;
+			top: 2px;
+			left: 2px;
+		}
+	}
+	.bx-wrapper .bx-pager.bx-default-pager a.active, 
+	.bx-wrapper .bx-pager.bx-default-pager a:hover{
+		border: 1px solid #fff;
+	}
+}
+
+// ************************************SLIDE 10*********************************
+#slide10{
+	position: relative;
+
+	.logo{
+		padding: 0;
+		position: absolute;
+		top: 12px;
+    	left: 125px;
+		z-index: 1;
+	}
+	#map{
+		width: 100%;
+		height: 100%;
 	}
 }
