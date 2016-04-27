@@ -52,22 +52,40 @@ body{
 	right: 5px; 
 	z-index: 1;
 }
-//**********animation Inheritance***********
-// .animation-1.5s{
-// 	-webkit-transition: all 1.5s ease-in-out;
-// 	-moz-transition: all 1.5s ease-in-out;
-// 	-ms-transition: all 1.5s ease-in-out;
-// 	-o-transition: all 1.5s ease-in-out;
-// 	transition: all 1.5s ease-in-out;
-// }
-// .fadeAnimateElement-1.5s{
-// 	opacity: 0;
-// 	-webkit-transition: all 1.5s ease-in-out;
-// 	-moz-transition: all 1.5s ease-in-out;
-// 	-ms-transition: all 1.5s ease-in-out;
-// 	-o-transition: all 1.5s ease-in-out;
-// 	transition: all 1.5s ease-in-out;
-// }
+//**********animation settings***********
+@keyframes fadeUp {
+	from {
+		bottom: -1000px;
+		opacity: 0;
+	} 
+	50%{
+		bottom: -70px;
+		opacity: 0;
+	}
+	85%{
+		opacity: .95;
+	}
+	to{
+		opacity: 1;
+		bottom: 0;
+	}
+}
+@keyframes slideDown {
+	from {
+		opacity: 0;
+		top: -500px;
+	} 
+	70%{
+		top: 30px;
+	}
+	95%{
+		top: 10px;
+	}
+	to{
+		opacity: 1;
+		top: 15px;
+	}
+}
 
 // ************************************SLIDE'S BACKGROUND*********************************
 #slide1{
@@ -122,16 +140,12 @@ body{
     top: 0;
     z-index: 999;
     -webkit-transition: all .1s ease-in-out;
-    -moz-transition: all .1s ease-in-out;
-    -ms-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out; 
 
     #fsvs-pagination{
     	margin: 0;
     	padding-left: 17px;
     	-webkit-transition: all .1s ease-in-out;
-    	-moz-transition: all .1s ease-in-out;
-    	-ms-transition: all .1s ease-in-out;
     	transition: all .1s ease-in-out;
 
     	li{
@@ -162,16 +176,12 @@ body{
     			overflow: hidden;
     			margin-right: -23px;
     			-webkit-transition: all .3s ease-in-out;
-    			-moz-transition: all .3s ease-in-out;
-    			-ms-transition: all .3s ease-in-out;
     			transition: all .3s ease-in-out;
     		}
     	}
     	li.active > span{
     		margin-right: 11px; 
     		-webkit-transition: all .3s ease-in-out;
-    		-moz-transition: all .3s ease-in-out;
-    		-ms-transition: all .3s ease-in-out;
     		transition: all .3s ease-in-out;
     		&:after{ 
     			margin-right: 0;
@@ -229,15 +239,11 @@ body{
 #nav-wrap.open{
 	width: 130px;
 	-webkit-transition: all .25s ease-in-out;
-	-moz-transition: all .25s ease-in-out;
-	-ms-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
 
     #fsvs-pagination{
     	padding-left: 10px; 
     	-webkit-transition: all .25s ease-in-out;
-    	-moz-transition: all .25s ease-in-out;
-    	-ms-transition: all .25s ease-in-out;
     	transition: all .25s ease-in-out;
 
     	li > span:after{
@@ -307,23 +313,6 @@ body{
 #slide2{
 	position: relative;
 }
-@keyframes fadeUp {
-		from {
-			bottom: -1000px;
-			opacity: 0;
-		} 
-		50%{
-			bottom: -70px;
-			opacity: 0;
-		}
-		85%{
-			opacity: .95;
-		}
-		to{
-			opacity: 1;
-			bottom: 0;
-		}
-	}
 #slide2.active-slide .web-content{
 	animation: fadeUp 1.5s;
 }
@@ -489,11 +478,6 @@ body{
 	position: relative;
 	-webkit-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
-	-webkit-animation-duration: 2.5s;
-	-moz-animation-duration: 2.5s;
-	-ms-animation-duration: 2.5s;
-	-o-animation-duration: 2.5s;
-	animation-duration: 2.5s;
 	&:hover{
 		opacity: .9;
 		color: #ccc;
@@ -522,25 +506,25 @@ body{
 	}
 }
 // ************************************SLIDE 3*********************************
-#slide3.active-slide .mobile-content{
-	opacity: 1;
-	-webkit-transition: all 1.5s ease-in-out;
-	-moz-transition: all 1.5s ease-in-out;
-	-ms-transition: all 1.5s ease-in-out;
-	-o-transition: all 1.5s ease-in-out;
-	transition: all 1.5s ease-in-out;
+// ***************animation START***************
+#slide3{
+	position: relative;
 }
+#slide3.active-slide .mobile-content{
+	animation: fadeUp 1.5s;
+}
+#slide3.active-slide .mobile-content .right-col{
+	animation: fadeUp 1.8s;
+}
+#slide3 .mobile-content{ 
+	position: relative;
+}
+// ***************animation END***************
 
 .mobile-content{
 	max-width: 810px;
 	margin: 0 auto; 
 	overflow: hidden;
-	opacity: 0;
-	-webkit-transition: all 1.5s ease-in-out;
-	-moz-transition: all 1.5s ease-in-out;
-	-ms-transition: all 1.5s ease-in-out;
-	-o-transition: all 1.5s ease-in-out;
-	transition: all 1.5s ease-in-out;
 
 	.left-col{
 		width: 49.4%;
@@ -685,17 +669,11 @@ body{
 #slide4.active-slide .marketing-block{
 	opacity: 1;
 	-webkit-transition: all 1.5s ease-in-out;
-	-moz-transition: all 1.5s ease-in-out;
-	-ms-transition: all 1.5s ease-in-out;
-	-o-transition: all 1.5s ease-in-out;
 	transition: all 1.5s ease-in-out;
 }
 .marketing-block{
 	opacity: 0;
 	-webkit-transition: all 1.5s ease-in-out;
-	-moz-transition: all 1.5s ease-in-out;
-	-ms-transition: all 1.5s ease-in-out;
-	-o-transition: all 1.5s ease-in-out;
 	transition: all 1.5s ease-in-out;
 	max-width: 810px;
 	margin: 9% auto 0 auto; 
@@ -1013,6 +991,9 @@ body{
 }
 
 // ************************************SLIDE 10*********************************
+#slide10.active-slide .rolers-holder{
+	animation: slideDown 1.5s;
+}
 #slide10{
 	position: relative;
 
@@ -1022,6 +1003,44 @@ body{
 		top: 12px;
     	left: 125px;
 		z-index: 1;
+	}
+	.rolers-holder{
+		position: absolute;
+		top: 15px;
+		right: 60px;
+		z-index: 1;
+
+		.open-roles{
+			display: inline-block;
+			background: url(../images/roles-bg-1.jpg) 0 0 no-repeat;
+			background-size: cover;
+			-webkit-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+			position: relative;
+			&:hover{
+				opacity: .8;
+			}
+			&:before{
+				@extend .beforePointTop;
+			}
+			&:after{  
+				@extend .afterPointTop; 
+			}
+			span{
+				display: inline-block;
+				width: 223px;
+				text-align: center;
+				color: #000;
+				padding: 17px 5px;
+				position: relative; 
+				&:before{
+					@extend .beforePointBottom;
+				}
+				&:after{  
+					@extend .afterPointBottom; 
+				}
+			}
+		}
 	}
 	#map{
 		width: 100%;
