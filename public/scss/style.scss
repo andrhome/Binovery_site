@@ -6,6 +6,10 @@ body{
 	font-weight: 300;
 	color: #fff;
 }
+a, a:hover{
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
 
 // ***********************Inheritance***********************
 .beforePointTop{
@@ -112,6 +116,7 @@ body{
 #slide6{
 	background: url(../images/slide-6-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
+	background-position: 50%;
 }
 #slide7{
 	background: url(../images/slide-7-bg.jpg) 0 0 no-repeat;
@@ -120,10 +125,12 @@ body{
 #slide8{
 	background: url(../images/slide-8-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
+	background-position: 50%;
 } 
 #slide9{
 	background: url(../images/slide-9-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
+	background-position: 0 19%;
 }
 
 // ************************************Navigation*********************************
@@ -141,18 +148,15 @@ body{
     z-index: 999;
     -webkit-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out; 
-
     #fsvs-pagination{
     	margin: 0;
     	padding-left: 17px;
     	-webkit-transition: all .1s ease-in-out;
     	transition: all .1s ease-in-out;
-
     	li{
     		display: flex;
 		    flex-direction: row;
 		    align-items: center;
-
     		i{
     			display: inline-block;
     			font-size: 12px;
@@ -163,7 +167,6 @@ body{
     	}
     	li > span{
 			position: relative;
-
 			&:after{
 				display: none;
     			content: '';
@@ -202,7 +205,6 @@ body{
 	&:hover{
 		background: rgba(0,0,0, 0.15);
 	}
-
 	span{
 		display: inline-block;
 		vertical-align: middle;
@@ -476,8 +478,6 @@ body{
 	background-position: 50%;
 	padding: 30px 10px 0 10px;
 	position: relative;
-	-webkit-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
 	&:hover{
 		opacity: .9;
 		color: #ccc;
@@ -666,17 +666,17 @@ body{
 }
 
 // ************************************SLIDE 4*********************************
-#slide4.active-slide .marketing-block{
+#slide4.active-slide .marketing-content{
 	opacity: 1;
 	-webkit-transition: all 1.5s ease-in-out;
 	transition: all 1.5s ease-in-out;
 }
-.marketing-block{
+.marketing-content{
 	opacity: 0;
 	-webkit-transition: all 1.5s ease-in-out;
 	transition: all 1.5s ease-in-out;
 	max-width: 810px;
-	margin: 9% auto 0 auto; 
+	margin: 0 auto; 
 	overflow: hidden;
 
 	h2{
@@ -759,17 +759,123 @@ body{
 }
 
 // ************************************SLIDE 5*********************************
+// ***************animation START***************
+#slide5, .portfolio-content{
+	position: relative;
+}
+#slide5.active-slide .portfolio-content{
+	animation: fadeUp 1s;
+}
+#slide5.active-slide .portfolio-content ul li:nth-child(2){
+	animation: fadeUp 1.2s;
+}
+#slide5.active-slide .portfolio-content ul li:nth-child(3){
+	animation: fadeUp 1.5s;
+}
+#slide5.active-slide .portfolio-content ul li:nth-child(4){
+	animation: fadeUp 1.7s;
+}
+#slide5.active-slide .portfolio-content ul li:nth-child(5){
+	animation: fadeUp 1.9s;
+}
+#slide5.active-slide .portfolio-content ul li:nth-child(6){
+	animation: fadeUp 2.0s;
+}
+#slide5.active-slide .portfolio-content ul li:nth-child(7){
+	animation: fadeUp 2.1s;
+}
+#slide5.active-slide .portfolio-content ul li:nth-child(8){
+	animation: fadeUp 2.2s;
+}
+#slide5.active-slide .portfolio-content ul li:nth-child(9){
+	animation: fadeUp 2.3s;
+}
+#slide5.active-slide .portfolio-content ul li:nth-child(10){
+	animation: fadeUp 2.4s;
+}
+#slide5.active-slide .portfolio-content ul li:last-child{
+	animation: fadeUp 2.5s;
+}
+// ***************animation END***************
+
 .portfolio-content{
-	width: 67.5%;
+	width: 810px;
 	margin: 0 auto;
-	overflow: hidden;
-
-
+	
+	ul{
+		line-height: 0;
+		font-size: 0;
+		li{
+			display: inline-block;
+			width: 24.2%;
+			height: 150px;
+			vertical-align: top;
+			cursor: pointer;
+			margin-left: 6px;
+			margin-bottom: 6px;
+			overflow: hidden;
+			position: relative;
+			.blur{
+				width: 100%;
+				height: 100%;
+				background: url(../images/portf-img-1.jpg) 0 0 no-repeat;
+				background-size: cover;
+				position: absolute;
+				top: 0;
+				left: 0;
+				-webkit-transition: all .3s ease-in-out;
+				transition: all .3s ease-in-out;
+			}
+			&:hover .blur{
+				-webkit-filter: blur(4px);
+				-moz-filter: blur(4px);
+				-ms-filter: blur(4px);
+				-o-filter: blur(4px);
+				filter: blur(4px);
+			}
+			.text{
+				width: 100%;
+				color: #fff;
+				font-size: 14px;
+				line-height: normal;
+				text-align: center;
+				opacity: 0;
+				-webkit-transition: all .3 ease-in-out;
+				transition: all .3s ease-in-out;
+				position: absolute;
+				top: 30%;
+				left: 0;
+				strong{
+					font-size: 18px;
+					font-weight: 400;
+					display: inline-block;
+					margin-bottom: 10px;
+				}
+			}
+			&:hover .text{
+				opacity: 1;
+			}
+		}
+		li:last-child{
+			width: 49.1%;
+			.behance-btn{
+				background: url(../images/portf-blur-1.jpg) 0 0 no-repeat;
+				background-size: cover;
+				background-position: 50%;
+				line-height: normal;
+				padding: 30px 0 0;
+				strong{
+					padding-bottom: 47px;
+				}
+			}
+		}
+	}
 }
 
 
 
 // ************************************SLIDE 7*********************************
+// ***************animation START***************
 #slide7{
 	position: relative;
 }
@@ -919,7 +1025,181 @@ body{
 	}
 }
 
+// ************************************SLIDE 8*********************************
+#slide8, .blog-content{
+	position: relative;
+}
+#slide8.active-slide .blog-content{
+	animation: fadeUp 1.5s;
+}
+#slide8.active-slide .blog-content ul li:nth-child(2){
+	animation: fadeUp 1.7s;
+}
+#slide8.active-slide .blog-content ul li:nth-child(3){
+	animation: fadeUp 1.9s;
+}
+#slide8.active-slide .blog-content ul li:nth-child(4){
+	animation: fadeUp 2.1s;
+}
+#slide8.active-slide .blog-content ul li:nth-child(5){
+	animation: fadeUp 2.3s;
+}
+#slide8.active-slide .blog-content ul li:last-child{
+	animation: fadeUp 2.5s;
+}
+// ***************animation END***************
 
+.blog-content{
+	max-width: 810px;
+	margin: 0 auto;
+
+	ul{
+		line-height: 0;
+		font-size: 0;
+		li{
+			display: inline-block;
+			width: 32.5%;
+			vertical-align: top;
+			margin-left: 6px;
+			margin-bottom: 6px;
+			article{
+				min-height: 290px;
+				background: url(../images/blog-img-1.jpg) 0 0 no-repeat;
+				background-size: cover;
+				position: relative;
+				.info-block{
+					width: 100%;
+					font-size: 12px;
+					line-height: normal;
+					background: url(../images/blog-blur-1.jpg) 0 0 no-repeat;
+					background-size: cover;
+					letter-spacing: 0.5px;
+					padding: 8px 10px;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					.title{
+						display: inline-block;
+						color: #fff;
+						font-size: 18px;
+						line-height: 28px;
+						height: 30px;
+						overflow: hidden;
+						text-decoration: none;
+						margin-bottom: 3px;
+						position: relative;
+						&:after{
+							content: '';
+							width: 100%;
+							height: 1px;
+							background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 66%, rgba(255,255,255,0.2) 100%);
+							background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 66%,rgba(255,255,255,0.2) 100%);
+							background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 66%,rgba(255,255,255,0.2) 100%);
+							position: absolute;
+							bottom: 0;
+							left: -100%;
+							-webkit-transition: all .2s ease-in-out;
+							transition: all .2s ease-in-out;
+						}
+						&:hover:after{
+							left: 0;
+						}
+					}
+					.date-and-comments{
+						margin-bottom: 10px;
+						.date{
+							display: inline-block;
+							padding-left: 18px;
+							margin-right: 15px;
+							position: relative;
+							&:after{
+								content: '';
+								width: 15px;
+								height: 15px;
+								background: url(../images/ico-4.png) 0 0 no-repeat;
+								background-size: cover;
+								position: absolute;
+								top: 1.5px;
+								left: 0;
+							}
+						}
+						.comments{
+							display: inline-block;
+							color: #fff;
+							text-decoration: none;
+							padding-left: 21px;
+							position: relative;
+							-webkit-transition: all .2s ease-in-out;
+							transition: all .2s ease-in-out;
+							&:after{
+								content: '';
+								width: 19px;
+								height: 15px;
+								background: url(../images/ico-5.png) 0 0 no-repeat;
+								background-size: cover;
+								position: absolute;
+								top: 1.5px;
+								left: 0;
+							}
+							&:hover{
+								color: #ccc;
+							}
+						}
+					}
+					.section{
+						padding-left: 21px;
+						position: relative;
+						&:after{
+							content: '';
+							width: 19px;
+							height: 15px;
+							background: url(../images/ico-6.png) 0 0 no-repeat;
+							background-size: cover;
+							position: absolute;
+							top: 1px;
+							left: 0;
+						}
+					}
+				}
+			}
+			.view-all{
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				color: #fff;
+				font-size: 24px;
+				line-height: normal;
+				text-transform: uppercase;
+				background: url(../images/blog-blur-2.jpg) 0 0 no-repeat;
+				background-size: cover;
+				padding-top: 112px;
+				position: relative;
+				&:before{
+					@extend .beforePointTop;
+				}
+				&:after{  
+					@extend .afterPointTop; 
+				}
+				&:hover{
+					opacity: .95;
+				}
+				span{
+					display: inline-block;
+					width: 100%;
+					padding-bottom: 112px;
+					position: relative;
+					&:before{
+						@extend .beforePointBottom;
+					}
+					&:after{  
+						@extend .afterPointBottom; 
+					}
+				}
+			}
+		}
+	}
+}
 
 // ************************************SLIDE 9*********************************
 #slide9{

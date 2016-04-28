@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
             endSlide            : function(){},
             mouseWheelEvents    : true,
             mouseWheelDelay     : false,
-            mouseDragEvents     : true,
+            mouseDragEvents     : false,
             touchEvents         : true,
             arrowKeyEvents      : true,
             pagination          : true,
@@ -43,6 +43,27 @@ document.addEventListener("DOMContentLoaded", function () {
             detectHash          : true
         });
     };
+
+    //Enabling touch event
+    // if( $(window).width() < 1030 ) {
+    //     slider = $.fn.fsvs({
+    //         speed               : 1000,
+    //         bodyID              : 'fsvs-body',
+    //         selector            : '> .slide',
+    //         mouseSwipeDisance   : 40,
+    //         afterSlide          : function(){},
+    //         beforeSlide         : function(){},
+    //         endSlide            : function(){},
+    //         mouseWheelEvents    : true,
+    //         mouseWheelDelay     : false,
+    //         mouseDragEvents     : true,
+    //         touchEvents         : true,
+    //         arrowKeyEvents      : true,
+    //         pagination          : true,
+    //         nthClasses          : 2,
+    //         detectHash          : true
+    //     });
+    //}
     //END
 
 
@@ -114,6 +135,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }());
 
 
+    //MarginTop for '.marketing-content' on the slide4
+    ;(function() {
+        var marketingContent = document.querySelector('.marketing-content'),
+            slide4Height = document.getElementById('slide4').offsetHeight,
+            marketingContHeight = marketingContent.offsetHeight,
+            logoHeight = document.querySelector('.logo').offsetHeight;
+
+        marketingContent.style.cssText = "margin-top:" + parseInt((slide4Height / 2) - (marketingContHeight / 2) - (logoHeight)) + "px";
+        
+        window.addEventListener('resize', function() {
+            marketingContent.style.cssText = "margin-top:" + parseInt((slide4Height / 2) - (marketingContHeight / 2) - (logoHeight)) + "px";
+        });
+    }());
+
+
     //MarginTop for '.portfolio-content' on the slide5
     ;(function() {
         var portfolioContent = document.querySelector('.portfolio-content'),
@@ -142,6 +178,23 @@ document.addEventListener("DOMContentLoaded", function () {
             frameworkContent.style.cssText = "margin-top:" + parseInt((slide7Height / 2) - (frameworkContHeight / 2) - (logoHeight)) + "px";
         });
     }());
+
+
+    //MarginTop for '.blog-content' on the slide8
+    ;(function() {
+        var blogContent = document.querySelector('.blog-content'),
+            slide8Height = document.getElementById('slide8').offsetHeight,
+            blogContHeight = blogContent.offsetHeight,
+            logoHeight = document.querySelector('.logo').offsetHeight;
+
+        blogContent.style.cssText = "margin-top:" + parseInt((slide8Height / 2) - (blogContHeight / 2) - (logoHeight)) + "px";
+        
+        window.addEventListener('resize', function() {
+            blogContent.style.cssText = "margin-top:" + parseInt((slide8Height / 2) - (blogContHeight / 2) - (logoHeight)) + "px";
+        });
+    }());
+
+    
 
 
     // //Creating own event for animation PART_1
