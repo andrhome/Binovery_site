@@ -116,7 +116,7 @@ a, a:hover{
 #slide6{
 	background: url(../images/slide-6-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
-	background-position: 50%;
+	background-position: 50% 100%;
 }
 #slide7{
 	background: url(../images/slide-7-bg.jpg) 0 0 no-repeat;
@@ -872,7 +872,117 @@ a, a:hover{
 	}
 }
 
+// ************************************SLIDE 6*********************************
+#slide6{
+	position: relative;
+	.logo{
+		width: 120px;
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		padding: 0;
+	} 
+}
+.team-content{
+	max-width: 1000px; 
+	height: 100%;
+	padding-right: 52px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 
+	.left-col{
+		width: 41%;
+		height: 320px;
+		padding-bottom: 25px;
+		background: url(../images/team-bg-1.jpg) 0 0 no-repeat;
+		background-size: cover;
+		background-position: 50%;
+		position: relative;
+		&:before{
+			@extend .beforePointBottom;
+		}
+		&:after{  
+			@extend .afterPointBottom; 
+		}
+
+		h2{
+			font-size: 18px;
+			font-weight: 600;
+			color: #fff;
+			text-align: center;
+			margin-bottom: 25px;
+			padding: 25px 10px 0 10px;
+			position: relative;
+			&:before{
+				@extend .beforePointTop;
+			}
+			&:after{  
+				@extend .afterPointTop; 
+			}
+		}
+		.text{
+			line-height: 25px;
+			padding: 0 25px;
+			p{
+				margin-bottom: 20px;
+			}
+		}
+	}
+	.right-col{
+		width: 58.7%;
+		.team-slider{
+			position: relative;
+			.masonry-container{
+				padding: 0;
+				&:after{
+					content: '';
+					clear: both;
+					display: block;
+				}
+				.item{
+					width: 50%;
+					float: left;
+					padding: 3px;
+					img{
+						width: 100%;
+						display: block;
+					}
+				}
+			}
+			.own-nav{
+				position: absolute;
+				top: 47%;
+				right: -50px;
+				span{
+					width: 23px;
+					height: 22px;
+					display: block;
+					cursor: pointer;
+					opacity: .4;
+					&:hover{
+						opacity: 1;
+					}
+				}
+				.prev{
+					background: url(../images/ico-prev.png) 0 0 no-repeat;
+					margin-bottom: 3px;
+					
+					-webkit-transition: all .3s ease-in-out;
+					transition: all .3s ease-in-out;
+					
+				}
+				.next{
+					background: url(../images/ico-prev.png) 0 0 no-repeat;
+					-webkit-transform: rotate(180deg);
+					transform: rotate(180deg);
+				}
+			}
+		}	
+	}
+}
 
 // ************************************SLIDE 7*********************************
 // ***************animation START***************
@@ -1278,6 +1388,7 @@ a, a:hover{
 	position: relative;
 
 	.logo{
+		width: 120px;
 		padding: 0;
 		position: absolute;
 		top: 12px;

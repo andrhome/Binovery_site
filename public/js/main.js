@@ -165,6 +165,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }());
 
 
+    //MarginTop for '.team-content .left-col' on the slide6
+    // ;(function() {
+    //     var teamContent = document.querySelector('.team-content'),
+    //         leftColTeam = teamContent.querySelector('.left-col'),
+    //         leftColHeight = leftColTeam.offsetHeight,
+    //         slide6Height = document.getElementById('slide6').offsetHeight;
+
+    //     leftColTeam.style.cssText = "margin-top:" + parseInt((slide6Height / 2) - (leftColHeight / 2)) + "px";
+        
+    //     window.addEventListener('resize', function() {
+    //         leftColTeam.style.cssText = "margin-top:" + parseInt((slide6Height / 2) - (leftColHeight / 2)) + "px";
+    //     });
+    // }());
+
+
     //MarginTop for '.framework-content' on the slide7
     ;(function() {
         var frameworkContent = document.querySelector('.framework-content'),
@@ -192,62 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.addEventListener('resize', function() {
             blogContent.style.cssText = "margin-top:" + parseInt((slide8Height / 2) - (blogContHeight / 2) - (logoHeight)) + "px";
         });
-    }());
-
-    
-
-
-    // //Creating own event for animation PART_1
-    // (function(){
-    //     //Сохраняем ссылку на стандартный метод jQuery
-    //     var originalAddClassMethod = jQuery.fn.addClass;
-    //     //Переопределяем
-    //     $.fn.addClass = function(){
-    //         var result = originalAddClassMethod.apply(this, arguments);
-    //         //Инициализируем событие смены класса
-    //         $(this).trigger('cssClassChanged');
-    //         return result;
-    //     }
-    // })();
-    // //PART_2: Adding class for animation element (animetion on slide2)
-    // $(function(){
-    //     $("#slide2").bind('cssClassChanged', function(){ 
-    //         if( $("#slide2").hasClass('active-slide') ) {
-    //             setTimeout(function() {
-    //                 $('#slide2 .left-col').addClass('fadeInUp'); //animation name
-    //                 $('#slide2 .right-col').addClass('fadeInUp');
-    //             }, 1);
-    //         } else{
-    //             setTimeout(function() {
-    //                 $('#slide2 .left-col').removeClass('fadeInUp');
-    //                 $('#slide2 .right-col').removeClass('fadeInUp');
-    //             }, 1);
-    //         }
-    //     });
-    // });
-    // //PART_2: Adding class for animation element (animetion on slide3)
-    // $(function(){
-    //     $("#slide3").bind('cssClassChanged', function(){ 
-    //         if( $("#slide3").hasClass('active-slide') ) {
-    //             setTimeout(function() {
-    //                 $('#slide3 .left-col').addClass('fadeInUp'); //animation name
-    //                 $('#slide3 .right-col').addClass('fadeInUp');
-    //             }, 1);
-    //         } else{
-    //             setTimeout(function() {
-    //                 $('#slide3 .left-col').removeClass('fadeInUp');
-    //                 $('#slide3 .right-col').removeClass('fadeInUp');
-    //             }, 1);
-    //         }
-    //     });
-    // });
-    
-
-    
-    
-
-    
-    
+    }());    
 
 
     
@@ -276,6 +236,13 @@ $(document).ready(function() {
         slideMargin: 5
     });
 
+    //Vertical carousel on the slide6
+    $('.bxslider-team').bxSlider({
+        mode: 'vertical',
+        nextSelector: '.slider-next_team',
+        prevSelector: '.slider-prev_team'
+    });
+
     //Vertical carousel on the slide7
     $('.bxslider-framework').bxSlider({
         mode: 'vertical',
@@ -293,5 +260,16 @@ $(document).ready(function() {
         speed: 700,
         slideMargin: 5
     });
+
+    //Masonry settings
+    var $container = jQuery('.masonry-container');
+        $container.imagesLoaded( function(){
+            $container.masonry({
+                itemSelector : '.item',
+                columnWidth: '.item',
+                gutterWidth: 30,
+                isResizable: true
+            });
+        });
 
 });
