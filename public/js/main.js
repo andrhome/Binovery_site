@@ -239,6 +239,9 @@ $(document).ready(function() {
     //Vertical carousel on the slide6
     $('.bxslider-team').bxSlider({
         mode: 'vertical',
+        auto: true,
+        pause: 5000,
+        speed: 1000,
         nextSelector: '.slider-next_team',
         prevSelector: '.slider-prev_team'
     });
@@ -271,5 +274,20 @@ $(document).ready(function() {
                 isResizable: true
             });
         });
+
+    //Team slider
+    // ;(function(slider) {
+    //     if(!slider) return;
+
+    //     var masonryBlock = document.
+
+    //     function cssGenerator(prop, val, el) {
+    //         el.style.cssText += prop + ':' + (val) + 'px';
+    //     };
+
+    //     function moveSlider() {
+
+    //     };
+    // }());
 
 });

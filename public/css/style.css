@@ -9,7 +9,7 @@ a, a:hover {
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out; }
 
-.beforePointTop, .web-content .left-col h2:before, .web-content .right-col:before, .behance-btn:before, .mobile-content .left-col .text-holder h2:before, .mobile-content .right-col .carousel-iphone-holder:before, .marketing-content h2:before, .team-content .left-col h2:before, .framework-content .left-col h2:before, .framework-content .right-col .framework-carousel-holder:before, .blog-content ul li .view-all:before, .reviews-content .bxslider-reviews li:before, #slide10 .rolers-holder .open-roles:before {
+.beforePointTop, .web-content .left-col h2:before, .web-content .right-col:before, .behance-btn:before, .mobile-content .left-col .text-holder h2:before, .mobile-content .right-col .carousel-iphone-holder:before, .marketing-content h2:before, #slide6 .team-content .left-col h2:before, .framework-content .left-col h2:before, .framework-content .right-col .framework-carousel-holder:before, .blog-content ul li .view-all:before, .reviews-content .bxslider-reviews li:before, #slide10 .rolers-holder .open-roles:before {
   content: '';
   width: 5px;
   height: 5px;
@@ -20,7 +20,7 @@ a, a:hover {
   left: 5px;
   z-index: 1; }
 
-.afterPointTop, .web-content .left-col h2:after, .web-content .right-col:after, .behance-btn:after, .mobile-content .left-col .text-holder h2:after, .mobile-content .right-col .carousel-iphone-holder:after, .marketing-content h2:after, .team-content .left-col h2:after, .framework-content .left-col h2:after, .framework-content .right-col .framework-carousel-holder:after, .blog-content ul li .view-all:after, .reviews-content .bxslider-reviews li:after, #slide10 .rolers-holder .open-roles:after {
+.afterPointTop, .web-content .left-col h2:after, .web-content .right-col:after, .behance-btn:after, .mobile-content .left-col .text-holder h2:after, .mobile-content .right-col .carousel-iphone-holder:after, .marketing-content h2:after, #slide6 .team-content .left-col h2:after, .framework-content .left-col h2:after, .framework-content .right-col .framework-carousel-holder:after, .blog-content ul li .view-all:after, .reviews-content .bxslider-reviews li:after, #slide10 .rolers-holder .open-roles:after {
   content: '';
   width: 5px;
   height: 5px;
@@ -31,7 +31,7 @@ a, a:hover {
   right: 5px;
   z-index: 1; }
 
-.beforePointBottom, .web-content .left-col:before, .web-content .right-col .carousel-dom-wf-holder:before, .behance-btn strong:before, .mobile-content .left-col .text-holder:before, .mobile-content .right-col:before, .marketing-content .title-block:before, .marketing-content .text-holder .colum:before, .team-content .left-col:before, .framework-content .left-col:before, .framework-content .right-col:before, .blog-content ul li .view-all span:before, .reviews-content .bxslider-reviews li .review:before, #slide10 .rolers-holder .open-roles span:before {
+.beforePointBottom, .web-content .left-col:before, .web-content .right-col .carousel-dom-wf-holder:before, .behance-btn strong:before, .mobile-content .left-col .text-holder:before, .mobile-content .right-col:before, .marketing-content .title-block:before, .marketing-content .text-holder .colum:before, #slide6 .team-content .left-col:before, .framework-content .left-col:before, .framework-content .right-col:before, .blog-content ul li .view-all span:before, .reviews-content .bxslider-reviews li .review:before, #slide10 .rolers-holder .open-roles span:before {
   content: '';
   width: 5px;
   height: 5px;
@@ -42,7 +42,7 @@ a, a:hover {
   left: 5px;
   z-index: 1; }
 
-.afterPointBottom, .web-content .left-col:after, .web-content .right-col .carousel-dom-wf-holder:after, .behance-btn strong:after, .mobile-content .left-col .text-holder:after, .mobile-content .right-col:after, .marketing-content .title-block:after, .marketing-content .text-holder .colum:after, .team-content .left-col:after, .framework-content .left-col:after, .framework-content .right-col:after, .blog-content ul li .view-all span:after, .reviews-content .bxslider-reviews li .review:after, #slide10 .rolers-holder .open-roles span:after {
+.afterPointBottom, .web-content .left-col:after, .web-content .right-col .carousel-dom-wf-holder:after, .behance-btn strong:after, .mobile-content .left-col .text-holder:after, .mobile-content .right-col:after, .marketing-content .title-block:after, .marketing-content .text-holder .colum:after, #slide6 .team-content .left-col:after, .framework-content .left-col:after, .framework-content .right-col:after, .blog-content ul li .view-all span:after, .reviews-content .bxslider-reviews li .review:after, #slide10 .rolers-holder .open-roles span:after {
   content: '';
   width: 5px;
   height: 5px;
@@ -657,6 +657,12 @@ a, a:hover {
         .portfolio-content ul li:last-child .behance-btn strong {
           padding-bottom: 47px; }
 
+#slide6, .team-content {
+  position: relative; }
+
+#slide6.active-slide .team-content {
+  animation: fadeUp 2s; }
+
 #slide6 {
   position: relative; }
   #slide6 .logo {
@@ -665,75 +671,82 @@ a, a:hover {
     top: 15px;
     left: 15px;
     padding: 0; }
-
-.team-content {
-  max-width: 1000px;
-  height: 100%;
-  padding-right: 52px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between; }
-  .team-content .left-col {
-    width: 41%;
-    height: 320px;
-    padding-bottom: 25px;
-    background: url(../images/team-bg-1.jpg) 0 0 no-repeat;
-    background-size: cover;
-    background-position: 50%;
-    position: relative; }
-    .team-content .left-col h2 {
-      font-size: 18px;
-      font-weight: 600;
-      color: #fff;
-      text-align: center;
-      margin-bottom: 25px;
-      padding: 25px 10px 0 10px;
+  #slide6 .team-content {
+    max-width: 1000px;
+    height: 100%;
+    padding-right: 52px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+    #slide6 .team-content .left-col {
+      width: 41%;
+      height: 320px;
+      padding-bottom: 25px;
+      background: url(../images/team-bg-1.jpg) 0 0 no-repeat;
+      background-size: cover;
+      background-position: 50%;
       position: relative; }
-    .team-content .left-col .text {
-      line-height: 25px;
-      padding: 0 25px; }
-      .team-content .left-col .text p {
-        margin-bottom: 20px; }
-  .team-content .right-col {
-    width: 58.7%; }
-    .team-content .right-col .team-slider {
-      position: relative; }
-      .team-content .right-col .team-slider .masonry-container {
-        padding: 0; }
-        .team-content .right-col .team-slider .masonry-container:after {
-          content: '';
-          clear: both;
-          display: block; }
-        .team-content .right-col .team-slider .masonry-container .item {
-          width: 50%;
-          float: left;
-          padding: 3px; }
-          .team-content .right-col .team-slider .masonry-container .item img {
-            width: 100%;
+      #slide6 .team-content .left-col h2 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 25px;
+        padding: 25px 10px 0 10px;
+        position: relative; }
+      #slide6 .team-content .left-col .text {
+        line-height: 25px;
+        padding: 0 25px; }
+        #slide6 .team-content .left-col .text p {
+          margin-bottom: 20px; }
+    #slide6 .team-content .right-col {
+      width: 58.7%; }
+      #slide6 .team-content .right-col .carousel-container {
+        position: relative; }
+        #slide6 .team-content .right-col .carousel-container .team-carousel .bxslider-team .masonry-container {
+          padding: 0; }
+          #slide6 .team-content .right-col .carousel-container .team-carousel .bxslider-team .masonry-container:after {
+            content: '';
+            clear: both;
             display: block; }
-      .team-content .right-col .team-slider .own-nav {
-        position: absolute;
-        top: 47%;
-        right: -50px; }
-        .team-content .right-col .team-slider .own-nav span {
-          width: 23px;
-          height: 22px;
-          display: block;
-          cursor: pointer;
-          opacity: .4; }
-          .team-content .right-col .team-slider .own-nav span:hover {
-            opacity: 1; }
-        .team-content .right-col .team-slider .own-nav .prev {
-          background: url(../images/ico-prev.png) 0 0 no-repeat;
-          margin-bottom: 3px;
-          -webkit-transition: all .3s ease-in-out;
-          transition: all .3s ease-in-out; }
-        .team-content .right-col .team-slider .own-nav .next {
-          background: url(../images/ico-prev.png) 0 0 no-repeat;
-          -webkit-transform: rotate(180deg);
-          transform: rotate(180deg); }
+          #slide6 .team-content .right-col .carousel-container .team-carousel .bxslider-team .masonry-container .item {
+            width: 50%;
+            float: left;
+            padding: 3px; }
+            #slide6 .team-content .right-col .carousel-container .team-carousel .bxslider-team .masonry-container .item img {
+              width: 100%;
+              display: block; }
+        #slide6 .team-content .right-col .carousel-container .team-carousel .bx-controls {
+          display: none; }
+        #slide6 .team-content .right-col .carousel-container .team-carousel .outside {
+          position: absolute;
+          top: 47%;
+          right: -40px; }
+          #slide6 .team-content .right-col .carousel-container .team-carousel .outside span {
+            display: block;
+            width: 23px;
+            height: 22px;
+            color: transparent;
+            cursor: pointer;
+            opacity: .4;
+            -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out; }
+            #slide6 .team-content .right-col .carousel-container .team-carousel .outside span:hover {
+              opacity: 1; }
+            #slide6 .team-content .right-col .carousel-container .team-carousel .outside span a {
+              display: inline-block;
+              width: 100%;
+              height: 100%;
+              text-indent: -9999px; }
+          #slide6 .team-content .right-col .carousel-container .team-carousel .outside .slider-prev_team {
+            background: url(../images/ico-prev.png) 0 0 no-repeat;
+            margin-bottom: 3px; }
+          #slide6 .team-content .right-col .carousel-container .team-carousel .outside .slider-next_team {
+            background: url(../images/ico-prev.png) 0 0 no-repeat;
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
 
 #slide7 {
   position: relative; }
