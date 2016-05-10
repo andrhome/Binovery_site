@@ -165,21 +165,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }());
 
 
-    //MarginTop for '.team-content .left-col' on the slide6
-    // ;(function() {
-    //     var teamContent = document.querySelector('.team-content'),
-    //         leftColTeam = teamContent.querySelector('.left-col'),
-    //         leftColHeight = leftColTeam.offsetHeight,
-    //         slide6Height = document.getElementById('slide6').offsetHeight;
-
-    //     leftColTeam.style.cssText = "margin-top:" + parseInt((slide6Height / 2) - (leftColHeight / 2)) + "px";
-        
-    //     window.addEventListener('resize', function() {
-    //         leftColTeam.style.cssText = "margin-top:" + parseInt((slide6Height / 2) - (leftColHeight / 2)) + "px";
-    //     });
-    // }());
-
-
     //MarginTop for '.framework-content' on the slide7
     ;(function() {
         var frameworkContent = document.querySelector('.framework-content'),
@@ -208,6 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
             blogContent.style.cssText = "margin-top:" + parseInt((slide8Height / 2) - (blogContHeight / 2) - (logoHeight)) + "px";
         });
     }());    
+
 
 
     
