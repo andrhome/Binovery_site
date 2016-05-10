@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
             endSlide            : function(){},
             mouseWheelEvents    : true,
             mouseWheelDelay     : false,
-            mouseDragEvents     : false,
+            mouseDragEvents     : true,
             touchEvents         : true,
             arrowKeyEvents      : true,
             pagination          : true,
@@ -211,6 +211,14 @@ $(document).ready(function() {
         mode: 'vertical',
         nextSelector: '.slider-next',
         prevSelector: '.slider-prev',
+        slideMargin: 5
+    });
+
+    //Vertical carousel on the slide2
+    $('.bxslider-web-popup').bxSlider({
+        mode: 'vertical',
+        nextSelector: '.sl-next',
+        prevSelector: '.sl-prev',
         slideMargin: 5
     });
 
