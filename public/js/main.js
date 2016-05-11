@@ -195,6 +195,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }());    
 
 
+    
+
 
     
     
@@ -208,26 +210,60 @@ document.addEventListener("DOMContentLoaded", function () {
 $(document).ready(function() {
     //Vertical carousel on the slide2
     $('.bxslider-dom-wf').bxSlider({
-        mode: 'vertical',
+        mode: 'horizontal',
         nextSelector: '.slider-next',
         prevSelector: '.slider-prev',
         slideMargin: 5
     });
 
-    //Vertical carousel on the slide2
+    //Vertical popup carousel on the slide2
     $('.bxslider-web-popup').bxSlider({
-        mode: 'vertical',
+        mode: 'horizontal',
         nextSelector: '.sl-next',
         prevSelector: '.sl-prev',
         slideMargin: 5
     });
+    //SLIDE2: show and hide '.slider-web-popup-holder'
+    $('.bxslider-dom-wf img').click(function() {
+        $('.slider-web-popup-holder').css({
+            'opacity' : '1',
+            'z-index' : '100'
+        });
+    });
+    $('.slider-web-popup-holder .closer, #nav-wrap, #slide1, #slide3, #slide4, #slide5, #slide6, #slide7, #slide8, #slide9, #slide10').click(function() {
+        $('.slider-web-popup-holder').css({
+            'opacity' : '0',
+            'z-index' : '-1'
+        });
+    });
 
     //Vertical carousel on the slide3
     $('.bxslider-iphone').bxSlider({
-        mode: 'vertical',
+        mode: 'horizontal',
         nextSelector: '.slider-next_mob',
         prevSelector: '.slider-prev_mob',
         slideMargin: 5
+    });
+
+    //Vertical popup carousel on the slide3
+    $('.bxslider-mob-popup').bxSlider({
+        mode: 'horizontal',
+        nextSelector: '.mob-next',
+        prevSelector: '.mob-prev',
+        slideMargin: 5
+    });
+    //SLIDE3: show and hide '.slider-mob-popup-holder'
+    $('.bxslider-iphone img').click(function() {
+        $('.slider-mob-popup-holder').css({
+            'opacity' : '1',
+            'z-index' : '100'
+        });
+    });
+    $('.slider-mob-popup-holder .closer, #nav-wrap, #slide1, #slide2, #slide4, #slide5, #slide6, #slide7, #slide8, #slide9, #slide10').click(function() {
+        $('.slider-mob-popup-holder').css({
+            'opacity' : '0',
+            'z-index' : '-1'
+        });
     });
 
     //Vertical carousel on the slide6

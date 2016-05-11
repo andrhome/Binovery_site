@@ -335,8 +335,7 @@ a, a:hover{
 .web-content{
 	max-width: 810px; 
 	margin: 0 auto; 
-	overflow: hidden;
-	
+	overflow: hidden;	
 	.left-col{
 		width: 49.4%;
 		height: 470px;
@@ -353,7 +352,6 @@ a, a:hover{
 		&:after{  
 			@extend .afterPointBottom; 
 		}
-
 		h2{
 			font-size: 18px;
 			font-weight: 600;
@@ -390,13 +388,12 @@ a, a:hover{
 		&:after{  
 			@extend .afterPointTop; 
 		}
-
 		.carousel-dom-wf-holder{
 			background: url(../images/web-bg-2.jpg) 0 0 no-repeat;
 			background-size: cover;
 			background-position: 50%;
 			margin-bottom: 6px;
-			padding: 50px 0 65px 0;
+			padding: 40px 0 75px;
 			position: relative;
 			&:before{
 				@extend .beforePointBottom;
@@ -412,7 +409,7 @@ a, a:hover{
 				background-size: contain;
 				background-position: 50%;
 				position: relative;
-				padding-top: 11px;
+				padding: 11px 43px 0 43px;
 				&:after{
 					content: '';
 					width: 130%;
@@ -429,14 +426,15 @@ a, a:hover{
 					}
 					.bx-wrapper img{
 						width: 245px !important;
-						margin: 0 auto;
+						cursor: pointer;
 					}
 					.outside{
 						position: absolute;
-						top: 35%;
-    					right: -13px;
+						bottom: -40px;
+    					right: 42%;
 						span{
-							display: block;
+							display: inline-block;
+							vertical-align: top;
 							width: 23px;
 							height: 22px;
 							color: transparent;
@@ -456,12 +454,14 @@ a, a:hover{
 						}
 						.slider-prev{
 							background: url(../images/ico-prev.png) 0 0 no-repeat;
-							margin-bottom: 3px;
+							margin-right: 3px;
+							-webkit-transform: rotate(-90deg);
+							transform: rotate(-90deg);
 						}
 						.slider-next{
 							background: url(../images/ico-prev.png) 0 0 no-repeat;
-							-webkit-transform: rotate(180deg);
-							transform: rotate(180deg);
+							-webkit-transform: rotate(90deg);
+							transform: rotate(90deg);
 						}
 					}
 				}
@@ -469,62 +469,104 @@ a, a:hover{
 		}
 	}
 }
-.slider-web-popup{
+.slider-web-popup-holder{
 	background: url(../images/web-bg-4.jpg) 0 0 no-repeat;
 	background-size: cover;
 	width: 100%;
 	height: 100%;
-	@extend .flexCol;
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 100;
-	.carousel-web-popup-holder{
-		width: 750px;
-		position: relative;
-		background: url(../images/carousel-bg.png) 0 0 no-repeat;
-		background-size: contain;
-		background-position: 50%;
-		padding: 25px 0 55px 0;
-		.carousel-web-popup{
-			.bx-controls{
-				display: none;
-			}
-			.bx-wrapper img{
-				width: 75% !important;
-				margin: 0 auto;
-			}
-			.outside{
+	z-index: -1;
+    opacity: 0;
+    -webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	.slider-web-popup{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		.closer{
+			font-size: 30px;
+			line-height: 30px;
+			font-family: 'Open Sans', Arial, sans-serif;
+			font-weight: 300;
+			color: #fff;
+			background: none;
+			border: 0;
+			cursor: pointer;
+			opacity: .7;
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			&:hover{opacity: 1}
+		}
+		.carousel-web-popup-holder{
+			width: 750px;
+			height: 435px;
+			position: relative;
+			background: url(../images/carousel-bg.png) 0 0 no-repeat;
+			background-size: contain;
+			background-position: 50%;
+			padding: 26px 98px 46px 98px;
+			&:after{
+				content: '';
+				width: 137%;
+				height: 185px;
+				background: url(../images/shadow-web-2.png) 0 0 no-repeat;
+				background-size: cover;
+				background-position: 50%;
 				position: absolute;
-				top: 35%;
-				right: -40px;
-				span{
-					display: block;
-					width: 23px;
-					height: 22px;
-					color: transparent;
-					cursor: pointer;
-					opacity: .4;
-					-webkit-transition: all .3s ease-in-out;
-					transition: all .3s ease-in-out;
-					&:hover{
-						opacity: 1;
-					}
-					a{
+				bottom: -76px;
+	    		left: -130px;
+			}
+			.carousel-web-popup{
+				.bx-controls{
+					display: none;
+				}
+				.bx-wrapper img{
+					width: 100% !important;
+					margin: 0 auto;
+				}
+				.outside{
+					display: flex;
+					position: absolute;
+					bottom: -50px;
+					right: 46.5%;
+					z-index: 1;
+					span{
 						display: inline-block;
-						width: 100%;
-						height: 100%;
-						text-indent: -9999px;
+						vertical-align: top;
+						width: 23px;
+						height: 22px;
+						color: transparent;
+						cursor: pointer;
+						opacity: .4;
+						-webkit-transition: all .3s ease-in-out;
+						transition: all .3s ease-in-out;
+						&:hover{
+							opacity: 1;
+						}
+						a{
+							display: inline-block;
+							width: 100%;
+							height: 100%;
+							text-indent: -9999px;
+						}
 					}
-				}
-				.sl-prev{
-					background: url(../images/ico-prev.png) 0 0 no-repeat;
-					margin-bottom: 3px;
-				}
-				.sl-next{
-					background: url(../images/ico-prev.png) 0 0 no-repeat;
-					-webkit-transform: rotate(180deg);
-					transform: rotate(180deg);
+					.sl-prev{
+						background: url(../images/ico-prev.png) 0 0 no-repeat;
+						margin-right: 5px;
+						-webkit-transform: rotate(-90deg);
+						transform: rotate(-90deg);
+					}
+					.sl-next{
+						background: url(../images/ico-prev.png) 0 0 no-repeat;
+						-webkit-transform: rotate(90deg);
+						transform: rotate(90deg);
+					}
 				}
 			}
 		}
@@ -690,6 +732,7 @@ a, a:hover{
 					.bx-wrapper img{
 						width: 160px !important;
 						margin: 0 auto;
+						cursor: pointer;
 					}
 					.outside{
 						position: absolute;
@@ -723,6 +766,107 @@ a, a:hover{
 							-webkit-transform: rotate(180deg);
 							transform: rotate(180deg);
 						}
+					}
+				}
+			}
+		}
+	}
+}
+.slider-mob-popup-holder{
+	background: url(../images/mob-bg-4.jpg) 0 0 no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+    opacity: 0;
+    -webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	.slider-mob-popup{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		.closer{
+			font-size: 30px;
+			line-height: 30px;
+			font-family: 'Open Sans', Arial, sans-serif;
+			font-weight: 300;
+			color: #fff;
+			background: none;
+			border: 0;
+			cursor: pointer;
+			opacity: .7;
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			&:hover{opacity: 1}
+		}
+		.carousel-mob-popup-holder{
+			width: 350px;
+			height: 610px;
+			position: relative;
+			background: url(../images/iphone-bg.png) 0 0 no-repeat;
+			background-size: contain;
+			background-position: 50%;
+			padding: 80px 49px;
+			&:after{
+				content: '';
+				width: 137%;
+				height: 105px;
+				background: url(../images/shadow-mob-2.png) 0 0 no-repeat;
+				background-size: cover;
+				background-position: 50%;
+				position: absolute;
+				bottom: -35px;
+    			left: -61px;
+			}
+			.carousel-mob-popup{
+				.bx-controls{
+					display: none;
+				}
+				.bx-wrapper img{
+					width: 100% !important;
+					margin: 0 auto;
+				}
+				.outside{
+					position: absolute;
+					bottom: -48px;
+				    right: 42%;
+				    z-index: 1;
+					span{
+						display: inline-block;
+						width: 23px;
+						height: 22px;
+						color: transparent;
+						cursor: pointer;
+						opacity: .4;
+						-webkit-transition: all .3s ease-in-out;
+						transition: all .3s ease-in-out;
+						&:hover{
+							opacity: 1;
+						}
+						a{
+							display: inline-block;
+							width: 100%;
+							height: 100%;
+							text-indent: -9999px;
+						}
+					}
+					.mob-prev{
+						background: url(../images/ico-prev.png) 0 0 no-repeat;
+						margin-right: 3px;
+						-webkit-transform: rotate(-90deg);
+						transform: rotate(-90deg);
+					}
+					.mob-next{
+						background: url(../images/ico-prev.png) 0 0 no-repeat;
+						-webkit-transform: rotate(90deg);
+						transform: rotate(90deg);
 					}
 				}
 			}
