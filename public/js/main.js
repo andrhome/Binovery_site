@@ -268,20 +268,52 @@ $(document).ready(function() {
 
     //Vertical carousel on the slide6
     $('.bxslider-team').bxSlider({
-        mode: 'vertical',
+        mode: 'horizontal',
         auto: true,
-        pause: 5000,
-        speed: 1000,
-        nextSelector: '.slider-next_team',
-        prevSelector: '.slider-prev_team'
+        pause: 100000,
+        speed: 1500,
+        nextSelector: '.next_team',
+        prevSelector: '.prev_team'
+    });
+    //Masonry settings
+    var $container = jQuery('.masonry-container');
+    $container.imagesLoaded( function(){
+        $container.masonry({
+            itemSelector : '.item',
+            columnWidth: '.item',
+            gutterWidth: 30,
+            stamp: '.stamp',
+            isResizable: true
+        });
     });
 
     //Vertical carousel on the slide7
     $('.bxslider-framework').bxSlider({
-        mode: 'vertical',
+        mode: 'horizontal',
         nextSelector: '.slider-next_frame',
         prevSelector: '.slider-prev_frame',
         slideMargin: 5
+    });
+
+    //Vertical popup carousel on the slide7
+    $('.bxslider-frame-popup').bxSlider({
+        mode: 'horizontal',
+        nextSelector: '.frame-next',
+        prevSelector: '.frame-prev',
+        slideMargin: 5
+    });
+    //SLIDE7: show and hide '.slider-frame-popup-holder'
+    $('.bxslider-framework img').click(function() {
+        $('.slider-frame-popup-holder').css({
+            'opacity' : '1',
+            'z-index' : '100'
+        });
+    });
+    $('.slider-frame-popup-holder .closer, #nav-wrap, #slide1, #slide2, #slide3, #slide4, #slide5, #slide6, #slide8, #slide9, #slide10').click(function() {
+        $('.slider-frame-popup-holder').css({
+            'opacity' : '0',
+            'z-index' : '-1'
+        });
     });
 
     //Vertical carousel on the slide9
@@ -294,30 +326,6 @@ $(document).ready(function() {
         slideMargin: 5
     });
 
-    //Masonry settings
-    var $container = jQuery('.masonry-container');
-        $container.imagesLoaded( function(){
-            $container.masonry({
-                itemSelector : '.item',
-                columnWidth: '.item',
-                gutterWidth: 30,
-                isResizable: true
-            });
-        });
-
-    //Team slider
-    // ;(function(slider) {
-    //     if(!slider) return;
-
-    //     var masonryBlock = document.
-
-    //     function cssGenerator(prop, val, el) {
-    //         el.style.cssText += prop + ':' + (val) + 'px';
-    //     };
-
-    //     function moveSlider() {
-
-    //     };
-    // }());
+    
 
 });

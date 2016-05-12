@@ -72,9 +72,7 @@ a, a:hover{
 		bottom: -70px;
 		opacity: 0;
 	}
-	85%{
-		opacity: .95;
-	}
+	85%{opacity: .95;}
 	to{
 		opacity: 1;
 		bottom: 0;
@@ -85,16 +83,18 @@ a, a:hover{
 		opacity: 0;
 		top: -500px;
 	} 
-	70%{
-		top: 30px;
-	}
-	95%{
-		top: 10px;
-	}
+	70%{top: 30px;}
+	95%{top: 10px;}
 	to{
 		opacity: 1;
 		top: 15px;
 	}
+}
+@keyframes fade {
+	from {opacity: 0;} 
+	30%{opacity: 0;}
+	85%{opacity: .95;}
+	to{opacity: 1;}
 }
 
 // ************************************SLIDE'S BACKGROUND*********************************
@@ -713,7 +713,7 @@ a, a:hover{
 				background-size: contain;
 				background-position: 50%;
 				position: relative;
-				padding-top: 58px;
+				padding: 58px 13px 55px 13px;
 				&:after{
 					content: '';
 					width: 167%;
@@ -736,10 +736,11 @@ a, a:hover{
 					}
 					.outside{
 						position: absolute;
-						top: 41%;
-	    				right: -55px;
+						bottom: -42px;
+    					right: 36%;
+    					z-index: 1;
 						span{
-							display: block;
+							display: inline-block;
 							width: 23px;
 							height: 22px;
 							color: transparent;
@@ -759,12 +760,14 @@ a, a:hover{
 						}
 						.slider-prev_mob{
 							background: url(../images/ico-prev.png) 0 0 no-repeat;
-							margin-bottom: 3px;
+							margin-right: 3px;
+							-webkit-transform: rotate(-90deg);
+							transform: rotate(-90deg);
 						}
 						.slider-next_mob{
 							background: url(../images/ico-prev.png) 0 0 no-repeat;
-							-webkit-transform: rotate(180deg);
-							transform: rotate(180deg);
+							-webkit-transform: rotate(90deg);
+							transform: rotate(90deg);
 						}
 					}
 				}
@@ -1086,50 +1089,63 @@ a, a:hover{
 #slide6, .team-content{
 	position: relative;
 }
-#slide6.active-slide .team-content{
-	animation: fadeUp 2s;
+// #slide6.active-slide .team-content{
+// 	animation: fadeUp 1s;
+// }
+#slide6.active-slide .item{
+	animation: fade 1.6s;
 }
+#slide6.active-slide .item:nth-child(2){
+	animation: fade 2.3s;
+}
+#slide6.active-slide .item:nth-child(3){
+	animation: fade 2.6s;
+}
+#slide6.active-slide .item:nth-child(4){
+	animation: fade 2s;
+}
+#slide6.active-slide .item:nth-child(5){
+	animation: fade 2.4s;
+}
+#slide6.active-slide .item:nth-child(6){
+	animation: fade 1.8s;
+}
+#slide6.active-slide .item:nth-child(7){
+	animation: fade 2s;
+}
+#slide6.active-slide .item:last-child{
+	animation: fade 2.7s;
+}
+
 // ***************animation END***************
 #slide6{
-	position: relative;
-	.logo{
-		width: 120px;
-		position: absolute;
-		top: 15px;
-		left: 15px;
-		padding: 0;
-	} 
+	position: relative; 
 	.team-content{
-		max-width: 1000px; 
+		width: 80%; 
 		height: 100%;
-		padding-right: 52px;
 		margin: 0 auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-
-		.left-col{
-			width: 41%;
-			height: 320px;
-			padding-bottom: 25px;
+		padding-top: 2%;
+		.top-section{
+			width: 70%;
+			height: 150px;
 			background: url(../images/team-bg-1.jpg) 0 0 no-repeat;
 			background-size: cover;
 			background-position: 50%;
 			position: relative;
+			margin: 0 auto 30px;
+			overflow: hidden;
 			&:before{
 				@extend .beforePointBottom;
 			}
 			&:after{  
 				@extend .afterPointBottom; 
 			}
-
 			h2{
 				font-size: 18px;
 				font-weight: 600;
 				color: #fff;
 				text-align: center;
-				margin-bottom: 25px;
+				margin-bottom: 10px;
 				padding: 25px 10px 0 10px;
 				position: relative;
 				&:before{
@@ -1141,62 +1157,13 @@ a, a:hover{
 			}
 			.text{
 				line-height: 25px;
-				padding: 0 25px;
+				padding: 0 25px 20px;
 				p{
-					margin-bottom: 20px;
+					margin-bottom: 5px;
 				}
 			}
 		}
-		.right-col{
-			width: 58.7%;
-			// .team-slider{
-			// 	position: relative;
-			// 	.masonry-container{
-			// 		padding: 0;
-			// 		&:after{
-			// 			content: '';
-			// 			clear: both;
-			// 			display: block;
-			// 		}
-			// 		.item{
-			// 			width: 50%;
-			// 			float: left;
-			// 			padding: 3px;
-			// 			img{
-			// 				width: 100%;
-			// 				display: block;
-			// 			}
-			// 		}
-			// 	}
-			// 	.own-nav{
-			// 		position: absolute;
-			// 		top: 47%;
-			// 		right: -50px;
-			// 		span{
-			// 			width: 23px;
-			// 			height: 22px;
-			// 			display: block;
-			// 			cursor: pointer;
-			// 			opacity: .4;
-			// 			&:hover{
-			// 				opacity: 1;
-			// 			}
-			// 		}
-			// 		.prev{
-			// 			background: url(../images/ico-prev.png) 0 0 no-repeat;
-			// 			margin-bottom: 3px;
-						
-			// 			-webkit-transition: all .3s ease-in-out;
-			// 			transition: all .3s ease-in-out;
-						
-			// 		}
-			// 		.next{
-			// 			background: url(../images/ico-prev.png) 0 0 no-repeat;
-			// 			-webkit-transform: rotate(180deg);
-			// 			transform: rotate(180deg);
-			// 		}
-			// 	}
-			// }
+		.main-col{
 			.carousel-container{
 				position: relative;
 				.team-carousel{
@@ -1209,9 +1176,12 @@ a, a:hover{
 								display: block;
 							}
 							.item{
-								width: 50%;
+								width: 25%;
 								float: left;
 								padding: 3px;
+								cursor: pointer;
+								-webkit-transition: all .3s ease-in-out;
+								transition: all .3s ease-in-out;
 								img{
 									width: 100%;
 									display: block;
@@ -1223,21 +1193,20 @@ a, a:hover{
 						display: none;
 					}
 					.outside{
+						width: 100%;
+						height: 0;
 						position: absolute;
-						top: 47%;
-						right: -40px;
+						top: 36%;
+					    left: 0;
 						span{
-							display: block;
-							width: 23px;
-							height: 22px;
+							display: inline-block;
+							width: 46px;
+							height: 44px;
 							color: transparent;
 							cursor: pointer;
-							opacity: .4;
+							opacity: 0;
 							-webkit-transition: all .3s ease-in-out;
 							transition: all .3s ease-in-out;
-							&:hover{
-								opacity: 1;
-							}
 							a{
 								display: inline-block;
 								width: 100%;
@@ -1245,16 +1214,32 @@ a, a:hover{
 								text-indent: -9999px;
 							}
 						}
-						.slider-prev_team{
-							background: url(../images/ico-prev.png) 0 0 no-repeat;
-							margin-bottom: 3px;
+						.prev_team{
+							background: url(../images/ico-prev3.jpg) 0 0 no-repeat;
+							background-size: cover;
+							-webkit-transform: rotate(-90deg);
+							transform: rotate(-90deg);
+							margin-left: -50px;
 						}
-						.slider-next_team{
-							background: url(../images/ico-prev.png) 0 0 no-repeat;
-							-webkit-transform: rotate(180deg);
-							transform: rotate(180deg);
+						.next_team{
+							background: url(../images/ico-prev3.jpg) 0 0 no-repeat;
+							background-size: cover;
+							-webkit-transform: rotate(90deg);
+							transform: rotate(90deg);
+							float: right;
+							margin-right: -50px;
 						}
 					}
+				}
+			}
+			&:hover{
+				.carousel-container .team-carousel .outside .prev_team{
+					opacity: .6;
+					margin-left: 8px;
+				}
+				.carousel-container .team-carousel .outside .next_team{
+					opacity: .6;
+					margin-right: 8px;
 				}
 			}
 		}
@@ -1353,7 +1338,7 @@ a, a:hover{
 				background-size: contain;
 				background-position: 50%;
 				position: relative;
-				padding-top: 11px;
+				padding: 11px 43px 0;
 				&:after{
 					content: '';
 					width: 130%;
@@ -1372,13 +1357,14 @@ a, a:hover{
 					.bx-wrapper img{
 						width: 245px !important;
 						margin: 0 auto;
+						cursor: pointer;
 					}
 					.outside{
 						position: absolute;
-						top: 35%;
-    					right: -13px;
+						bottom: -40px;
+    					right: 42%;
 						span{
-							display: block;
+							display: inline-block;
 							width: 23px;
 							height: 22px;
 							color: transparent;
@@ -1398,12 +1384,14 @@ a, a:hover{
 						}
 						.slider-prev_frame{
 							background: url(../images/ico-prev.png) 0 0 no-repeat;
-							margin-bottom: 3px;
+							margin-right: 3px;
+							-webkit-transform: rotate(-90deg);
+							transform: rotate(-90deg);
 						}
 						.slider-next_frame{
 							background: url(../images/ico-prev.png) 0 0 no-repeat;
-							-webkit-transform: rotate(180deg);
-							transform: rotate(180deg);
+							-webkit-transform: rotate(90deg);
+							transform: rotate(90deg);
 						}
 					}
 				}
@@ -1411,7 +1399,109 @@ a, a:hover{
 		}
 	}
 }
-
+.slider-frame-popup-holder{
+	background: url(../images/web-bg-4.jpg) 0 0 no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+    opacity: 0;
+    -webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	.slider-frame-popup{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		.closer{
+			font-size: 30px;
+			line-height: 30px;
+			font-family: 'Open Sans', Arial, sans-serif;
+			font-weight: 300;
+			color: #fff;
+			background: none;
+			border: 0;
+			cursor: pointer;
+			opacity: .7;
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			&:hover{opacity: 1}
+		}
+		.carousel-frame-popup-holder{
+			width: 750px;
+			height: 435px;
+			position: relative;
+			background: url(../images/carousel-bg.png) 0 0 no-repeat;
+			background-size: contain;
+			background-position: 50%;
+			padding: 26px 98px 46px 98px;
+			&:after{
+				content: '';
+				width: 137%;
+				height: 185px;
+				background: url(../images/shadow-web-2.png) 0 0 no-repeat;
+				background-size: cover;
+				background-position: 50%;
+				position: absolute;
+				bottom: -76px;
+	    		left: -130px;
+			}
+			.carousel-frame-popup{
+				.bx-controls{
+					display: none;
+				}
+				.bx-wrapper img{
+					width: 100% !important;
+					margin: 0 auto;
+				}
+				.outside{
+					display: flex;
+					position: absolute;
+					bottom: -50px;
+					right: 46.5%;
+					z-index: 1;
+					span{
+						display: inline-block;
+						vertical-align: top;
+						width: 23px;
+						height: 22px;
+						color: transparent;
+						cursor: pointer;
+						opacity: .4;
+						-webkit-transition: all .3s ease-in-out;
+						transition: all .3s ease-in-out;
+						&:hover{
+							opacity: 1;
+						}
+						a{
+							display: inline-block;
+							width: 100%;
+							height: 100%;
+							text-indent: -9999px;
+						}
+					}
+					.frame-prev{
+						background: url(../images/ico-prev.png) 0 0 no-repeat;
+						margin-right: 5px;
+						-webkit-transform: rotate(-90deg);
+						transform: rotate(-90deg);
+					}
+					.frame-next{
+						background: url(../images/ico-prev.png) 0 0 no-repeat;
+						-webkit-transform: rotate(90deg);
+						transform: rotate(90deg);
+					}
+				}
+			}
+		}
+	}
+}
 // ************************************SLIDE 8*********************************
 #slide8, .blog-content{
 	position: relative;
