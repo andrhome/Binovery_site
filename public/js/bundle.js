@@ -11,7 +11,7 @@
 		 */
 
 		var defaults = {
-			speed : 5000,
+			speed : 1000,
 			autoPlay : false,
 			bodyID : 'fsvs-body',
 			selector : '> .slide',

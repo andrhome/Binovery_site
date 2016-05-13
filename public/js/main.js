@@ -2,68 +2,64 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     //Code for main scroll plugin "FSVS"
-    var brouser = navigator.userAgent;
-    var regV = /firefox/i;
-    if(brouser.search(regV) != -1) {
-        var slider = $.fn.fsvs({
-            autoPlay            : false,
-            speed               : 1000,
-            bodyID              : 'fsvs-body',
-            selector            : '> .slide',
-            mouseSwipeDisance   : 40,
-            afterSlide          : function(){},
-            beforeSlide         : function(){},
-            endSlide            : function(){},
-            mouseWheelEvents    : false, // в FireFox отменяем скролл
-            mouseWheelDelay     : false,
-            mouseDragEvents     : true,
-            touchEvents         : true,
-            arrowKeyEvents      : true,
-            pagination          : true,
-            nthClasses          : 2,
-            detectHash          : true
-        });
-    } else{
-        slider = $.fn.fsvs({
-            autoPlay            : false,
-            speed               : 1000,
-            bodyID              : 'fsvs-body',
-            selector            : '> .slide',
-            mouseSwipeDisance   : 40,
-            afterSlide          : function(){},
-            beforeSlide         : function(){},
-            endSlide            : function(){},
-            mouseWheelEvents    : true,
-            mouseWheelDelay     : false,
-            mouseDragEvents     : true,
-            touchEvents         : true,
-            arrowKeyEvents      : true,
-            pagination          : true,
-            nthClasses          : 2,
-            detectHash          : true
-        });
+    if(window.innerWidth > 768) {
+        var brouser = navigator.userAgent;
+        var regV = /firefox/i;
+        if(brouser.search(regV) != -1) {
+            var slider = $.fn.fsvs({
+                autoPlay            : false,
+                speed               : 1000,
+                bodyID              : 'fsvs-body',
+                selector            : '> .slide',
+                mouseSwipeDisance   : 40,
+                afterSlide          : function(){},
+                beforeSlide         : function(){},
+                endSlide            : function(){},
+                mouseWheelEvents    : false, // в FireFox отменяем скролл
+                mouseWheelDelay     : false,
+                mouseDragEvents     : false, // Disabling touch-scroll pages
+                touchEvents         : true,
+                arrowKeyEvents      : true,
+                pagination          : true,
+                nthClasses          : 2,
+                detectHash          : true
+            });
+        } else{
+            slider = $.fn.fsvs({
+                autoPlay            : false,
+                speed               : 1000,
+                bodyID              : 'fsvs-body',
+                selector            : '> .slide',
+                mouseSwipeDisance   : 40,
+                afterSlide          : function(){},
+                beforeSlide         : function(){},
+                endSlide            : function(){},
+                mouseWheelEvents    : true,
+                mouseWheelDelay     : false,
+                mouseDragEvents     : false, // Disabling touch-scroll pages
+                touchEvents         : true,
+                arrowKeyEvents      : true,
+                pagination          : true,
+                nthClasses          : 2,
+                detectHash          : true
+            });
+        };
+    } else {
+        // Delete class 'fsvs' from <html> for inclusion scroll
+        var html = document.querySelector('html');
+        html.classList.remove('fsvs');
     };
 
-    //Enabling touch event
-    // if( $(window).width() < 1030 ) {
-    //     slider = $.fn.fsvs({
-    //         speed               : 1000,
-    //         bodyID              : 'fsvs-body',
-    //         selector            : '> .slide',
-    //         mouseSwipeDisance   : 40,
-    //         afterSlide          : function(){},
-    //         beforeSlide         : function(){},
-    //         endSlide            : function(){},
-    //         mouseWheelEvents    : true,
-    //         mouseWheelDelay     : false,
-    //         mouseDragEvents     : true,
-    //         touchEvents         : true,
-    //         arrowKeyEvents      : true,
-    //         pagination          : true,
-    //         nthClasses          : 2,
-    //         detectHash          : true
-    //     });
-    //}
+    //Enabling touch-scroll event
+    if( window.innerWidth <= 1030 ) {
+        slider = $.fn.fsvs({
+            mouseDragEvents : true
+        });
+
+        // Adding class 'nav-true' to '#nav-wrap' for remove it
+        var mainNav = document.getElementById('nav-wrap');
+        mainNav.classList.add('nav-true');
+    };
     //END
 
 
@@ -286,6 +282,27 @@ $(document).ready(function() {
             isResizable: true
         });
     });
+    //Vertical popup carousel on the slide6
+    $('.bxslider-team-popup').bxSlider({
+        mode: 'horizontal',
+        adaptiveHeight: true,
+        nextSelector: '.team-next',
+        prevSelector: '.team-prev',
+        slideMargin: 5
+    });
+    //SLIDE3: show and hide '.slider-team-popup-holder'
+    $('.bxslider-team img').click(function() {
+        $('.slider-team-popup-holder').css({
+            'opacity' : '1',
+            'z-index' : '100'
+        });
+    });
+    $('.slider-team-popup-holder .closer, #nav-wrap, #slide1, #slide2, #slide3, #slide4, #slide5, #slide7, #slide8, #slide9, #slide10').click(function() {
+        $('.slider-team-popup-holder').css({
+            'opacity' : '0',
+            'z-index' : '-1'
+        });
+    });
 
     //Vertical carousel on the slide7
     $('.bxslider-framework').bxSlider({
@@ -318,8 +335,8 @@ $(document).ready(function() {
 
     //Vertical carousel on the slide9
     $('.bxslider-reviews').bxSlider({
-        adaptiveHeight: true,
         mode: 'horizontal',
+        adaptiveHeight: true,
         auto: true,
         pause: 5000,
         speed: 700,

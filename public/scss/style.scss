@@ -62,6 +62,22 @@ a, a:hover{
 	align-items: center;
 	justify-content: center;
 }
+.closerPopup{
+	font-size: 30px;
+	line-height: 30px;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-weight: 300;
+	color: #fff;
+	background: none;
+	border: 0;
+	cursor: pointer;
+	opacity: .7;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	z-index: 1;
+	&:hover{opacity: 1}
+}
 //**********animation settings***********
 @keyframes fadeUp {
 	from {
@@ -92,8 +108,7 @@ a, a:hover{
 }
 @keyframes fade {
 	from {opacity: 0;} 
-	30%{opacity: 0;}
-	85%{opacity: .95;}
+	70%{opacity: 0;}
 	to{opacity: 1;}
 }
 
@@ -101,6 +116,7 @@ a, a:hover{
 #slide1{
 	background: url(../images/slide-1-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
+	background-position: 50%;
 }
 #slide2{
 	background: url(../images/slide-2-bg.jpg) 0 0 no-repeat;
@@ -110,14 +126,17 @@ a, a:hover{
 #slide3{
 	background: url(../images/slide-3-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
+	background-position: 50%;
 }
 #slide4{
 	background: url(../images/slide-4-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
+	background-position: 50%;
 }
 #slide5{
 	background: url(../images/slide-5-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
+	background-position: 50%;
 }
 #slide6{
 	background: url(../images/slide-6-bg.jpg) 0 0 no-repeat;
@@ -127,6 +146,7 @@ a, a:hover{
 #slide7{
 	background: url(../images/slide-7-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
+	background-position: 50%;
 } 
 #slide8{
 	background: url(../images/slide-8-bg.jpg) 0 0 no-repeat;
@@ -140,12 +160,10 @@ a, a:hover{
 }
 
 // ************************************Navigation*********************************
+#nav-wrap.nav-true + #nav-wrap{display: none;}
 #nav-wrap{
 	width: 50px; 
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     margin: 0;
     position: fixed;
     background: rgba(0,0,0, 0.3);
@@ -489,19 +507,7 @@ a, a:hover{
 		align-items: center;
 		justify-content: center;
 		.closer{
-			font-size: 30px;
-			line-height: 30px;
-			font-family: 'Open Sans', Arial, sans-serif;
-			font-weight: 300;
-			color: #fff;
-			background: none;
-			border: 0;
-			cursor: pointer;
-			opacity: .7;
-			position: absolute;
-			top: 15px;
-			left: 15px;
-			&:hover{opacity: 1}
+			@extend .closerPopup;
 		}
 		.carousel-web-popup-holder{
 			width: 750px;
@@ -795,19 +801,7 @@ a, a:hover{
 		align-items: center;
 		justify-content: center;
 		.closer{
-			font-size: 30px;
-			line-height: 30px;
-			font-family: 'Open Sans', Arial, sans-serif;
-			font-weight: 300;
-			color: #fff;
-			background: none;
-			border: 0;
-			cursor: pointer;
-			opacity: .7;
-			position: absolute;
-			top: 15px;
-			left: 15px;
-			&:hover{opacity: 1}
+			@extend .closerPopup;
 		}
 		.carousel-mob-popup-holder{
 			width: 350px;
@@ -1089,32 +1083,29 @@ a, a:hover{
 #slide6, .team-content{
 	position: relative;
 }
-// #slide6.active-slide .team-content{
-// 	animation: fadeUp 1s;
-// }
 #slide6.active-slide .item{
-	animation: fade 1.6s;
+	animation: fade 1s;
 }
 #slide6.active-slide .item:nth-child(2){
-	animation: fade 2.3s;
+	animation: fade 1.5s;
 }
 #slide6.active-slide .item:nth-child(3){
-	animation: fade 2.6s;
+	animation: fade 1.1s;
 }
 #slide6.active-slide .item:nth-child(4){
-	animation: fade 2s;
+	animation: fade 1.9s;
 }
 #slide6.active-slide .item:nth-child(5){
-	animation: fade 2.4s;
+	animation: fade 1.2s;
 }
 #slide6.active-slide .item:nth-child(6){
-	animation: fade 1.8s;
+	animation: fade 1.3s;
 }
 #slide6.active-slide .item:nth-child(7){
-	animation: fade 2s;
+	animation: fade 1.7s;
 }
 #slide6.active-slide .item:last-child{
-	animation: fade 2.7s;
+	animation: fade 2s;
 }
 
 // ***************animation END***************
@@ -1127,7 +1118,6 @@ a, a:hover{
 		padding-top: 2%;
 		.top-section{
 			width: 70%;
-			height: 150px;
 			background: url(../images/team-bg-1.jpg) 0 0 no-repeat;
 			background-size: cover;
 			background-position: 50%;
@@ -1240,6 +1230,111 @@ a, a:hover{
 				.carousel-container .team-carousel .outside .next_team{
 					opacity: .6;
 					margin-right: 8px;
+				}
+			}
+		}
+	}
+}
+.slider-team-popup-holder{
+	background: url(../images/web-bg-4.jpg) 0 0 no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+    opacity: 0;
+    -webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	.slider-team{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		.closer{
+			@extend .closerPopup;
+		}
+		.carousel-team-popup{
+			width: 80%;
+			position: relative;
+			.bx-controls{
+				display: none;
+			}
+			.bx-wrapper img{
+				width: 80% !important;
+				margin: 0 auto;
+			}
+			.outside{
+				width: 100%;
+				height: 0;
+				position: absolute;
+				top: 44%;
+			    left: 0;
+				span{
+					display: inline-block;
+					width: 46px;
+					height: 44px;
+					color: transparent;
+					cursor: pointer;
+					-webkit-transition: all .3s ease-in-out;
+					transition: all .3s ease-in-out;
+					a{
+						display: inline-block;
+						width: 100%;
+						height: 100%;
+						text-indent: -9999px;
+					}
+				}
+				.team-prev{
+					background: url(../images/ico-prev3.jpg) 0 0 no-repeat;
+					background-size: cover;
+					-webkit-transform: rotate(-90deg);
+					transform: rotate(-90deg);
+					opacity: 0;
+					margin-left: -50px;
+				}
+				.team-next{
+					background: url(../images/ico-prev3.jpg) 0 0 no-repeat;
+					background-size: cover;
+					-webkit-transform: rotate(90deg);
+					transform: rotate(90deg);
+					float: right;
+					opacity: 0;
+					margin-right: -50px;
+				}
+			}
+			&:hover{
+				.outside .team-prev{
+					opacity: .6;
+					margin-left: 8px;
+				}
+				.outside .team-next{
+					opacity: .6;
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1024px) {
+	#slide6{
+		.team-content{
+			.top-section{
+				width: 100%;
+			}
+			.main-col{
+				.carousel-container .prev_team,
+				.slider-team-popup-holder .team-prev{
+					opacity: .7 !important;
+					margin-left: 8px !important;
+				}
+				.carousel-container .next_team,
+				.slider-team-popup-holder .team-next{
+					opacity: .7 !important;
+					margin-right: 8px !important;
 				}
 			}
 		}
@@ -1419,19 +1514,7 @@ a, a:hover{
 		align-items: center;
 		justify-content: center;
 		.closer{
-			font-size: 30px;
-			line-height: 30px;
-			font-family: 'Open Sans', Arial, sans-serif;
-			font-weight: 300;
-			color: #fff;
-			background: none;
-			border: 0;
-			cursor: pointer;
-			opacity: .7;
-			position: absolute;
-			top: 15px;
-			left: 15px;
-			&:hover{opacity: 1}
+			@extend .closerPopup;
 		}
 		.carousel-frame-popup-holder{
 			width: 750px;
