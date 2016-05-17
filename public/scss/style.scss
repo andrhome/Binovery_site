@@ -17,6 +17,7 @@ a, a:hover{
 	width: 5px;
 	height: 5px;
 	background: #fff;
+	-webkit-border-radius: 50%;
 	border-radius: 50%;
 	position: absolute;
 	top: 5px;
@@ -28,6 +29,7 @@ a, a:hover{
 	width: 5px;
 	height: 5px;
 	background: #fff;
+	-webkit-border-radius: 50%;
 	border-radius: 50%;
 	position: absolute;
 	top: 5px;  
@@ -39,6 +41,7 @@ a, a:hover{
 	width: 5px;
 	height: 5px;
 	background: #fff;
+	-webkit-border-radius: 50%;
 	border-radius: 50%;
 	position: absolute;
 	bottom: 5px;
@@ -50,6 +53,7 @@ a, a:hover{
 	width: 5px;
 	height: 5px;
 	background: #fff;
+	-webkit-border-radius: 50%;
 	border-radius: 50%;
 	position: absolute;
 	bottom: 5px;  
@@ -79,37 +83,39 @@ a, a:hover{
 	&:hover{opacity: 1}
 }
 //**********animation settings***********
-@keyframes fadeUp {
-	from {
-		bottom: -1000px;
-		opacity: 0;
-	} 
-	50%{
-		bottom: -70px;
-		opacity: 0;
+@media screen and (min-width: 1025px){
+	@keyframes fadeUp {
+		from {
+			bottom: -1000px;
+			opacity: 0;
+		} 
+		50%{
+			bottom: -70px;
+			opacity: 0;
+		}
+		85%{opacity: .95;}
+		to{
+			opacity: 1;
+			bottom: 0;
+		}
 	}
-	85%{opacity: .95;}
-	to{
-		opacity: 1;
-		bottom: 0;
+	@keyframes slideDown {
+		from {
+			opacity: 0;
+			top: -500px;
+		} 
+		70%{top: 30px;}
+		95%{top: 10px;}
+		to{
+			opacity: 1;
+			top: 15px;
+		}
 	}
-}
-@keyframes slideDown {
-	from {
-		opacity: 0;
-		top: -500px;
-	} 
-	70%{top: 30px;}
-	95%{top: 10px;}
-	to{
-		opacity: 1;
-		top: 15px;
+	@keyframes fade {
+		from {opacity: 0;} 
+		70%{opacity: 0;}
+		to{opacity: 1;}
 	}
-}
-@keyframes fade {
-	from {opacity: 0;} 
-	70%{opacity: 0;}
-	to{opacity: 1;}
 }
 
 // ************************************SLIDE'S BACKGROUND*********************************
@@ -117,48 +123,79 @@ a, a:hover{
 	background: url(../images/slide-1-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
 	background-position: 50%;
+	@media screen and (max-width: 1024px){
+		-webkit-background-image: radial-gradient(circle at 50% 50%, #fe9c1c, #e16600);
+		background-image: radial-gradient(circle at 50% 50%, #fe9c1c, #e16600);
+	}
 }
 #slide2{
 	background: url(../images/slide-2-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
 	background-position: 50%; 
+	@media screen and (max-width: 1024px){
+		-webkit-background-image: radial-gradient(circle at 50% 50%, #484848, #272727);
+		background-image: radial-gradient(circle at 50% 50%, #484848, #272727);
+	}
 }
 #slide3{
 	background: url(../images/slide-3-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
 	background-position: 50%;
+	@media screen and (max-width: 1024px){
+		-webkit-background-image: radial-gradient(circle at 50% 50%, #c9c9c9, #767676);
+		background-image: radial-gradient(circle at 50% 50%, #c9c9c9, #767676);
+	}
 }
 #slide4{
 	background: url(../images/slide-4-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
 	background-position: 50%;
+	@media screen and (max-width: 1024px){
+		-webkit-background-image: radial-gradient(circle at 50% 50%, #b4b4b4, #464646);
+		background-image: radial-gradient(circle at 50% 50%, #b4b4b4, #464646);
+	}
 }
 #slide5{
 	background: url(../images/slide-5-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
 	background-position: 50%;
+	@media screen and (max-width: 1024px){
+		-webkit-background-image: radial-gradient(circle at 50% 50%, #fe9c1c, #e16600);
+		background-image: radial-gradient(circle at 50% 50%, #fe9c1c, #e16600);
+	}
 }
 #slide6{
 	background: url(../images/slide-6-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
 	background-position: 50% 100%;
+	@media screen and (max-width: 1024px){
+		-webkit-background-image: radial-gradient(circle at 50% 50%, #0485be, #00608b);
+		background-image: radial-gradient(circle at 50% 50%, #0485be, #00608b);
+	}
 }
 #slide7{
 	background: url(../images/slide-7-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
 	background-position: 50%;
+	@media screen and (max-width: 1024px){
+		-webkit-background-image: radial-gradient(circle at 50% 50%, #484848, #272727);
+		background-image: radial-gradient(circle at 50% 50%, #484848, #272727);
+	}
 } 
 #slide8{
 	background: url(../images/slide-8-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
 	background-position: 50%;
+	@media screen and (max-width: 1024px){
+		-webkit-background-image: radial-gradient(circle at 50% 50%, #fe9c1c, #e16600);
+		background-image: radial-gradient(circle at 50% 50%, #fe9c1c, #e16600);
+	}
 } 
 #slide9{
 	background: url(../images/slide-9-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
 	background-position: 0 19%;
 }
-
 // ************************************Navigation*********************************
 #nav-wrap.nav-true + #nav-wrap{display: none;}
 #nav-wrap{
@@ -216,10 +253,11 @@ a, a:hover{
     		}
     	}
     }
-} 
+}
 #burgerBtn{
 	width: 38px;
 	text-align: center;
+	-webkit-border-radius: 4px;
 	border-radius: 4px;
 	padding: 10px 0 12px 0;
 	cursor: pointer;
@@ -324,15 +362,156 @@ a, a:hover{
 	}
 }
 
+.fixed-navigation{
+	display: none;
+	width: 100%;
+	background: rgba(0,0,0, .7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	&.active{
+		background: rgba(0,0,0, .9);
+	}
+	.nav-holder{
+		.nav-content{
+			.logo{
+				display: inline-block;
+				vertical-align: top;
+				width: 150px;
+				padding: 15px;
+				img{
+					width: 100%;
+				}
+			}
+			.language-panel{
+				float: right;
+				margin-right: 60px; 
+				padding: 16px;
+				a{
+					display: inline-block;
+					text-decoration: none;
+					color: #fff;
+					-webkit-border-radius: 3px;
+					border-radius: 3px;
+					padding: 0 3px;
+					-webkit-transition: none;
+					transition: none;
+					&:hover{background: rgba(0,0,0, .3);}
+				}
+				.engl{margin-right: 5px;}
+			}
+			.nav-menu{
+				.burger-btn{
+					width: 38px;
+					text-align: center;
+					-webkit-border-radius: 4px;
+					border-radius: 4px;
+					padding: 7px 0 12px;
+					cursor: pointer;
+					position: absolute;
+					top: 9px;
+					right: 5px; 
+					&.active{
+						-webkit-transition: all .3s ease-in-out;
+						transition: all .3s ease-in-out;
+						span{
+							-webkit-transform: rotate(-45deg);
+							transform: rotate(-45deg);
+						}
+						:before{
+							-webkit-transform: rotate(90deg);
+							transform: rotate(90deg);
+							top: 0;
+						}
+						:after{display: none;}
+					}
+					&:active{
+						background: rgba(0,0,0, 0.5);
+					}
+					span{
+						display: inline-block;
+						vertical-align: middle;
+						width: 23px;
+						height: 2px;
+						background: #fff;
+						position: relative;
+						-webkit-transition: all .3s ease-in-out;
+						transition: all .3s ease-in-out;
+						&:before{
+							content: '';
+							width: 100%;
+							height: 2px;
+							background: #fff;
+							position: absolute;
+							top: -5px;
+							right: 0; 
+						}
+						&:after{
+							content: '';
+							width: 50%;
+							height: 2px;
+							background: #fff;
+							position: absolute;
+							bottom: -5px;
+							right: 0;
+						}
+					}
+				}
+				ul{
+					display: none;
+					li{
+						a{
+							display: block;
+							font-size: 15px;
+							text-transform: uppercase;
+							text-decoration: none;
+							color: #fff;
+							padding: 7px 0 7px 15px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1024px){
+	.fixed-navigation{display: block;}
+}
+// ************************************SLIDE 1*********************************
+.slide1{
+	display: none;
+	width: 80%;
+    margin: 0 auto;
+	padding: 100px 10px 40px;
+	.logotype{
+		display: block;
+		margin-bottom: 25px;
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+	.text-box{
+		letter-spacing: 0.7px;
+		line-height: 22px;
+	}
+}
+@media screen and (max-width: 1024px){
+	.slide1{display: block;}
+}
+
 // ************************************SLIDE 2*********************************
 .logo{
 	display: block;
 	width: 150px;
 	padding: 15px;
-
 	img{
 		width: 100%;
 	}
+}
+@media screen and (max-width: 1024px){
+	.logo{display: none;}
 }
 
 // ***************animation START***************
@@ -589,7 +768,7 @@ a, a:hover{
 	background: url(../images/web-bg-3.jpg) 0 0 no-repeat;
 	background-size: cover;
 	background-position: 50%;
-	padding: 30px 10px 0 10px;
+	padding: 30px 0 0;
 	position: relative;
 	&:hover{
 		opacity: .9;
@@ -884,6 +1063,9 @@ a, a:hover{
 	max-width: 810px;
 	margin: 0 auto; 
 	overflow: hidden;
+	@media screen and (max-width: 1024px){
+		opacity: 1;
+	}
 
 	h2{
 		font-size: 18px;
@@ -1319,12 +1501,9 @@ a, a:hover{
 		}
 	}
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
 	#slide6{
 		.team-content{
-			.top-section{
-				width: 100%;
-			}
 			.main-col{
 				.carousel-container .prev_team,
 				.slider-team-popup-holder .team-prev{
@@ -1336,6 +1515,15 @@ a, a:hover{
 					opacity: .7 !important;
 					margin-right: 8px !important;
 				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1024px) {
+	#slide6{
+		.team-content{
+			.top-section{
+				width: 100%;
 			}
 		}
 	}
@@ -1808,6 +1996,7 @@ a, a:hover{
     	height: 16px;
 		background: transparent;
 		border: 1px solid transparent;
+		-webkit-border-radius: 50%;
 		border-radius: 50%;
 		margin: 0 3px;
 		position: relative;
@@ -1818,6 +2007,7 @@ a, a:hover{
 			width: 10px;
 			height: 10px;
 			background: #fff;
+			-webkit-border-radius: 50%;
 			border-radius: 50%;
 			position: absolute;
 			top: 2px;

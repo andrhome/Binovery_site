@@ -108,12 +108,14 @@ html.fsvs {
       margin: 0 0 4px 0;
       cursor: pointer; }
       html.fsvs #fsvs-pagination li > span {
+        -webkit-border-radius: 100%;
         border-radius: 100%;
         width: 17px;
         height: 17px;
         line-height: 17px;
         display: block; }
         html.fsvs #fsvs-pagination li > span > span {
+          -webkit-border-radius: 100%;
           border-radius: 100%;
           width: 9px;
           height: 9px;

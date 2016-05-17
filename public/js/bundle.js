@@ -503,6 +503,14 @@
 					$(this).addClass( 'active' );
 					app.slideToIndex( $(this).index(), e );
 				});
+
+				//for touch event
+				$('li', pagination).bind( 'touchstart.fsvs', function(e){
+					ignoreHashChange = true;
+					$('.active', pagination).removeClass( 'active' );
+					$(this).addClass( 'active' );
+					app.slideToIndex( $(this).index(), e );
+				});
 			},
 
 			/**
