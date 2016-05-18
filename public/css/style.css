@@ -341,12 +341,12 @@ a, a:hover {
   z-index: 1000; }
   .fixed-navigation.active {
     background: rgba(0, 0, 0, 0.9); }
-  .fixed-navigation .nav-holder .nav-content .logo {
+  .fixed-navigation .nav-holder .nav-content .logo_sm {
     display: inline-block;
     vertical-align: top;
     width: 150px;
     padding: 15px; }
-    .fixed-navigation .nav-holder .nav-content .logo img {
+    .fixed-navigation .nav-holder .nav-content .logo_sm img {
       width: 100%; }
   .fixed-navigation .nav-holder .nav-content .language-panel {
     float: right;
@@ -430,7 +430,7 @@ a, a:hover {
 
 .slide1 {
   display: none;
-  width: 80%;
+  max-width: 80%;
   margin: 0 auto;
   padding: 100px 10px 40px; }
   .slide1 .logotype {
@@ -446,6 +446,19 @@ a, a:hover {
 @media screen and (max-width: 1024px) {
   .slide1 {
     display: block; } }
+
+@media screen and (max-width: 480px) {
+  .fixed-navigation .nav-holder .nav-content .nav-menu ul li a {
+    font-size: 14px; }
+  .slide1 {
+    width: 85%;
+    padding: 80px 10px 30px; }
+    .slide1 .logotype {
+      margin-bottom: 15px; }
+    .slide1 .text-box {
+      font-size: 12px;
+      letter-spacing: .5px;
+      line-height: 20px; } }
 
 .logo {
   display: block;
@@ -488,10 +501,19 @@ a, a:hover {
       font-size: 18px;
       font-weight: 600;
       color: #fff;
+      text-transform: uppercase;
       text-align: center;
       margin-bottom: 25px;
       padding: 25px 10px 0 10px;
       position: relative; }
+    .web-content .left-col .mac {
+      display: none;
+      width: 60%;
+      min-width: 205px;
+      margin: 0 auto 25px; }
+      .web-content .left-col .mac img {
+        display: block;
+        width: 100%; }
     .web-content .left-col .text {
       line-height: 25px;
       padding: 0 25px; }
@@ -663,6 +685,67 @@ a, a:hover {
     font-size: 24px;
     padding-bottom: 55px;
     position: relative; }
+  .behance-btn .icon-be {
+    display: none;
+    font-size: 40px; }
+
+@media screen and (max-width: 1024px) {
+  .behance-btn {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: inherit;
+    background: none; }
+    .behance-btn:hover {
+      opacity: 1;
+      color: #ccc; }
+    .behance-btn:before, .behance-btn:after, .behance-btn strong {
+      display: none; }
+    .behance-btn p {
+      margin-bottom: 10px; }
+    .behance-btn .icon-be {
+      display: inline-block; } }
+
+@media screen and (max-width: 1024px) {
+  .web-content {
+    padding-bottom: 25px; }
+    .web-content .left-col {
+      width: 100%;
+      height: auto;
+      float: none;
+      padding-bottom: 0;
+      background: none; }
+      .web-content .left-col:before, .web-content .left-col:after {
+        display: none; }
+      .web-content .left-col h2 {
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-transform: inherit; }
+        .web-content .left-col h2:before, .web-content .left-col h2:after {
+          display: none; }
+      .web-content .left-col .mac {
+        display: block; }
+      .web-content .left-col .text {
+        letter-spacing: .5px;
+        padding: 0 35px; }
+        .web-content .left-col .text p {
+          margin-bottom: 15px; }
+    .web-content .right-col {
+      width: 100%;
+      height: auto;
+      float: none;
+      text-align: center;
+      padding-bottom: 0; }
+      .web-content .right-col:before, .web-content .right-col:after,
+      .web-content .right-col .carousel-dom-wf-holder {
+        display: none; } }
+
+@media screen and (max-width: 480px) {
+  .web-content .left-col .text p {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 22px; } }
 
 #slide3 {
   position: relative; }
@@ -694,11 +777,20 @@ a, a:hover {
       .mobile-content .left-col .text-holder h2 {
         font-size: 18px;
         font-weight: 600;
+        text-transform: uppercase;
         color: #fff;
         text-align: center;
         margin-bottom: 25px;
         padding: 25px 10px 0 10px;
         position: relative; }
+      .mobile-content .left-col .text-holder .iphone_sm {
+        display: none;
+        width: 25%;
+        min-width: 80px;
+        margin: 0 auto 25px; }
+        .mobile-content .left-col .text-holder .iphone_sm img {
+          display: block;
+          width: 100%; }
       .mobile-content .left-col .text-holder .text {
         line-height: 26px;
         padding: 0 25px; }
@@ -848,6 +940,58 @@ a, a:hover {
           -webkit-transform: rotate(90deg);
           transform: rotate(90deg); }
 
+@media screen and (max-width: 1024px) {
+  .mobile-content {
+    padding-bottom: 25px; }
+    .mobile-content .left-col {
+      width: 100%;
+      float: none;
+      text-align: center; }
+      .mobile-content .left-col .text-holder {
+        height: auto;
+        text-align: left;
+        overflow: inherit;
+        background: none; }
+        .mobile-content .left-col .text-holder:before, .mobile-content .left-col .text-holder:after {
+          display: none; }
+        .mobile-content .left-col .text-holder h2 {
+          font-size: 24px;
+          font-weight: 400;
+          letter-spacing: 1px;
+          text-transform: inherit; }
+          .mobile-content .left-col .text-holder h2:before, .mobile-content .left-col .text-holder h2:after {
+            display: none; }
+        .mobile-content .left-col .text-holder .iphone_sm {
+          display: block; }
+        .mobile-content .left-col .text-holder .text {
+          padding: 0 35px; }
+          .mobile-content .left-col .text-holder .text p {
+            margin-bottom: 15px; }
+      .mobile-content .left-col .behance-btn {
+        background: none; }
+    .mobile-content .right-col {
+      width: 100%;
+      float: none;
+      background: none;
+      padding-bottom: 0;
+      overflow: inherit; }
+      .mobile-content .right-col:before, .mobile-content .right-col:after,
+      .mobile-content .right-col .carousel-iphone-holder {
+        display: none; } }
+
+@media screen and (max-width: 480px) {
+  .mobile-content .left-col .text-holder .text p {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 22px; } }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?gu5cep");
+  src: url("../fonts/icomoon.eot?gu5cep#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?gu5cep") format("truetype"), url("../fonts/icomoon.woff?gu5cep") format("woff"), url("../fonts/icomoon.svg?gu5cep#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 #slide4.active-slide .marketing-content {
   opacity: 1;
   -webkit-transition: all 1.5s ease-in-out;
@@ -860,9 +1004,6 @@ a, a:hover {
   max-width: 810px;
   margin: 0 auto;
   overflow: hidden; }
-  @media screen and (max-width: 1024px) {
-    .marketing-content {
-      opacity: 1; } }
   .marketing-content h2 {
     font-size: 18px;
     font-weight: 400;
@@ -908,6 +1049,75 @@ a, a:hover {
       background: url(../images/market-bg-4.jpg) 0 0 no-repeat;
       background-size: cover;
       background-position: 50%; }
+
+@media screen and (max-width: 1024px) {
+  .marketing-content {
+    opacity: 1;
+    padding: 25px 0;
+    overflow: inherit; }
+    .marketing-content h2 {
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: inherit; }
+      .marketing-content h2:before, .marketing-content h2:after {
+        display: none; }
+    .marketing-content .title-block {
+      background: none;
+      margin-bottom: 30px; }
+      .marketing-content .title-block:before, .marketing-content .title-block:after {
+        display: none; }
+      .marketing-content .title-block h2 {
+        font-size: 24px;
+        padding: 0 10px; }
+    .marketing-content .text-holder {
+      overflow: inherit;
+      display: block;
+      padding: 0 25px; }
+      .marketing-content .text-holder .colum {
+        width: 100%;
+        letter-spacing: 0.7px;
+        line-height: 24px;
+        background: none;
+        padding-bottom: 0;
+        margin-bottom: 25px;
+        padding-left: 80px; }
+        .marketing-content .text-holder .colum:before {
+          display: none; }
+        .marketing-content .text-holder .colum:after {
+          content: "\e900";
+          font-family: 'icomoon' !important;
+          font-size: 44px;
+          color: #fff;
+          background: none;
+          top: 17px;
+          left: 0; }
+        .marketing-content .text-holder .colum h2 {
+          text-align: left;
+          padding-top: 0;
+          margin-bottom: 10px; }
+        .marketing-content .text-holder .colum p {
+          margin-bottom: 10px;
+          padding: 0; }
+      .marketing-content .text-holder .seo:after {
+        content: "\e900"; }
+      .marketing-content .text-holder .ppc:after {
+        content: "\e901";
+        left: 15px; }
+      .marketing-content .text-holder .smm:after {
+        content: "\e902";
+        left: 12px; } }
+
+@media screen and (max-width: 480px) {
+  .marketing-content .text-holder .colum {
+    padding-left: 65px; }
+    .marketing-content .text-holder .colum:after {
+      font-size: 32px;
+      top: 12px; }
+    .marketing-content .text-holder .colum p {
+      margin-bottom: 10px;
+      font-size: 12px;
+      line-height: 22px; } }
 
 #slide5, .portfolio-content {
   position: relative; }

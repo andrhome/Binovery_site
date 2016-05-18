@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     //Enabling touch-scroll event
-    if( window.innerWidth <= 1280 ) {
+    if( window.innerWidth <= 1280 && window.innerWidth > 1024) {
         slider = $.fn.fsvs({
             mouseDragEvents : true
         });

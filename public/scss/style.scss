@@ -375,7 +375,7 @@ a, a:hover{
 	}
 	.nav-holder{
 		.nav-content{
-			.logo{
+			.logo_sm{
 				display: inline-block;
 				vertical-align: top;
 				width: 150px;
@@ -481,7 +481,7 @@ a, a:hover{
 // ************************************SLIDE 1*********************************
 .slide1{
 	display: none;
-	width: 80%;
+	max-width: 80%;
     margin: 0 auto;
 	padding: 100px 10px 40px;
 	.logotype{
@@ -500,6 +500,23 @@ a, a:hover{
 @media screen and (max-width: 1024px){
 	.slide1{display: block;}
 }
+@media screen and (max-width: 480px){
+	.fixed-navigation .nav-holder .nav-content .nav-menu ul li a{
+		font-size: 14px;
+	}
+	.slide1{
+		width: 85%;
+		padding: 80px 10px 30px;
+		.logotype {
+		    margin-bottom: 15px;
+		}
+		.text-box {
+		    font-size: 12px;
+		    letter-spacing: .5px;
+		    line-height: 20px;
+		}
+	}
+}
 
 // ************************************SLIDE 2*********************************
 .logo{
@@ -512,6 +529,7 @@ a, a:hover{
 }
 @media screen and (max-width: 1024px){
 	.logo{display: none;}
+
 }
 
 // ***************animation START***************
@@ -553,6 +571,7 @@ a, a:hover{
 			font-size: 18px;
 			font-weight: 600;
 			color: #fff;
+			text-transform: uppercase;
 			text-align: center;
 			margin-bottom: 25px;
 			padding: 25px 10px 0 10px;
@@ -562,6 +581,16 @@ a, a:hover{
 			}
 			&:after{  
 				@extend .afterPointTop; 
+			}
+		}
+		.mac{
+			display: none;
+			width: 60%;
+			min-width: 205px;
+			margin: 0 auto 25px;
+			img{
+				display: block;
+				width: 100%;
 			}
 		}
 		.text{
@@ -796,6 +825,69 @@ a, a:hover{
 			@extend .afterPointBottom; 
 		}
 	}
+	.icon-be{
+		display: none;
+		font-size: 40px;
+	}
+}
+@media screen and (max-width: 1024px){
+	.behance-btn{
+		display: inline-block;
+		font-size: 20px;
+		font-weight: 300;
+		text-transform: inherit;
+		background: none;
+		&:hover{
+			opacity: 1;
+			color: #ccc;
+		}
+		&:before, &:after, strong{display: none;}
+		p{margin-bottom: 10px;}
+		.icon-be{display: inline-block;}
+	}
+}
+
+@media screen and (max-width: 1024px){
+	.web-content{
+		padding-bottom: 25px;
+		.left-col{
+			width: 100%;
+			height: auto;
+			float: none;
+			padding-bottom: 0;
+			background: none;
+			&:before, &:after{display: none;}
+			h2{
+				font-size: 24px;
+				font-weight: 400;
+				letter-spacing: 1px;
+				text-transform: inherit;
+				&:before, &:after{display: none;}
+			}
+			.mac{display: block;}
+			.text{
+				letter-spacing: .5px;
+				padding: 0 35px;
+				p {margin-bottom: 15px;}
+			}
+		}
+		.right-col{
+			width: 100%;
+			height: auto;
+			float: none;
+			text-align: center;
+			padding-bottom: 0;
+			&:before, &:after,
+			.carousel-dom-wf-holder{display: none;}
+		}
+	}
+}
+@media screen and (max-width: 480px){
+	.web-content .left-col .text p {
+	    margin-bottom: 10px;
+	    font-size: 12px;
+	    line-height: 22px;
+	}
 }
 // ************************************SLIDE 3*********************************
 // ***************animation START***************
@@ -817,11 +909,9 @@ a, a:hover{
 	max-width: 810px;
 	margin: 0 auto; 
 	overflow: hidden;
-
 	.left-col{
 		width: 49.4%;
 		float: left;	
-
 		.text-holder{
 			height: 390px;
 			overflow: hidden;
@@ -836,10 +926,10 @@ a, a:hover{
 			&:after{  
 				@extend .afterPointBottom; 
 			}
-
 			h2{
 				font-size: 18px;
 				font-weight: 600;
+				text-transform: uppercase;
 				color: #fff;
 				text-align: center;
 				margin-bottom: 25px;
@@ -850,6 +940,16 @@ a, a:hover{
 				}
 				&:after{  
 					@extend .afterPointTop; 
+				}
+			}
+			.iphone_sm{
+				display: none;
+				width: 25%;
+				min-width: 80px;
+				margin: 0 auto 25px;
+				img{
+					display: block;
+					width: 100%;
 				}
 			}
 			.text{
@@ -1049,8 +1149,64 @@ a, a:hover{
 		}
 	}
 }
-
+@media screen and (max-width: 1024px){
+	.mobile-content{
+		padding-bottom: 25px;
+		.left-col{
+			width: 100%;
+			float: none;
+			text-align: center;	
+			.text-holder{
+				height: auto;
+				text-align: left;
+				overflow: inherit;
+				background: none;
+				&:before, &:after{display: none;}
+				h2{
+					font-size: 24px;
+					font-weight: 400;
+					letter-spacing: 1px;
+					text-transform: inherit;
+					&:before, &:after{display: none;}
+				}
+				.iphone_sm{display: block;}
+				.text{
+					padding: 0 35px;
+					p{margin-bottom: 15px;}
+				}
+			}
+			.behance-btn{background: none;}
+		}
+		.right-col{
+			width: 100%;
+			float: none;
+			background: none;
+			padding-bottom: 0;
+			overflow: inherit;
+			&:before, &:after,
+			.carousel-iphone-holder{display: none;}
+		}
+	}
+}
+@media screen and (max-width: 480px){
+	.mobile-content .left-col .text-holder .text p {
+	    margin-bottom: 10px;
+	    font-size: 12px;
+	    line-height: 22px;
+	}
+}
 // ************************************SLIDE 4*********************************
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../fonts/icomoon.eot?gu5cep');
+    src:    url('../fonts/icomoon.eot?gu5cep#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?gu5cep') format('truetype'),
+        url('../fonts/icomoon.woff?gu5cep') format('woff'),
+        url('../fonts/icomoon.svg?gu5cep#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 #slide4.active-slide .marketing-content{
 	opacity: 1;
 	-webkit-transition: all 1.5s ease-in-out;
@@ -1063,10 +1219,6 @@ a, a:hover{
 	max-width: 810px;
 	margin: 0 auto; 
 	overflow: hidden;
-	@media screen and (max-width: 1024px){
-		opacity: 1;
-	}
-
 	h2{
 		font-size: 18px;
 		font-weight: 400;
@@ -1142,6 +1294,97 @@ a, a:hover{
 			background: url(../images/market-bg-4.jpg) 0 0 no-repeat;
 			background-size: cover;
 			background-position: 50%;
+		}
+	}
+}
+@media screen and (max-width: 1024px){
+	.marketing-content{
+		opacity: 1;
+		padding: 25px 0;
+		overflow: inherit;
+		h2{
+			font-size: 15px;
+			font-weight: 400;
+			letter-spacing: 1px;
+			text-transform: inherit;
+			&:before, &:after{display: none;}
+		}
+		.title-block{
+			background: none;
+			margin-bottom: 30px;
+			&:before, &:after{display: none;}
+			h2{
+				font-size: 24px;
+				padding: 0 10px;
+			}
+		}
+		.text-holder{
+			overflow: inherit;
+			display: block;
+			padding: 0 25px;
+			.colum{
+				width: 100%;
+				letter-spacing: 0.7px;
+    			line-height: 24px;
+    			background: none;
+				padding-bottom: 0;
+				margin-bottom: 25px;
+				padding-left: 80px;
+				&:before{display: none;}
+				&:after{
+					content: "\e900";
+					font-family: 'icomoon' !important;
+					font-size: 44px;
+					color: #fff;
+					background: none;
+					top: 17px;
+					left: 0;
+				}
+				h2{
+					text-align: left;
+					padding-top: 0;
+					margin-bottom: 10px;
+				}
+				p{
+					margin-bottom: 10px;
+					padding: 0;
+				}
+			}
+			.seo{
+				&:after{
+					content: "\e900";
+				}
+			}
+			.ppc{
+				&:after{
+					content: "\e901";
+					left: 15px;
+				}
+			}
+			.smm{
+				&:after{
+					content: "\e902";
+					left: 12px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 480px){
+	.marketing-content{
+		.text-holder{
+			.colum{
+				padding-left: 65px;
+				&:after{
+					font-size: 32px;
+					top: 12px;
+				}
+				p {
+				    margin-bottom: 10px;
+				    font-size: 12px;
+				    line-height: 22px;
+				}
+			}
 		}
 	}
 }
