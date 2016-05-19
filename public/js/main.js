@@ -206,16 +206,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 $(document).ready(function() {
-    //Vertical carousel on the slide2
+    
+    //Carousel on the slide2
     $('.bxslider-dom-wf').bxSlider({
         mode: 'horizontal',
         nextSelector: '.slider-next',
         prevSelector: '.slider-prev',
+        touchEnabled: false,
         slideMargin: 5
     });
 
 
-    //Vertical popup carousel on the slide2
+    //Popup carousel on the slide2
     $('.bxslider-web-popup').bxSlider({
         mode: 'horizontal',
         nextSelector: '.sl-next',
@@ -243,15 +245,16 @@ $(document).ready(function() {
     $('.slider-web-popup-holder .closer, #nav-wrap, #slide1, #slide3, #slide4, #slide5, #slide6, #slide7, #slide8, #slide9, #slide10').bind('touchend', hideWebPopup);
 
 
-    //Vertical carousel on the slide3
+    //Carousel on the slide3
     $('.bxslider-iphone').bxSlider({
         mode: 'horizontal',
         nextSelector: '.slider-next_mob',
         prevSelector: '.slider-prev_mob',
+        touchEnabled: false,
         slideMargin: 5
     });
 
-    //Vertical popup carousel on the slide3
+    //Popup carousel on the slide3
     $('.bxslider-mob-popup').bxSlider({
         mode: 'horizontal',
         nextSelector: '.mob-next',
@@ -279,14 +282,15 @@ $(document).ready(function() {
     $('.slider-mob-popup-holder .closer, #nav-wrap, #slide1, #slide2, #slide4, #slide5, #slide6, #slide7, #slide8, #slide9, #slide10').bind('touchend', hideMobPopup);
 
 
-    //Vertical carousel on the slide6
+    //Carousel on the slide6
     $('.bxslider-team').bxSlider({
         mode: 'horizontal',
         auto: true,
         pause: 100000,
         speed: 1500,
         nextSelector: '.next_team',
-        prevSelector: '.prev_team'
+        prevSelector: '.prev_team',
+        touchEnabled: false,
     });
 
     //Masonry settings
@@ -301,7 +305,7 @@ $(document).ready(function() {
         });
     });
 
-    //Vertical popup carousel on the slide6
+    //Popup carousel on the slide6
     $('.bxslider-team-popup').bxSlider({
         mode: 'horizontal',
         adaptiveHeight: true,
@@ -330,16 +334,17 @@ $(document).ready(function() {
     $('.slider-team-popup-holder .closer, #nav-wrap, #slide1, #slide2, #slide3, #slide4, #slide5, #slide7, #slide8, #slide9, #slide10').bind('touchend', hideTeamPopup);
 
 
-    //Vertical carousel on the slide7
+    //Carousel on the slide7
     $('.bxslider-framework').bxSlider({
         mode: 'horizontal',
         nextSelector: '.slider-next_frame',
         prevSelector: '.slider-prev_frame',
+        touchEnabled: false,
         slideMargin: 5
     });
 
 
-    //Vertical popup carousel on the slide7
+    //Popup carousel on the slide7
     $('.bxslider-frame-popup').bxSlider({
         mode: 'horizontal',
         nextSelector: '.frame-next',
@@ -367,7 +372,7 @@ $(document).ready(function() {
     $('.slider-frame-popup-holder .closer, #nav-wrap, #slide1, #slide2, #slide3, #slide4, #slide5, #slide6, #slide8, #slide9, #slide10').bind('touchend', hideFramePopup);
 
 
-    //Vertical carousel on the slide9
+    //Carousel on the slide9
     $('.bxslider-reviews').bxSlider({
         mode: 'horizontal',
         adaptiveHeight: true,
@@ -383,6 +388,20 @@ $(document).ready(function() {
         $(this).toggleClass('active');
         $('.fixed-navigation').toggleClass('active');
         $('.nav-menu ul').slideToggle(200);
+    });
+
+
+    //Carousel on the slide9 mobile version
+    $('.bxslider-potrfolio').bxSlider({
+        mode: 'horizontal',
+        adaptiveHeight: true,
+        auto: false,
+        pause: 7000,
+        speed: 700,
+        nextSelector: '.portf-next',
+        prevSelector: '.portf-prev',
+        touchEnabled: false,
+        slideMargin: 5
     });
 
 });

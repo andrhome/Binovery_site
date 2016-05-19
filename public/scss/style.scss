@@ -1430,10 +1430,9 @@ a, a:hover{
 // ***************animation END***************
 
 .portfolio-content{
-	width: 810px;
-	margin: 0 auto;
-	
-	ul{
+	max-width: 810px;
+	margin: 0 auto;	
+	.portfolio-list{
 		line-height: 0;
 		font-size: 0;
 		li{
@@ -1500,6 +1499,83 @@ a, a:hover{
 				}
 			}
 		}
+	}
+	.potrfolio-slider{
+		display: none;
+		width: 80%;
+		margin: 0 auto;
+		padding: 25px 0 50px;
+		position: relative;
+		.bxslider-potrfolio{
+			line-height: 0;
+			font-size: 0;
+			li{
+				margin-left: -7px;
+				.item{
+					width: 206px;
+					height: 206px;
+					display: inline-block;
+    				vertical-align: top;
+					background-size: cover;
+					background-position: 50%;
+					margin: 0  0 10px 10px; 
+				}
+			}
+		}
+		.bx-wrapper .bx-pager.bx-default-pager a{
+			background: none;
+    		border: 2px solid #fff;
+    		margin: 0 8px;
+		}
+		.bx-wrapper .bx-pager.bx-default-pager a.active, 
+		.bx-wrapper .bx-pager.bx-default-pager a:hover{
+			background: #fff;
+		}
+		.outside{
+			width: 30%;
+			height: 0;
+		    position: absolute;
+		    bottom: 45px;
+			left: 36%;
+			span{
+				display: inline-block;
+				vertical-align: top;
+				width: 16px;
+    			height: 29px;
+				a{
+					width: 100%;
+    				height: 100%;
+					text-indent: -9999px;
+					display: inline-block;
+				}
+			}
+			.portf-prev{
+				background: url(../images/next.svg) 0 0 no-repeat;
+				background-size: cover;
+				-webkit-transform: rotate(180deg);
+				transform: rotate(180deg);
+			}
+			.portf-next{
+				background: url(../images/next.svg) 0 0 no-repeat;
+				background-size: cover;
+				float: right;
+			}
+		}
+	}
+}
+@media screen and (max-width: 1024px){
+	.portfolio-content{
+		h2{
+			font-size: 24px;
+			font-weight: 400;
+			text-align: center;
+			letter-spacing: 1px;
+			margin-bottom: 25px;
+		}
+		.portfolio-list{
+			display: none;
+		}
+		.potrfolio-slider{display: block;}
 	}
 }
 
