@@ -181,8 +181,8 @@ a, a:hover {
   background-position: 50%; }
   @media screen and (max-width: 1024px) {
     #slide8 {
-      -webkit-background-image: radial-gradient(circle at 50% 50%, #fe9c1c, #e16600);
-      background-image: radial-gradient(circle at 50% 50%, #fe9c1c, #e16600); } }
+      -webkit-background-image: radial-gradient(circle at 50% 50%, #7d90cc, #49536b);
+      background-image: radial-gradient(circle at 50% 50%, #7d90cc, #49536b); } }
 
 #slide9 {
   background: url(../images/slide-9-bg.jpg) 0 0 no-repeat;
@@ -1563,7 +1563,7 @@ a, a:hover {
   .team-content_sm h2 {
     margin-bottom: 0; }
   .team-slider_sm {
-    width: 252px;
+    width: 240px;
     padding-top: 15px; }
     .team-slider_sm .bxslider-team_sm li img {
       width: 120px !important; } }
@@ -1598,9 +1598,18 @@ a, a:hover {
       font-weight: 600;
       color: #fff;
       text-align: center;
+      text-transform: uppercase;
       margin-bottom: 25px;
       padding: 25px 10px 0 10px;
       position: relative; }
+    .framework-content .left-col .mac {
+      display: none;
+      width: 60%;
+      min-width: 205px;
+      margin: 0 auto 25px; }
+      .framework-content .left-col .mac img {
+        display: block;
+        width: 100%; }
     .framework-content .left-col .text {
       line-height: 26px;
       padding: 0 25px; }
@@ -1746,6 +1755,49 @@ a, a:hover {
           -webkit-transform: rotate(90deg);
           transform: rotate(90deg); }
 
+@media screen and (max-width: 1024px) {
+  .framework-content {
+    padding-bottom: 25px; }
+    .framework-content .left-col {
+      width: 100%;
+      height: auto;
+      float: none;
+      padding-bottom: 0;
+      background: none; }
+      .framework-content .left-col:before, .framework-content .left-col:after {
+        display: none; }
+      .framework-content .left-col h2 {
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-transform: inherit; }
+        .framework-content .left-col h2:before, .framework-content .left-col h2:after {
+          display: none; }
+      .framework-content .left-col .mac {
+        display: block; }
+      .framework-content .left-col .text {
+        letter-spacing: .5px;
+        padding: 0 35px; }
+        .framework-content .left-col .text p {
+          margin-bottom: 15px; }
+    .framework-content .right-col {
+      width: 100%;
+      height: auto;
+      float: none;
+      text-align: center;
+      padding-bottom: 0; }
+      .framework-content .right-col:before, .framework-content .right-col:after,
+      .framework-content .right-col .framework-carousel-holder {
+        display: none; }
+  .slider-frame-popup-holder {
+    display: none; } }
+
+@media screen and (max-width: 480px) {
+  .framework-content .left-col .text p {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 22px; } }
+
 #slide8, .blog-content {
   position: relative; }
 
@@ -1770,6 +1822,13 @@ a, a:hover {
 .blog-content {
   max-width: 810px;
   margin: 0 auto; }
+  .blog-content h2 {
+    display: none;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 25px; }
   .blog-content ul {
     line-height: 0;
     font-size: 0; }
@@ -1779,93 +1838,79 @@ a, a:hover {
       vertical-align: top;
       margin-left: 6px;
       margin-bottom: 6px; }
-      .blog-content ul li article {
-        min-height: 290px;
-        background: url(../images/blog-img-1.jpg) 0 0 no-repeat;
-        background-size: cover;
-        position: relative; }
-        .blog-content ul li article .info-block {
-          width: 100%;
-          font-size: 12px;
-          line-height: normal;
-          background: url(../images/blog-blur-1.jpg) 0 0 no-repeat;
+      .blog-content ul li a {
+        display: block;
+        color: #fff; }
+        .blog-content ul li a:hover {
+          opacity: .9; }
+        .blog-content ul li a article {
+          min-height: 290px;
+          background: url(../images/blog-img-1.jpg) 0 0 no-repeat;
           background-size: cover;
-          letter-spacing: 0.5px;
-          padding: 8px 10px;
-          position: absolute;
-          bottom: 0;
-          left: 0; }
-          .blog-content ul li article .info-block .title {
-            display: inline-block;
-            color: #fff;
-            font-size: 18px;
-            line-height: 28px;
-            height: 30px;
-            overflow: hidden;
-            text-decoration: none;
-            margin-bottom: 3px;
-            position: relative; }
-            .blog-content ul li article .info-block .title:after {
-              content: '';
-              width: 100%;
-              height: 1px;
-              background: -moz-linear-gradient(left, white 0%, white 66%, rgba(255, 255, 255, 0.2) 100%);
-              background: -webkit-linear-gradient(left, white 0%, white 66%, rgba(255, 255, 255, 0.2) 100%);
-              background: linear-gradient(to right, white 0%, white 66%, rgba(255, 255, 255, 0.2) 100%);
-              position: absolute;
-              bottom: 0;
-              left: -100%;
-              -webkit-transition: all .2s ease-in-out;
-              transition: all .2s ease-in-out; }
-            .blog-content ul li article .info-block .title:hover:after {
-              left: 0; }
-          .blog-content ul li article .info-block .date-and-comments {
-            margin-bottom: 10px; }
-            .blog-content ul li article .info-block .date-and-comments .date {
-              display: inline-block;
-              padding-left: 18px;
-              margin-right: 15px;
-              position: relative; }
-              .blog-content ul li article .info-block .date-and-comments .date:after {
-                content: '';
-                width: 15px;
-                height: 15px;
-                background: url(../images/ico-4.png) 0 0 no-repeat;
-                background-size: cover;
-                position: absolute;
-                top: 1.5px;
-                left: 0; }
-            .blog-content ul li article .info-block .date-and-comments .comments {
+          position: relative; }
+          .blog-content ul li a article .info-block {
+            width: 100%;
+            font-size: 12px;
+            line-height: normal;
+            background: url(../images/blog-blur-1.jpg) 0 0 no-repeat;
+            background-size: cover;
+            letter-spacing: 0.5px;
+            padding: 8px 10px;
+            position: absolute;
+            bottom: 0;
+            left: 0; }
+            .blog-content ul li a article .info-block .title {
               display: inline-block;
               color: #fff;
+              font-size: 18px;
+              line-height: 28px;
+              height: 30px;
+              overflow: hidden;
               text-decoration: none;
+              margin-bottom: 3px; }
+            .blog-content ul li a article .info-block .date-and-comments {
+              margin-bottom: 10px; }
+              .blog-content ul li a article .info-block .date-and-comments .date {
+                display: inline-block;
+                padding-left: 18px;
+                margin-right: 15px;
+                position: relative; }
+                .blog-content ul li a article .info-block .date-and-comments .date:after {
+                  content: '';
+                  width: 15px;
+                  height: 15px;
+                  background: url(../images/ico-4.png) 0 0 no-repeat;
+                  background-size: cover;
+                  position: absolute;
+                  top: 1.5px;
+                  left: 0; }
+              .blog-content ul li a article .info-block .date-and-comments .comments {
+                display: inline-block;
+                color: #fff;
+                text-decoration: none;
+                padding-left: 21px;
+                position: relative; }
+                .blog-content ul li a article .info-block .date-and-comments .comments:after {
+                  content: '';
+                  width: 19px;
+                  height: 15px;
+                  background: url(../images/ico-5.png) 0 0 no-repeat;
+                  background-size: cover;
+                  position: absolute;
+                  top: 1.5px;
+                  left: 0; }
+            .blog-content ul li a article .info-block .section {
               padding-left: 21px;
-              position: relative;
-              -webkit-transition: all .2s ease-in-out;
-              transition: all .2s ease-in-out; }
-              .blog-content ul li article .info-block .date-and-comments .comments:after {
+              position: relative; }
+              .blog-content ul li a article .info-block .section:after {
                 content: '';
                 width: 19px;
                 height: 15px;
-                background: url(../images/ico-5.png) 0 0 no-repeat;
+                background: url(../images/ico-6.png) 0 0 no-repeat;
                 background-size: cover;
                 position: absolute;
-                top: 1.5px;
+                top: 1px;
                 left: 0; }
-              .blog-content ul li article .info-block .date-and-comments .comments:hover {
-                color: #ccc; }
-          .blog-content ul li article .info-block .section {
-            padding-left: 21px;
-            position: relative; }
-            .blog-content ul li article .info-block .section:after {
-              content: '';
-              width: 19px;
-              height: 15px;
-              background: url(../images/ico-6.png) 0 0 no-repeat;
-              background-size: cover;
-              position: absolute;
-              top: 1px;
-              left: 0; }
       .blog-content ul li .view-all {
         display: inline-block;
         width: 100%;
@@ -1886,6 +1931,84 @@ a, a:hover {
           width: 100%;
           padding-bottom: 112px;
           position: relative; }
+
+@media screen and (max-width: 1024px) {
+  .blog-content {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 35px 35px 60px; }
+    .blog-content h2 {
+      display: block; }
+    .blog-content ul li a article {
+      min-height: 256px;
+      text-align: left; }
+    .blog-content ul li .view-all {
+      background-image: radial-gradient(circle at 50% 50%, #7d90cc, #49536b);
+      padding-top: 94.45px; }
+      .blog-content ul li .view-all:before, .blog-content ul li .view-all:after {
+        display: none; }
+      .blog-content ul li .view-all span {
+        letter-spacing: 1px;
+        padding-bottom: 96px; }
+        .blog-content ul li .view-all span:before, .blog-content ul li .view-all span:after {
+          display: none; } }
+
+@media screen and (max-width: 800px) {
+  .blog-content ul li {
+    width: 199px; }
+    .blog-content ul li a article {
+      min-height: 199px; }
+      .blog-content ul li a article .info-block .title {
+        font-size: 14px;
+        line-height: 18px;
+        height: 20px; }
+      .blog-content ul li a article .info-block .date-and-comments .date {
+        font-size: 10px;
+        margin-right: 7px; }
+        .blog-content ul li a article .info-block .date-and-comments .date:after {
+          top: 0.5px; }
+      .blog-content ul li a article .info-block .date-and-comments .comments {
+        font-size: 10px; }
+      .blog-content ul li a article .info-block .section {
+        font-size: 10px; }
+        .blog-content ul li a article .info-block .section:after {
+          top: 0; }
+    .blog-content ul li .view-all {
+      font-size: 18px;
+      height: 199px;
+      padding-top: 73.45px; }
+      .blog-content ul li .view-all span {
+        padding-bottom: 0; } }
+
+@media screen and (max-width: 480px) {
+  .blog-content {
+    padding: 20px 15px 40px; }
+    .blog-content ul {
+      width: 270px;
+      text-align: justify;
+      margin: 0 auto; }
+      .blog-content ul li {
+        width: 129px; }
+        .blog-content ul li a article {
+          min-height: 129px; }
+          .blog-content ul li a article .info-block {
+            padding: 7px; }
+            .blog-content ul li a article .info-block .title {
+              font-size: 12px;
+              line-height: 16px;
+              height: 16px;
+              margin-bottom: 0; }
+            .blog-content ul li a article .info-block .date-and-comments {
+              margin-bottom: 0; }
+              .blog-content ul li a article .info-block .date-and-comments .comments {
+                display: none; }
+            .blog-content ul li a article .info-block .section {
+              display: none; }
+        .blog-content ul li .view-all {
+          font-size: 16px;
+          height: 129px;
+          padding-top: 47px; } }
 
 #slide9 {
   position: relative; }

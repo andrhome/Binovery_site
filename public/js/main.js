@@ -441,6 +441,8 @@ $(document).ready(function() {
     });
 
 
+    //Fancybox init
+    $(".fancybox").fancybox();
 
 
 

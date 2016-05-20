@@ -69,102 +69,89 @@
 					vertical-align: top;
 					margin-left: 6px;
 					margin-bottom: 6px;
-					article{
-						min-height: 290px;
-						background: url(../images/blog-img-1.jpg) 0 0 no-repeat;
-						background-size: cover;
-						position: relative;
-						.info-block{
-							width: 100%;
-							font-size: 12px;
-							line-height: normal;
-							background: url(../images/blog-blur-1.jpg) 0 0 no-repeat;
+					a{
+						display: block;
+						color: #fff;
+						article{
+							min-height: 290px;
+							background: url(../images/blog-img-1.jpg) 0 0 no-repeat;
 							background-size: cover;
-							letter-spacing: 0.5px;
-							padding: 8px 10px;
-							position: absolute;
-							bottom: 0;
-							left: 0;
-							.title{
-								display: inline-block;
-								color: #fff;
-								font-size: 18px;
-								line-height: 28px;
-								height: 30px;
-								overflow: hidden;
-								text-decoration: none;
-								margin-bottom: 3px;
-								position: relative;
-								&:after{
-									content: '';
-									width: 100%;
-									height: 1px;
-									background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 66%, rgba(255,255,255,0.2) 100%);
-									background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 66%,rgba(255,255,255,0.2) 100%);
-									background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 66%,rgba(255,255,255,0.2) 100%);
-									position: absolute;
-									bottom: 0;
-									left: -100%;
-									-webkit-transition: all .2s ease-in-out;
-									transition: all .2s ease-in-out;
-								}
-								&:hover:after{
-									left: 0;
-								}
-							}
-							.date-and-comments{
-								margin-bottom: 10px;
-								.date{
-									display: inline-block;
-									padding-left: 18px;
-									margin-right: 15px;
-									position: relative;
-									&:after{
-										content: '';
-										width: 15px;
-										height: 15px;
-										background: url(../images/ico-4.png) 0 0 no-repeat;
-										background-size: cover;
-										position: absolute;
-										top: 1.5px;
-										left: 0;
-									}
-								}
-								.comments{
+							position: relative;
+							.info-block{
+								width: 100%;
+								font-size: 12px;
+								line-height: normal;
+								background: url(../images/blog-blur-1.jpg) 0 0 no-repeat;
+								background-size: cover;
+								letter-spacing: 0.5px;
+								padding: 8px 10px;
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								.title{
 									display: inline-block;
 									color: #fff;
+									font-size: 18px;
+									line-height: 28px;
+									height: 30px;
+									overflow: hidden;
 									text-decoration: none;
+									margin-bottom: 3px;
+								}
+								.date-and-comments{
+									margin-bottom: 10px;
+									.date{
+										display: inline-block;
+										padding-left: 18px;
+										margin-right: 15px;
+										position: relative;
+										&:after{
+											content: '';
+											width: 15px;
+											height: 15px;
+											background: url(../images/ico-4.png) 0 0 no-repeat;
+											background-size: cover;
+											position: absolute;
+											top: 1.5px;
+											left: 0;
+										}
+									}
+									.comments{
+										display: inline-block;
+										color: #fff;
+										text-decoration: none;
+										padding-left: 21px;
+										position: relative;
+										-webkit-transition: all .2s ease-in-out;
+										transition: all .2s ease-in-out;
+										&:after{
+											content: '';
+											width: 19px;
+											height: 15px;
+											background: url(../images/ico-5.png) 0 0 no-repeat;
+											background-size: cover;
+											position: absolute;
+											top: 1.5px;
+											left: 0;
+										}
+										&:hover{
+											color: #ccc;
+										}
+									}
+								}
+								.section{
 									padding-left: 21px;
 									position: relative;
-									-webkit-transition: all .2s ease-in-out;
-									transition: all .2s ease-in-out;
 									&:after{
 										content: '';
 										width: 19px;
 										height: 15px;
-										background: url(../images/ico-5.png) 0 0 no-repeat;
+										background: url(../images/ico-6.png) 0 0 no-repeat;
 										background-size: cover;
 										position: absolute;
-										top: 1.5px;
+										top: 1px;
 										left: 0;
 									}
-									&:hover{
-										color: #ccc;
-									}
-								}
-							}
-							.section{
-								padding-left: 21px;
-								position: relative;
-								&:after{
-									content: '';
-									width: 19px;
-									height: 15px;
-									background: url(../images/ico-6.png) 0 0 no-repeat;
-									background-size: cover;
-									position: absolute;
-									top: 1px;
-									left: 0;
 								}
 							}
 						}
@@ -264,12 +251,12 @@
 	}
 }
 @media screen and (max-width: 800px){
-	#open-blog ul li article{
+	#open-blog ul li a article{
 		min-height: 250px !important;
 	}
 }
 @media screen and (max-width: 768px){
-	#open-blog ul li article{
+	#open-blog ul li a article{
 		min-height: 181px !important;
 	}
 }
@@ -283,6 +270,7 @@
 			}
 			.articles-list {
 			    margin-right: 0;
+			    padding: 0 15px;
 			    ul{
 			    	text-align: justify;
 			    	&:after{
@@ -290,7 +278,7 @@
 			    		width: 100%;
 			    		display: inline-block;
 			    	}
-			    	li article{
+			    	li a article{
 			    		min-height: 230px !important;
 			    	}
 			    }
@@ -303,6 +291,7 @@
 			flex-direction: column;
 		    justify-content: center;
 		    align-items: center;
+		    right: 18px;
 			-webkit-transition: all .25s ease-in-out;
 			transition: all .25s ease-in-out;
 		}
@@ -325,8 +314,8 @@
 	#open-blog .open-blog-content .articles-list ul li{
 		width: 100%;
 		margin: 0 0 15px 0;
-		article{
-			min-height: 289px!important;
+		a article{
+			min-height: 276px!important;
 		}
 	}
 	#open-blog ul li:last-child{
