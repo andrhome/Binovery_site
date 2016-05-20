@@ -64,42 +64,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     //Adding burger-button in the navWrap
-    var navWrap = document.getElementById('nav-wrap'),
-        burgerButton = "<div id='burgerBtn'><span></span></div>";
+    if(window.innerWidth > 1024) {
+        var navWrap = document.getElementById('nav-wrap'),
+            burgerButton = "<div id='burgerBtn'><span></span></div>";
 
-    navWrap.insertAdjacentHTML('afterBegin', burgerButton);
+        navWrap.insertAdjacentHTML('afterBegin', burgerButton);
 
-    var burgerBtn = document.getElementById('burgerBtn');
-    //Opening navWrap and adding text in the elements of fsvsPagination (in the 'li');
-    function openPagination() {
+        var burgerBtn = document.getElementById('burgerBtn');
+        //Opening navWrap and adding text in the elements of fsvsPagination (in the 'li');
+        function openPagination() {
 
-        navWrap.classList.toggle('open');
+            navWrap.classList.toggle('open');
 
-        var fsvsPagination = document.getElementById('fsvs-pagination'),
-            li = fsvsPagination.children,
-            liText = ["Home", "Web", "Mobile", "Marketing", "Portfolio", "Team", "Framework", "Blog", "Reviews", "Contacts"];
-        
-        if(navWrap.classList.contains('open')) {
-            for(var i = 0; i < li.length; i++) {
-                li[i].innerHTML = '<span><span></span></span>' + '<i>' + liText[i] + '</i>';
-            };
-        } else{
-            for(var i = 0; i < li.length; i++) {
-                li[i].innerHTML = '<span><span></span></span>';
+            var fsvsPagination = document.getElementById('fsvs-pagination'),
+                li = fsvsPagination.children,
+                liText = ["Home", "Web", "Mobile", "Marketing", "Portfolio", "Team", "Framework", "Blog", "Reviews", "Contacts"];
+            
+            if(navWrap.classList.contains('open')) {
+                for(var i = 0; i < li.length; i++) {
+                    li[i].innerHTML = '<span><span></span></span>' + '<i>' + liText[i] + '</i>';
+                };
+            } else{
+                for(var i = 0; i < li.length; i++) {
+                    li[i].innerHTML = '<span><span></span></span>';
+                };
             };
         };
+        burgerBtn.addEventListener("click", openPagination);
+        burgerBtn.addEventListener("touchend", openPagination);
+        
+
+        //Adding language navigation
+        var langLinks = "<div id='langNavHolder'><a href='#' class='engl'>EN</a><a href='#' class='ital'>IT</a></div>";
+        burgerBtn.insertAdjacentHTML('afterEnd', langLinks);
+
+        //Adding links of social networks (f, in, Be)
+        var socialLinks = "<div id='socialLinksBox'><a href='#' class='fb'><i class='fa fa-facebook' aria-hidden='true'></i></a><a href='#' class='in'><i class='fa fa-linkedin' aria-hidden='true'></i></a><a href='#'><i class='fa fa-behance' aria-hidden='true'></i></a></div>"
+        navWrap.insertAdjacentHTML('beforeEnd', socialLinks);
     };
-    burgerBtn.addEventListener("click", openPagination);
-    burgerBtn.addEventListener("touchend", openPagination);
-    
-
-    //Adding language navigation
-    var langLinks = "<div id='langNavHolder'><a href='#' class='engl'>EN</a><a href='#' class='ital'>IT</a></div>";
-    burgerBtn.insertAdjacentHTML('afterEnd', langLinks);
-
-    //Adding links of social networks (f, in, Be)
-    var socialLinks = "<div id='socialLinksBox'><a href='#' class='fb'><i class='fa fa-facebook' aria-hidden='true'></i></a><a href='#' class='in'><i class='fa fa-linkedin' aria-hidden='true'></i></a><a href='#'><i class='fa fa-behance' aria-hidden='true'></i></a></div>"
-    navWrap.insertAdjacentHTML('beforeEnd', socialLinks);
     //END
 
     
@@ -193,6 +195,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }());    
 
 
+    // Stylse for slider pagination at the Portfolio page (Mobile version)
+    ;(function() {
+        var portfolioSlider = document.querySelector('.potrfolio-slider'),
+            outside = portfolioSlider.querySelector('.outside'),
+            portfNext = portfolioSlider.querySelector('.portf-next'),
+            bxPagerItems = portfolioSlider.querySelectorAll('.bx-pager-item'),
+            pagerItem = portfolioSlider.querySelector('.bx-pager-item'),
+            sliderWidth = portfolioSlider.clientWidth,
+            pagerWidth = pagerItem.clientWidth * bxPagerItems.length;
+            outside.style.cssText = 'width:' + (pagerWidth + 36) + 'px';
+    }());
+
+
+    // Stylse for slider pagination at the Team page (Mobile version)
+    ;(function() {
+        var teamSlider = document.querySelector('.team-slider_sm'),
+            outside = teamSlider.querySelector('.outside'),
+            teamfNext = teamSlider.querySelector('.team-nt'),
+            bxPagerItems = teamSlider.querySelectorAll('.bx-pager-item'),
+            pagerItem = teamSlider.querySelector('.bx-pager-item'),
+            sliderWidth = teamSlider.clientWidth,
+            pagerWidth = pagerItem.clientWidth * bxPagerItems.length;
+            outside.style.cssText = 'width:' + (pagerWidth + 36) + 'px';
+    }());
     
 
 
@@ -391,17 +417,34 @@ $(document).ready(function() {
     });
 
 
-    //Carousel on the slide9 mobile version
+    //Carousel on the slide5(portfolio) mobile version
     $('.bxslider-potrfolio').bxSlider({
         mode: 'horizontal',
         adaptiveHeight: true,
         auto: false,
-        pause: 7000,
-        speed: 700,
         nextSelector: '.portf-next',
         prevSelector: '.portf-prev',
         touchEnabled: false,
         slideMargin: 5
     });
 
+
+    //Carousel on the slide6(team) mobile version
+    $('.bxslider-team_sm').bxSlider({
+        mode: 'horizontal',
+        adaptiveHeight: true,
+        auto: false,
+        nextSelector: '.team-nt',
+        prevSelector: '.team-pr',
+        touchEnabled: false,
+        slideMargin: 5
+    });
+
+
+
+
+
+
+
+    console.log(performance.now());
 });

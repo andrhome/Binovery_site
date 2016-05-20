@@ -881,6 +881,7 @@ a, a:hover{
 			.carousel-dom-wf-holder{display: none;}
 		}
 	}
+	.slider-web-popup-holder{display: none;}
 }
 @media screen and (max-width: 480px){
 	.web-content .left-col .text p {
@@ -1187,6 +1188,7 @@ a, a:hover{
 			.carousel-iphone-holder{display: none;}
 		}
 	}
+	.slider-mob-popup-holder{display: none;}
 }
 @media screen and (max-width: 480px){
 	.mobile-content .left-col .text-holder .text p {
@@ -1500,66 +1502,68 @@ a, a:hover{
 			}
 		}
 	}
-	.potrfolio-slider{
-		display: none;
-		width: 80%;
-		margin: 0 auto;
-		padding: 25px 0 50px;
-		position: relative;
-		.bxslider-potrfolio{
-			line-height: 0;
-			font-size: 0;
-			li{
-				margin-left: -7px;
-				.item{
-					width: 206px;
-					height: 206px;
-					display: inline-block;
-    				vertical-align: top;
-					background-size: cover;
-					background-position: 50%;
-					margin: 0  0 10px 10px; 
-				}
-			}
-		}
-		.bx-wrapper .bx-pager.bx-default-pager a{
-			background: none;
-    		border: 2px solid #fff;
-    		margin: 0 8px;
-		}
-		.bx-wrapper .bx-pager.bx-default-pager a.active, 
-		.bx-wrapper .bx-pager.bx-default-pager a:hover{
-			background: #fff;
-		}
-		.outside{
-			width: 30%;
-			height: 0;
-		    position: absolute;
-		    bottom: 45px;
-			left: 36%;
-			span{
+}
+.potrfolio-slider{
+	display: none;
+	width: 80%;
+	margin: 0 auto;
+	padding: 25px 0 75px;
+	position: relative;
+	.bxslider-potrfolio{
+		line-height: 0;
+		font-size: 0;
+		li{
+			margin-left: -7px;
+			a{
 				display: inline-block;
-				vertical-align: top;
-				width: 16px;
-    			height: 29px;
-				a{
+				width: 31.7%;
+				margin: 0  0 10px 10px; 
+				img{
 					width: 100%;
-    				height: 100%;
-					text-indent: -9999px;
-					display: inline-block;
+					display: block;
 				}
 			}
-			.portf-prev{
-				background: url(../images/next.svg) 0 0 no-repeat;
-				background-size: cover;
-				-webkit-transform: rotate(180deg);
-				transform: rotate(180deg);
+		}
+	}
+	.bx-wrapper .bx-pager{bottom: -40px;}
+	.bx-wrapper .bx-pager.bx-default-pager a{
+		background: none;
+		border: 2px solid #fff;
+		margin: 0 8px;
+	}
+	.bx-wrapper .bx-pager.bx-default-pager a.active, 
+	.bx-wrapper .bx-pager.bx-default-pager a:hover{
+		background: #fff;
+	}
+	.outside{
+		height: 0;
+	    position: absolute;
+	    bottom: 60px;
+	    left: 0;
+	    right: 0;
+	    margin: 0 auto;
+		span{
+			display: inline-block;
+			vertical-align: top;
+			width: 16px;
+			height: 29px;
+			a{
+				width: 100%;
+				height: 100%;
+				text-indent: -9999px;
+				display: inline-block;
 			}
-			.portf-next{
-				background: url(../images/next.svg) 0 0 no-repeat;
-				background-size: cover;
-				float: right;
-			}
+		}
+		.portf-prev{
+			background: url(../images/next.svg) 0 0 no-repeat;
+			background-size: cover;
+			-webkit-transform: rotate(180deg);
+			transform: rotate(180deg);
+		}
+		.portf-next{
+			background: url(../images/next.svg) 0 0 no-repeat;
+			background-size: cover;
+			float: right;
 		}
 	}
 }
@@ -1575,7 +1579,16 @@ a, a:hover{
 		.portfolio-list{
 			display: none;
 		}
-		.potrfolio-slider{display: block;}
+	}
+	.potrfolio-slider{display: block;}
+}
+@media screen and (max-width: 768px){
+	.bxslider-potrfolio li a{width: 31.35% !important;}
+}
+@media screen and (max-width: 640px){
+	.potrfolio-slider{
+		width: 252px;
+		.bxslider-potrfolio li a{width: 116px !important;}
 	}
 }
 
@@ -1612,126 +1625,126 @@ a, a:hover{
 // ***************animation END***************
 #slide6{
 	position: relative; 
-	.team-content{
-		width: 80%; 
-		height: 100%;
-		margin: 0 auto;
-		padding-top: 2%;
-		.top-section{
-			width: 70%;
-			background: url(../images/team-bg-1.jpg) 0 0 no-repeat;
-			background-size: cover;
-			background-position: 50%;
+}
+.team-content{
+	width: 80%; 
+	height: 100%;
+	margin: 0 auto;
+	padding-top: 2%;
+	.top-section{
+		width: 70%;
+		background: url(../images/team-bg-1.jpg) 0 0 no-repeat;
+		background-size: cover;
+		background-position: 50%;
+		position: relative;
+		margin: 0 auto 30px;
+		overflow: hidden;
+		&:before{
+			@extend .beforePointBottom;
+		}
+		&:after{  
+			@extend .afterPointBottom; 
+		}
+		h2{
+			font-size: 18px;
+			font-weight: 600;
+			color: #fff;
+			text-align: center;
+			margin-bottom: 10px;
+			padding: 25px 10px 0 10px;
 			position: relative;
-			margin: 0 auto 30px;
-			overflow: hidden;
 			&:before{
-				@extend .beforePointBottom;
+				@extend .beforePointTop;
 			}
 			&:after{  
-				@extend .afterPointBottom; 
+				@extend .afterPointTop; 
 			}
-			h2{
-				font-size: 18px;
-				font-weight: 600;
-				color: #fff;
-				text-align: center;
-				margin-bottom: 10px;
-				padding: 25px 10px 0 10px;
-				position: relative;
-				&:before{
-					@extend .beforePointTop;
-				}
-				&:after{  
-					@extend .afterPointTop; 
-				}
+		}
+		.text{
+			line-height: 25px;
+			padding: 0 25px 20px;
+			p{
+				margin-bottom: 5px;
 			}
-			.text{
-				line-height: 25px;
-				padding: 0 25px 20px;
-				p{
-					margin-bottom: 5px;
+		}
+	}
+	.main-col{
+		.carousel-container{
+			position: relative;
+			.team-carousel{
+				.bxslider-team{
+					.masonry-container{
+						padding: 0;
+						&:after{
+							content: '';
+							clear: both;
+							display: block;
+						}
+						.item{
+							width: 25%;
+							float: left;
+							padding: 3px;
+							cursor: pointer;
+							-webkit-transition: all .3s ease-in-out;
+							transition: all .3s ease-in-out;
+							img{
+								width: 100%;
+								display: block;
+							}
+						}
+					}
+				}
+				.bx-controls{
+					display: none;
+				}
+				.outside{
+					width: 100%;
+					height: 0;
+					position: absolute;
+					top: 36%;
+				    left: 0;
+					span{
+						display: inline-block;
+						width: 46px;
+						height: 44px;
+						color: transparent;
+						cursor: pointer;
+						opacity: 0;
+						-webkit-transition: all .3s ease-in-out;
+						transition: all .3s ease-in-out;
+						a{
+							display: inline-block;
+							width: 100%;
+							height: 100%;
+							text-indent: -9999px;
+						}
+					}
+					.prev_team{
+						background: url(../images/ico-prev3.jpg) 0 0 no-repeat;
+						background-size: cover;
+						-webkit-transform: rotate(-90deg);
+						transform: rotate(-90deg);
+						margin-left: -50px;
+					}
+					.next_team{
+						background: url(../images/ico-prev3.jpg) 0 0 no-repeat;
+						background-size: cover;
+						-webkit-transform: rotate(90deg);
+						transform: rotate(90deg);
+						float: right;
+						margin-right: -50px;
+					}
 				}
 			}
 		}
-		.main-col{
-			.carousel-container{
-				position: relative;
-				.team-carousel{
-					.bxslider-team{
-						.masonry-container{
-							padding: 0;
-							&:after{
-								content: '';
-								clear: both;
-								display: block;
-							}
-							.item{
-								width: 25%;
-								float: left;
-								padding: 3px;
-								cursor: pointer;
-								-webkit-transition: all .3s ease-in-out;
-								transition: all .3s ease-in-out;
-								img{
-									width: 100%;
-									display: block;
-								}
-							}
-						}
-					}
-					.bx-controls{
-						display: none;
-					}
-					.outside{
-						width: 100%;
-						height: 0;
-						position: absolute;
-						top: 36%;
-					    left: 0;
-						span{
-							display: inline-block;
-							width: 46px;
-							height: 44px;
-							color: transparent;
-							cursor: pointer;
-							opacity: 0;
-							-webkit-transition: all .3s ease-in-out;
-							transition: all .3s ease-in-out;
-							a{
-								display: inline-block;
-								width: 100%;
-								height: 100%;
-								text-indent: -9999px;
-							}
-						}
-						.prev_team{
-							background: url(../images/ico-prev3.jpg) 0 0 no-repeat;
-							background-size: cover;
-							-webkit-transform: rotate(-90deg);
-							transform: rotate(-90deg);
-							margin-left: -50px;
-						}
-						.next_team{
-							background: url(../images/ico-prev3.jpg) 0 0 no-repeat;
-							background-size: cover;
-							-webkit-transform: rotate(90deg);
-							transform: rotate(90deg);
-							float: right;
-							margin-right: -50px;
-						}
-					}
-				}
+		&:hover{
+			.carousel-container .team-carousel .outside .prev_team{
+				opacity: .6;
+				margin-left: 8px;
 			}
-			&:hover{
-				.carousel-container .team-carousel .outside .prev_team{
-					opacity: .6;
-					margin-left: 8px;
-				}
-				.carousel-container .team-carousel .outside .next_team{
-					opacity: .6;
-					margin-right: 8px;
-				}
+			.carousel-container .team-carousel .outside .next_team{
+				opacity: .6;
+				margin-right: 8px;
 			}
 		}
 	}
@@ -1820,31 +1833,104 @@ a, a:hover{
 		}
 	}
 }
+.team-content_sm{
+	display: none;
+	padding: 25px 0 15px;
+	h2{
+	    font-size: 24px;
+	    font-weight: 400;
+	    text-align: center;
+	    letter-spacing: 1px;
+	    margin-bottom: 10px;
+	}
+}
+.team-slider_sm{
+	width: 80%;
+	margin: 0 auto;
+	padding: 25px 0 75px;
+	position: relative;
+	.bxslider-team_sm{
+		line-height: 0;
+		font-size: 0;
+		h3{
+			font-size: 20px;
+		    line-height: 24px;
+		    text-align: center;
+		    margin-bottom: 15px;
+		}
+		img{
+			width: 33.3%;
+			display: inline-block;
+		}
+	}
+	.bx-wrapper .bx-pager{bottom: -55px;}
+	.bx-wrapper .bx-pager.bx-default-pager a{
+		background: none;
+		border: 2px solid #fff;
+		margin: 0 8px;
+	}
+	.bx-wrapper .bx-pager.bx-default-pager a.active, 
+	.bx-wrapper .bx-pager.bx-default-pager a:hover{
+		background: #fff;
+	}
+	.outside{
+		height: 0;
+	    position: absolute;
+	    bottom: 45px;
+	    left: 0;
+	    right: 0;
+	    margin: 0 auto;
+		span{
+			display: inline-block;
+			vertical-align: top;
+			width: 16px;
+			height: 29px;
+			a{
+				width: 100%;
+				height: 100%;
+				text-indent: -9999px;
+				display: inline-block;
+			}
+		}
+		.team-pr{
+			background: url(../images/next.svg) 0 0 no-repeat;
+			background-size: cover;
+			-webkit-transform: rotate(180deg);
+			transform: rotate(180deg);
+		}
+		.team-nt{
+			background: url(../images/next.svg) 0 0 no-repeat;
+			background-size: cover;
+			float: right;
+		}
+	}
+}
 @media screen and (max-width: 1280px) {
-	#slide6{
-		.team-content{
-			.main-col{
-				.carousel-container .prev_team,
-				.slider-team-popup-holder .team-prev{
-					opacity: .7 !important;
-					margin-left: 8px !important;
-				}
-				.carousel-container .next_team,
-				.slider-team-popup-holder .team-next{
-					opacity: .7 !important;
-					margin-right: 8px !important;
-				}
+	.team-content{
+		.main-col{
+			.carousel-container .prev_team,
+			.slider-team-popup-holder .team-prev{
+				opacity: .7 !important;
+				margin-left: 8px !important;
+			}
+			.carousel-container .next_team,
+			.slider-team-popup-holder .team-next{
+				opacity: .7 !important;
+				margin-right: 8px !important;
 			}
 		}
 	}
 }
 @media screen and (max-width: 1024px) {
-	#slide6{
-		.team-content{
-			.top-section{
-				width: 100%;
-			}
-		}
+	.team-content{display: none;}
+	.team-content_sm{display: block;}
+}
+@media screen and (max-width: 640px){
+	.team-content_sm h2{margin-bottom: 0;}
+	.team-slider_sm{
+		width: 252px;
+		padding-top: 15px;
+		.bxslider-team_sm li img{width: 120px !important;}
 	}
 }
 
