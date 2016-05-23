@@ -104,121 +104,124 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     //END
 
-    
-    //MarginTop for '.web-content' on the slide2
-    ;(function() {
-        var webContent = document.querySelector('.web-content'),
-            slide2Height = document.getElementById('slide2').offsetHeight,
-            webContHeight = webContent.offsetHeight,
-            logoHeight = document.querySelector('.logo').offsetHeight;
+    // Vertical Alignment 
+    if(window.innerWidth > 1024) {
+        //MarginTop for '.web-content' on the slide2
+        ;(function() {
+            var webContent = document.querySelector('.web-content'),
+                slide2Height = document.getElementById('slide2').offsetHeight,
+                webContHeight = webContent.offsetHeight,
+                logoHeight = document.querySelector('.logo').offsetHeight;
 
-        webContent.style.cssText = "margin-top:" + parseInt((slide2Height / 2) - (webContHeight / 2) - (logoHeight)) + "px";
-        
-        window.addEventListener('resize', function() {
             webContent.style.cssText = "margin-top:" + parseInt((slide2Height / 2) - (webContHeight / 2) - (logoHeight)) + "px";
-        });
-    }());
+            
+            window.addEventListener('resize', function() {
+                webContent.style.cssText = "margin-top:" + parseInt((slide2Height / 2) - (webContHeight / 2) - (logoHeight)) + "px";
+            });
+        }());
 
 
-    //MarginTop for '.mobile-content' on the slide3
-    ;(function() {
-        var mobileContent = document.querySelector('.mobile-content'),
-            slide3Height = document.getElementById('slide3').offsetHeight,
-            mobileContHeight = mobileContent.offsetHeight,
-            logoHeight = document.querySelector('.logo').offsetHeight;
+        //MarginTop for '.mobile-content' on the slide3
+        ;(function() {
+            var mobileContent = document.querySelector('.mobile-content'),
+                slide3Height = document.getElementById('slide3').offsetHeight,
+                mobileContHeight = mobileContent.offsetHeight,
+                logoHeight = document.querySelector('.logo').offsetHeight;
 
-        mobileContent.style.cssText = "margin-top:" + parseInt((slide3Height / 2) - (mobileContHeight / 2) - (logoHeight)) + "px";
-        
-        window.addEventListener('resize', function() {
             mobileContent.style.cssText = "margin-top:" + parseInt((slide3Height / 2) - (mobileContHeight / 2) - (logoHeight)) + "px";
-        });
-    }());
+            
+            window.addEventListener('resize', function() {
+                mobileContent.style.cssText = "margin-top:" + parseInt((slide3Height / 2) - (mobileContHeight / 2) - (logoHeight)) + "px";
+            });
+        }());
 
 
-    //MarginTop for '.marketing-content' on the slide4
-    ;(function() {
-        var marketingContent = document.querySelector('.marketing-content'),
-            slide4Height = document.getElementById('slide4').offsetHeight,
-            marketingContHeight = marketingContent.offsetHeight,
-            logoHeight = document.querySelector('.logo').offsetHeight;
+        //MarginTop for '.marketing-content' on the slide4
+        ;(function() {
+            var marketingContent = document.querySelector('.marketing-content'),
+                slide4Height = document.getElementById('slide4').offsetHeight,
+                marketingContHeight = marketingContent.offsetHeight,
+                logoHeight = document.querySelector('.logo').offsetHeight;
 
-        marketingContent.style.cssText = "margin-top:" + parseInt((slide4Height / 2) - (marketingContHeight / 2) - (logoHeight)) + "px";
-        
-        window.addEventListener('resize', function() {
             marketingContent.style.cssText = "margin-top:" + parseInt((slide4Height / 2) - (marketingContHeight / 2) - (logoHeight)) + "px";
-        });
-    }());
+            
+            window.addEventListener('resize', function() {
+                marketingContent.style.cssText = "margin-top:" + parseInt((slide4Height / 2) - (marketingContHeight / 2) - (logoHeight)) + "px";
+            });
+        }());
 
 
-    //MarginTop for '.portfolio-content' on the slide5
-    ;(function() {
-        var portfolioContent = document.querySelector('.portfolio-content'),
-            slide5Height = document.getElementById('slide5').offsetHeight,
-            portfolioContHeight = portfolioContent.offsetHeight,
-            logoHeight = document.querySelector('.logo').offsetHeight;
+        //MarginTop for '.portfolio-content' on the slide5
+        ;(function() {
+            var portfolioContent = document.querySelector('.portfolio-content'),
+                slide5Height = document.getElementById('slide5').offsetHeight,
+                portfolioContHeight = portfolioContent.offsetHeight,
+                logoHeight = document.querySelector('.logo').offsetHeight;
 
-        portfolioContent.style.cssText = "margin-top:" + parseInt((slide5Height / 2) - (portfolioContHeight / 2) - (logoHeight)) + "px";
-        
-        window.addEventListener('resize', function() {
             portfolioContent.style.cssText = "margin-top:" + parseInt((slide5Height / 2) - (portfolioContHeight / 2) - (logoHeight)) + "px";
-        });
-    }());
+            
+            window.addEventListener('resize', function() {
+                portfolioContent.style.cssText = "margin-top:" + parseInt((slide5Height / 2) - (portfolioContHeight / 2) - (logoHeight)) + "px";
+            });
+        }());
 
 
-    //MarginTop for '.framework-content' on the slide7
-    ;(function() {
-        var frameworkContent = document.querySelector('.framework-content'),
-            slide7Height = document.getElementById('slide7').offsetHeight,
-            frameworkContHeight = frameworkContent.offsetHeight,
-            logoHeight = document.querySelector('.logo').offsetHeight;
+        //MarginTop for '.framework-content' on the slide7
+        ;(function() {
+            var frameworkContent = document.querySelector('.framework-content'),
+                slide7Height = document.getElementById('slide7').offsetHeight,
+                frameworkContHeight = frameworkContent.offsetHeight,
+                logoHeight = document.querySelector('.logo').offsetHeight;
 
-        frameworkContent.style.cssText = "margin-top:" + parseInt((slide7Height / 2) - (frameworkContHeight / 2) - (logoHeight)) + "px";
-        
-        window.addEventListener('resize', function() {
             frameworkContent.style.cssText = "margin-top:" + parseInt((slide7Height / 2) - (frameworkContHeight / 2) - (logoHeight)) + "px";
-        });
-    }());
+            
+            window.addEventListener('resize', function() {
+                frameworkContent.style.cssText = "margin-top:" + parseInt((slide7Height / 2) - (frameworkContHeight / 2) - (logoHeight)) + "px";
+            });
+        }());
 
 
-    //MarginTop for '.blog-content' on the slide8
-    ;(function() {
-        var blogContent = document.querySelector('.blog-content'),
-            slide8Height = document.getElementById('slide8').offsetHeight,
-            blogContHeight = blogContent.offsetHeight,
-            logoHeight = document.querySelector('.logo').offsetHeight;
+        //MarginTop for '.blog-content' on the slide8
+        ;(function() {
+            var blogContent = document.querySelector('.blog-content'),
+                slide8Height = document.getElementById('slide8').offsetHeight,
+                blogContHeight = blogContent.offsetHeight,
+                logoHeight = document.querySelector('.logo').offsetHeight;
 
-        blogContent.style.cssText = "margin-top:" + parseInt((slide8Height / 2) - (blogContHeight / 2) - (logoHeight)) + "px";
-        
-        window.addEventListener('resize', function() {
             blogContent.style.cssText = "margin-top:" + parseInt((slide8Height / 2) - (blogContHeight / 2) - (logoHeight)) + "px";
-        });
-    }());    
+            
+            window.addEventListener('resize', function() {
+                blogContent.style.cssText = "margin-top:" + parseInt((slide8Height / 2) - (blogContHeight / 2) - (logoHeight)) + "px";
+            });
+        }());    
 
 
-    // Stylse for slider pagination at the Portfolio page (Mobile version)
-    ;(function() {
-        var portfolioSlider = document.querySelector('.potrfolio-slider'),
-            outside = portfolioSlider.querySelector('.outside'),
-            portfNext = portfolioSlider.querySelector('.portf-next'),
-            bxPagerItems = portfolioSlider.querySelectorAll('.bx-pager-item'),
-            pagerItem = portfolioSlider.querySelector('.bx-pager-item'),
-            sliderWidth = portfolioSlider.clientWidth,
-            pagerWidth = pagerItem.clientWidth * bxPagerItems.length;
-            outside.style.cssText = 'width:' + (pagerWidth + 36) + 'px';
-    }());
+        // Stylse for slider pagination at the Portfolio page (Mobile version)
+        ;(function() {
+            var portfolioSlider = document.querySelector('.potrfolio-slider'),
+                outside = portfolioSlider.querySelector('.outside'),
+                portfNext = portfolioSlider.querySelector('.portf-next'),
+                bxPagerItems = portfolioSlider.querySelectorAll('.bx-pager-item'),
+                pagerItem = portfolioSlider.querySelector('.bx-pager-item'),
+                sliderWidth = portfolioSlider.clientWidth,
+                pagerWidth = pagerItem.clientWidth * bxPagerItems.length;
+                outside.style.cssText = 'width:' + (pagerWidth + 36) + 'px';
+        }());
 
 
-    // Stylse for slider pagination at the Team page (Mobile version)
-    ;(function() {
-        var teamSlider = document.querySelector('.team-slider_sm'),
-            outside = teamSlider.querySelector('.outside'),
-            teamfNext = teamSlider.querySelector('.team-nt'),
-            bxPagerItems = teamSlider.querySelectorAll('.bx-pager-item'),
-            pagerItem = teamSlider.querySelector('.bx-pager-item'),
-            sliderWidth = teamSlider.clientWidth,
-            pagerWidth = pagerItem.clientWidth * bxPagerItems.length;
-            outside.style.cssText = 'width:' + (pagerWidth + 36) + 'px';
-    }());
+        // Stylse for slider pagination at the Team page (Mobile version)
+        ;(function() {
+            var teamSlider = document.querySelector('.team-slider_sm'),
+                outside = teamSlider.querySelector('.outside'),
+                teamfNext = teamSlider.querySelector('.team-nt'),
+                bxPagerItems = teamSlider.querySelectorAll('.bx-pager-item'),
+                pagerItem = teamSlider.querySelector('.bx-pager-item'),
+                sliderWidth = teamSlider.clientWidth,
+                pagerWidth = pagerItem.clientWidth * bxPagerItems.length;
+                outside.style.cssText = 'width:' + (pagerWidth + 36) + 'px';
+        }());
+    };
+    //END
     
 
 
@@ -403,7 +406,7 @@ $(document).ready(function() {
         mode: 'horizontal',
         adaptiveHeight: true,
         auto: true,
-        pause: 5000,
+        pause: 10000,
         speed: 700,
         slideMargin: 5
     });

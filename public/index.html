@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <title>BINOVERY</title>
-        <link rel="stylesheet" type="text/css" href="build/bundle.min.css">
-        <!-- <link rel="stylesheet" type="text/css" href="css/style_scroll.css">
+        <!-- <link rel="stylesheet" type="text/css" href="build/bundle.min.css"> -->
+        <link rel="stylesheet" type="text/css" href="css/style_scroll.css">
         <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+        <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">       
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     </head>
@@ -26,15 +27,15 @@
                                 <span></span>
                             </div>
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Portfolio</a></li>
-                                <li><a href="#">Team</a></li>
-                                <li><a href="#">Framework</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Reviews</a></li>
-                                <li><a href="#">Open position</a></li>
-                                <li><a href="#">Contacts</a></li>
+                                <li><a href="#slide1">Home</a></li>
+                                <li><a href="#slide2">Services</a></li>
+                                <li><a href="#slide5">Portfolio</a></li>
+                                <li><a href="#slide6">Team</a></li>
+                                <li><a href="#slide7">Framework</a></li>
+                                <li><a href="#slide8">Blog</a></li>
+                                <li><a href="#slide9">Reviews</a></li>
+                                <li><a href="#openRoles">Open position</a></li>
+                                <li><a href="#slide10">Contacts</a></li>
                             </ul>
                         </div>
                     </div>
@@ -559,45 +560,61 @@
                 <div id="slide9" class="slide">
                     <a href="index.html" class="logo"><img src="images/logo.png" alt="Logotype"></a>
                     <div class="reviews-content">
+                        <h2>What Clients are saying</h2>
                         <div class="reviews-slider">
                             <ul class="bxslider-reviews">
                                 <li>
                                     <div class="review">
+                                        <img src="images/quotes.svg" alt="Quotes">
                                         <p>Lorem ipsum dolor sit amet, eum quod porro voluptaria ad, tantas suscipiantur his id. In mel posse impetus. Duo fugit veniam populo ex, vix nulla ignota nonumes cu. Vix quando ridens causae ne, mel in</p>
                                         <div class="author">
-                                            John Mc. Gregor <span>Microsoft Company</span>
+                                            John Mc. Gregor
+                                            <i>-</i>
+                                            <span>Microsoft Company</span>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="review">
+                                        <img src="images/quotes.svg" alt="Quotes">
                                         <p>Duo fugit veniam populo ex, vix nulla ignota nonumes cu. Vix quando ridens causae ne, mel in Lorem ipsum dolor sit amet, eum quod porro voluptaria ad, tantas suscipiantur his id. In mel posse impetus. Duo fugit veniam populo ex, vix nulla ignota nonumes cu. Vix quando ridens causae ne, mel in Duo fugit veniam populo ex, vix nulla ignota nonumes cu. Vix quando ridens causae ne, mel in Lorem ipsum dolor sit amet, eum quod porro voluptaria ad, tantas suscipiantur his id.</p>
                                         <div class="author">
-                                            John Mc. Gregor - <span>Microsoft Company</span>
+                                            John Mc. Gregor
+                                            <i>-</i>
+                                            <span>Microsoft Company</span>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="review">
+                                        <img src="images/quotes.svg" alt="Quotes">
                                         <p>Lorem ipsum dolor sit amet, eum quod porro voluptaria ad, tantas suscipiantur his id. In mel posse impetus. Duo fugit veniam populo ex, vix nulla ignota nonumes cu. Vix quando ridens causae ne, mel in</p>
                                         <div class="author">
-                                            John Mc. Gregor <span>Microsoft Company</span>
+                                            John Mc. Gregor
+                                            <i>-</i>
+                                            <span>Microsoft Company</span>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="review">
+                                        <img src="images/quotes.svg" alt="Quotes">
                                         <p>Lorem ipsum dolor sit amet, eum quod porro voluptaria ad, tantas suscipiantur his id. In mel posse impetus. Duo fugit veniam populo ex, vix nulla ignota nonumes cu. Vix quando ridens causae ne, mel in. Duo fugit veniam populo ex, vix nulla ignota nonumes cu. Vix quando ridens causae ne, mel in</p>
                                         <div class="author">
-                                            John Mc. Gregor <span>Microsoft Company</span>
+                                            John Mc. Gregor
+                                            <i>-</i>
+                                            <span>Microsoft Company</span>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="review">
+                                        <img src="images/quotes.svg" alt="Quotes">
                                         <p>Lorem ipsum dolor sit amet, eum quod porro voluptaria ad, tantas suscipiantur his id. In mel posse impetus. Duo fugit veniam populo ex, vix nulla ignota nonumes cu. Vix quando ridens causae ne, mel in</p>
                                         <div class="author">
-                                            John Mc. Gregor <span>Microsoft Company</span>
+                                            John Mc. Gregor
+                                            <i>-</i>
+                                            <span>Microsoft Company</span>
                                         </div>
                                     </div>
                                 </li>
@@ -619,7 +636,8 @@
                                 center: {lat: 41.9102415, lng: 12.3959152}
                             });
 
-                            var image = 'images/ico-3.png';
+                            var image;
+                            if(window.innerWidth > 1024) image = 'images/ico-3.png';
                             var beachMarker = new google.maps.Marker({
                                 position: {lat: 41.9102415, lng: 12.3959152},
                                 map: map,
@@ -631,6 +649,39 @@
                     </script>
                     <script async defer
                     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfR3kbtjmKagOM877Hzsoa8C_RN0n6kzY&signed_in=true&callback=initMap"></script>
+                    <div class="contacts_sm">
+                        <div class="top-section">
+                            <div class="address">
+                                <h6>Contact us</h6>
+                                <address>80136, Italy, Naples, vico Paradiso alla Salute, 68, int.11</address>
+                                <a href="tel:+393279776068">+39 (327) 977 60 68</a>
+                                <a href="mailto: cm@binovery.com">cm@binovery.com</a>
+                            </div>
+                            <div class="social-box">
+                                <h6>Follow us</h6>
+                                <div class="lnk-holder">
+                                    <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-us">
+                            <h6>About us</h6>
+                            <p>We are sure, your idea of a web or mobile project is a bingo for users and it is worth developing. Get in touch with us, Binovery is going to become your solid partner in the evolution of your web-business. Put your plan into action!</p>
+                        </div>
+                        <ul class="bottom-nav">
+                            <li><a href="#slide1">Home</a></li>
+                            <li><a href="#slide2">Services</a></li>
+                            <li><a href="#slide5">Portfolio</a></li>
+                            <li><a href="#slide6">Team</a></li>
+                            <li><a href="#slide7">Framework</a></li>
+                            <li><a href="#slide8">Blog</a></li>
+                            <li><a href="#slide9">Reviews</a></li>
+                            <li><a href="#openRoles">Open position</a></li>
+                        </ul>
+                        <div class="copyright">&copy; 2016 Binovery</div>
+                    </div>
                 </div>
             </div>
         </div>

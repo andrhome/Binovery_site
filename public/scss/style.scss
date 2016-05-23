@@ -124,7 +124,6 @@ a, a:hover{
 	background-size: cover;
 	background-position: 50%;
 	@media screen and (max-width: 1024px){
-		-webkit-background-image: radial-gradient(circle at 50% 50%, #fe9c1c, #e16600);
 		background-image: radial-gradient(circle at 50% 50%, #fe9c1c, #e16600);
 	}
 }
@@ -133,7 +132,6 @@ a, a:hover{
 	background-size: cover;
 	background-position: 50%; 
 	@media screen and (max-width: 1024px){
-		-webkit-background-image: radial-gradient(circle at 50% 50%, #484848, #272727);
 		background-image: radial-gradient(circle at 50% 50%, #484848, #272727);
 	}
 }
@@ -142,7 +140,6 @@ a, a:hover{
 	background-size: cover;
 	background-position: 50%;
 	@media screen and (max-width: 1024px){
-		-webkit-background-image: radial-gradient(circle at 50% 50%, #c9c9c9, #767676);
 		background-image: radial-gradient(circle at 50% 50%, #c9c9c9, #767676);
 	}
 }
@@ -151,7 +148,6 @@ a, a:hover{
 	background-size: cover;
 	background-position: 50%;
 	@media screen and (max-width: 1024px){
-		-webkit-background-image: radial-gradient(circle at 50% 50%, #b4b4b4, #464646);
 		background-image: radial-gradient(circle at 50% 50%, #b4b4b4, #464646);
 	}
 }
@@ -160,7 +156,6 @@ a, a:hover{
 	background-size: cover;
 	background-position: 50%;
 	@media screen and (max-width: 1024px){
-		-webkit-background-image: radial-gradient(circle at 50% 50%, #fe9c1c, #e16600);
 		background-image: radial-gradient(circle at 50% 50%, #fe9c1c, #e16600);
 	}
 }
@@ -169,7 +164,6 @@ a, a:hover{
 	background-size: cover;
 	background-position: 50% 100%;
 	@media screen and (max-width: 1024px){
-		-webkit-background-image: radial-gradient(circle at 50% 50%, #0485be, #00608b);
 		background-image: radial-gradient(circle at 50% 50%, #0485be, #00608b);
 	}
 }
@@ -178,7 +172,6 @@ a, a:hover{
 	background-size: cover;
 	background-position: 50%;
 	@media screen and (max-width: 1024px){
-		-webkit-background-image: radial-gradient(circle at 50% 50%, #484848, #272727);
 		background-image: radial-gradient(circle at 50% 50%, #484848, #272727);
 	}
 } 
@@ -187,7 +180,6 @@ a, a:hover{
 	background-size: cover;
 	background-position: 50%;
 	@media screen and (max-width: 1024px){
-		-webkit-background-image: radial-gradient(circle at 50% 50%, #7d90cc, #49536b);
 		background-image: radial-gradient(circle at 50% 50%, #7d90cc, #49536b);
 	}
 } 
@@ -195,6 +187,9 @@ a, a:hover{
 	background: url(../images/slide-9-bg.jpg) 0 0 no-repeat;
 	background-size: cover;
 	background-position: 0 19%;
+	@media screen and (max-width: 1024px){
+		background-image: radial-gradient(circle at 50% 50%, #fe9c1c, #e16600);
+	}
 }
 // ************************************Navigation*********************************
 #nav-wrap.nav-true + #nav-wrap{display: none;}
@@ -849,7 +844,7 @@ a, a:hover{
 
 @media screen and (max-width: 1024px){
 	.web-content{
-		padding-bottom: 25px;
+		padding: 35px 0 45px;
 		.left-col{
 			width: 100%;
 			height: auto;
@@ -1152,7 +1147,7 @@ a, a:hover{
 }
 @media screen and (max-width: 1024px){
 	.mobile-content{
-		padding-bottom: 25px;
+		padding: 35px 0 45px;
 		.left-col{
 			width: 100%;
 			float: none;
@@ -1302,7 +1297,7 @@ a, a:hover{
 @media screen and (max-width: 1024px){
 	.marketing-content{
 		opacity: 1;
-		padding: 25px 0;
+		padding: 35px 0;
 		overflow: inherit;
 		h2{
 			font-size: 15px;
@@ -1569,6 +1564,7 @@ a, a:hover{
 }
 @media screen and (max-width: 1024px){
 	.portfolio-content{
+		padding: 35px 0 45px;
 		h2{
 			font-size: 24px;
 			font-weight: 400;
@@ -1835,7 +1831,7 @@ a, a:hover{
 }
 .team-content_sm{
 	display: none;
-	padding: 25px 0 15px;
+	padding: 60px 0 45px;
 	h2{
 	    font-size: 24px;
 	    font-weight: 400;
@@ -2187,7 +2183,7 @@ a, a:hover{
 }
 @media screen and (max-width: 1024px){
 	.framework-content{
-		padding-bottom: 25px;
+		padding: 35px 0 45px;
 		.left-col{
 			width: 100%;
 			height: auto;
@@ -2398,7 +2394,7 @@ a, a:hover{
 		width: 100%;
 		max-width: 100%;
 		text-align: center;
-		padding: 35px 35px 60px;
+		padding: 60px 35px 60px;
 		h2{display: block;}
 		ul li {
 			a article{
@@ -2454,11 +2450,11 @@ a, a:hover{
 }
 @media screen and (max-width: 480px){
 	.blog-content{
-		padding: 20px 15px 40px;
+		padding: 60px 15px 60px;
 		ul{
 			width: 270px;
-			text-align: justify;
-			margin: 0 auto;
+			display: inline-block;
+    		margin-left: -6px;
 			li{
 				width: 129px;
 				a article{
@@ -2495,7 +2491,14 @@ a, a:hover{
 .reviews-content{
 	max-width: 665px;
 	margin: 16% auto 0 auto;
-
+	h2{
+		display: none;
+		font-size: 24px;
+		letter-spacing: 1px;
+		text-align: center;
+		margin-bottom: 20px;
+		padding: 0 22px;
+	}
 	.bxslider-reviews li{
 		position: relative; 
 		&:before{
@@ -2504,10 +2507,10 @@ a, a:hover{
 		&:after{  
 			@extend .afterPointTop; 
 		}
-
 		.review{
 			font-size: 16px;
 			line-height: 26px;
+			letter-spacing: .7px;
 			font-style: italic;
 			background: url(../images/review-bg-1.jpg) 0 0 no-repeat;
 			background-size: cover;
@@ -2519,6 +2522,11 @@ a, a:hover{
 			}
 			&:after{  
 				@extend .afterPointBottom; 
+			}
+			img{
+				display: none;
+				width: 32px;
+				margin: 0 auto 30px;
 			}
 			p{
 				margin-bottom: 15px;
@@ -2555,6 +2563,47 @@ a, a:hover{
 	.bx-wrapper .bx-pager.bx-default-pager a.active, 
 	.bx-wrapper .bx-pager.bx-default-pager a:hover{
 		border: 1px solid #fff;
+	}
+}
+@media screen and (max-width: 1024px){
+	.reviews-content{
+		margin: 0 auto;
+		padding: 30px 0 70px;
+		h2{display: block;}
+		.bxslider-reviews li{
+			&:before, &:after{display: none;}
+			.review{
+				text-align: justify;
+				font-style: normal;
+				background: none;
+				&:before, &:after{display: none;}
+				img{display: block;}
+				.author{
+					text-align: right;
+					i{display: none;;}
+					span{display: block;}
+				}
+			}
+		}
+		.bx-wrapper .bx-pager.bx-default-pager a{
+			width: 10px;
+			height: 10px;
+			background: none;
+    		border: 2px solid #fff;
+			margin: 0 8px;
+			&:hover, &.active{
+				background: #fff;
+				border: 2px solid #fff;
+			}
+			&:after{display: none;}
+		}
+	}
+}
+@media screen and (max-width: 480px){
+	.reviews-content .bxslider-reviews li .review{
+		font-size: 12px;
+		line-height: 18px;
+		.author{font-size: 12px;}
 	}
 }
 
@@ -2614,5 +2663,109 @@ a, a:hover{
 	#map{
 		width: 100%;
 		height: 100%;
+		min-height: 400px;
+	}
+}
+.contacts_sm{
+	display: none;
+	background-image: radial-gradient(circle at 50% 50%, #484848, #272727);
+	letter-spacing: .7px;
+	padding: 30px 8% 20px;
+	h6{
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		font-weight: 400;
+	}
+	.top-section{
+		margin-bottom: 20px;
+		.address{
+			width: 47%;
+			display: inline-block;
+			vertical-align: top;
+			font-size: 12px;
+			line-height: 18px;
+			margin-bottom: 10px;
+			margin-right: 20px;
+			address{margin-bottom: 20px}
+			a{
+				display: inline-block;
+				text-decoration: none;
+				color: #fff;
+				margin-right: 15px;
+			}
+		}
+		.social-box{
+			width: 95px;
+			float: right;
+			margin-bottom: 10px;
+			h6{
+				text-align: center;
+				margin-bottom: 15px;
+			}
+			.lnk-holder{
+				display: flex;
+    			justify-content: space-between;
+				a{
+					display: inline-block;
+					text-decoration: none;
+					color: #fff;
+					font-size: 18px;
+					&:active{opacity: .9;}
+				}
+			}
+		}
+	}
+	.about-us{
+		font-size: 12px;
+		line-height: 18px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #7d7d7d;
+		margin-bottom: 15px;
+	}
+	.bottom-nav{
+		line-height: 0;
+		font-size: 0;
+		text-align: center;
+		margin-bottom: 15px;
+		li{
+			display: inline-block;
+			margin: 0 15px 15px; 
+			a{
+				display: inline-block;
+				text-transform: uppercase;
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 20px;
+				text-decoration: none;
+				color: #fff;
+			}
+		}
+	}
+	.copyright{font-size: 12px;}
+}
+@media screen and (max-width: 1024px){
+	#slide10{
+		.rolers-holder{display: none;}
+	}
+	.contacts_sm{display: block;}
+}
+@media screen and (max-width: 480px){
+	.contacts_sm{
+		padding: 30px 15px 20px;
+		.top-section .address a{
+			margin-right: 0;
+			display: block;
+		}
+		.about-us{
+			font-size: 11px;
+			line-height: 17px;
+		}
+		.bottom-nav{
+			li{
+				margin: 0 7px 15px; 
+				a{font-size: 10px;}
+			}
+		}
+		.copyright{font-size: 11px;}
 	}
 }
