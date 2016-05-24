@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <title>Positions</title>
+        <!-- <link rel="stylesheet" type="text/css" href="build/bundle.min.css"> -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/open-positions.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="openPositions">
+                <a href="index.html" class="logo"><img src="images/logo.png" alt="Logotype"></a>
+                <h2>OPEN POSITIONS</h2>
+                <div class="positions-content">
+                    <ul class="positions-nav">
+                        <li><a href="#" data-id="tab1">All (6)</a></li>
+                        <li><a href="#" data-id="tab2">JavaScript Developers (1)</a></li>
+                        <li><a href="#" data-id="tab3">PHP Developers (1)</a></li>
+                        <li><a href="#" data-id="tab4">Designers (2)</a></li>
+                        <li><a href="#" data-id="tab5">Copywriters (2)</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <ul id="tab1" class="tab-list active">
+                            <li>
+                                <a href="#">
+                                    <span>Senior JavaScript developer</span>
+                                    <span>Kharkiv/Ukraine</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Senior PHP developer</span>
+                                    <span>Kharkiv/Ukraine</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>UI/UX Designer</span>
+                                    <span>Kharkiv/Ukraine</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>UI/UX Designer</span>
+                                    <span>Kharkiv/Ukraine</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Copywriter</span>
+                                    <span>Kharkiv/Ukraine</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Copywriter</span>
+                                    <span>Kharkiv/Ukraine</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul id="tab2" class="tab-list">
+                            <li>
+                                <a href="#">
+                                    <span>Senior JavaScript developer</span>
+                                    <span>Kharkiv/Ukraine</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul id="tab3" class="tab-list">
+                            <li>
+                                <a href="#">
+                                    <span>Senior PHP developer</span>
+                                    <span>Kharkiv/Ukraine</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul id="tab4" class="tab-list">
+                            <li>
+                                <a href="#">
+                                    <span>UI/UX Designer</span>
+                                    <span>Kharkiv/Ukraine</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>UI/UX Designer</span>
+                                    <span>Kharkiv/Ukraine</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul id="tab5" class="tab-list">
+                            <li>
+                                <a href="#">
+                                    <span>Copywriter</span>
+                                    <span>Kharkiv/Ukraine</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Copywriter</span>
+                                    <span>Kharkiv/Ukraine</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+
+                //Sets the height of the wrapper
+                var windowHeight = window.innerHeight,
+                    wrapper = document.getElementById('wrapper');
+                wrapper.style.cssText = 'height:' + windowHeight + 'px';
+
+
+                //TABS for '.positions-nav'
+                ;(function() {
+                    var positionNav = document.querySelector('.positions-nav');
+
+                    positionNav.addEventListener('click', showTabList);
+
+                    function showTabList() {
+                        var target = event && event.target,
+                            id = target.getAttribute('data-id'),
+                            tabId = document.getElementById(id);
+
+                        if(id) {                            
+                            removeClass()
+                            tabId.classList.add('active');
+                        };
+                        
+                    };
+
+                    function removeClass() {
+                        var tabList = document.querySelectorAll('.tab-list');
+                        for(var i = 0; i < tabList.length; i++) {
+                                tabList[i].classList.remove('active');
+                            }
+                    };
+                }());
+
+            });
+        </script>
+        <script src="js/jquery-2.2.2.min.js"></script>
+    </body>
+</html>

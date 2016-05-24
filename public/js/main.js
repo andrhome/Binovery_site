@@ -194,34 +194,34 @@ document.addEventListener("DOMContentLoaded", function () {
                 blogContent.style.cssText = "margin-top:" + parseInt((slide8Height / 2) - (blogContHeight / 2) - (logoHeight)) + "px";
             });
         }());    
-
-
-        // Stylse for slider pagination at the Portfolio page (Mobile version)
-        ;(function() {
-            var portfolioSlider = document.querySelector('.potrfolio-slider'),
-                outside = portfolioSlider.querySelector('.outside'),
-                portfNext = portfolioSlider.querySelector('.portf-next'),
-                bxPagerItems = portfolioSlider.querySelectorAll('.bx-pager-item'),
-                pagerItem = portfolioSlider.querySelector('.bx-pager-item'),
-                sliderWidth = portfolioSlider.clientWidth,
-                pagerWidth = pagerItem.clientWidth * bxPagerItems.length;
-                outside.style.cssText = 'width:' + (pagerWidth + 36) + 'px';
-        }());
-
-
-        // Stylse for slider pagination at the Team page (Mobile version)
-        ;(function() {
-            var teamSlider = document.querySelector('.team-slider_sm'),
-                outside = teamSlider.querySelector('.outside'),
-                teamfNext = teamSlider.querySelector('.team-nt'),
-                bxPagerItems = teamSlider.querySelectorAll('.bx-pager-item'),
-                pagerItem = teamSlider.querySelector('.bx-pager-item'),
-                sliderWidth = teamSlider.clientWidth,
-                pagerWidth = pagerItem.clientWidth * bxPagerItems.length;
-                outside.style.cssText = 'width:' + (pagerWidth + 36) + 'px';
-        }());
     };
     //END
+
+
+    // Stylse for slider pagination at the Portfolio page (Mobile version)
+    ;(function() {
+        var portfolioSlider = document.querySelector('.potrfolio-slider'),
+            outside = portfolioSlider.querySelector('.outside'),
+            portfNext = portfolioSlider.querySelector('.portf-next'),
+            bxPagerItems = portfolioSlider.querySelectorAll('.bx-pager-item'),
+            pagerItem = portfolioSlider.querySelector('.bx-pager-item'),
+            sliderWidth = portfolioSlider.clientWidth,
+            pagerWidth = pagerItem.clientWidth * bxPagerItems.length;
+            outside.style.cssText = 'width:' + (pagerWidth + 36) + 'px';
+    }());
+
+
+    // Stylse for slider pagination at the Team page (Mobile version)
+    ;(function() {
+        var teamSlider = document.querySelector('.team-slider_sm'),
+            outside = teamSlider.querySelector('.outside'),
+            teamfNext = teamSlider.querySelector('.team-nt'),
+            bxPagerItems = teamSlider.querySelectorAll('.bx-pager-item'),
+            pagerItem = teamSlider.querySelector('.bx-pager-item'),
+            sliderWidth = teamSlider.clientWidth,
+            pagerWidth = pagerItem.clientWidth * bxPagerItems.length;
+            outside.style.cssText = 'width:' + (pagerWidth + 36) + 'px';
+    }());
     
 
 
@@ -418,6 +418,11 @@ $(document).ready(function() {
         $('.fixed-navigation').toggleClass('active');
         $('.nav-menu ul').slideToggle(200);
     });
+    $('.slide').bind('touchend', function() {
+        $('.nav-menu .burger-btn').removeClass('active');
+        $('.fixed-navigation').removeClass('active');
+        $('.nav-menu ul').slideUp(200);
+    });
 
 
     //Carousel on the slide5(portfolio) mobile version
@@ -447,6 +452,29 @@ $(document).ready(function() {
     //Fancybox init
     $(".fancybox").fancybox();
 
+
+    //Mobile version: "Go to top" button
+    if( $(window).width() < 1024 ) {
+
+        $(window).scroll(function() {
+            if( $(this).scrollTop() > 100 ) {
+                $('#go-to-top').fadeIn();
+            } else {
+                $('#go-to-top').fadeOut();
+            };
+        });
+
+        $('#go-to-top').bind('touchend', function() {
+            $('body, html').animate({
+                scrollTop: 0
+            }, 400);
+            return false;
+        });
+
+    };
+
+
+    
 
 
 

@@ -1,0 +1,50 @@
+#openPositions{
+	height: 100%;
+	background: #555;
+	.logo{display: block !important;}
+	h2{
+		font-size: 18px;
+		margin: 40px 0 50px;
+		text-align: center;
+	}
+	.positions-content{
+		max-width: 650px;
+		margin: 0 auto;
+		letter-spacing: .7px;
+		padding: 0 30px;
+		overflow: hidden;
+		.positions-nav{
+			width: 200px;
+			float: left;
+			li{
+				margin-bottom: 30px;
+				a{
+					display: inline-block;
+					width: 100%;
+					color: #fff;
+					text-decoration: none;
+					&:hover, &.active{color: #ffc000;}
+				}
+			}
+		}
+		.tab-content{
+			margin-left: 240px;
+			.tab-list{
+				display: none;
+				li{
+					margin-bottom: 30px;
+					a{
+						display: flex;
+    					justify-content: space-between;
+						width: 100%;
+						color: #fff;
+						text-decoration: none;
+						&:hover, &.active{color: #ffc000;}
+						span{display: inline-block;}
+					}
+				}
+			}
+			.tab-list.active{display: block;}
+		}
+	}
+}
