@@ -464,7 +464,7 @@ $(document).ready(function() {
             };
         });
 
-        $('#go-to-top').bind('touchend', function() {
+        $('#go-to-top').bind('click', function() {
             $('body, html').animate({
                 scrollTop: 0
             }, 400);
