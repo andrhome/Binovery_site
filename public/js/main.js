@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 afterSlide          : function(){},
                 beforeSlide         : function(){},
                 endSlide            : function(){},
-                mouseWheelEvents    : false, // в FireFox отменяем скролл
+                mouseWheelEvents    : true, // в FireFox отменяем скролл
                 mouseWheelDelay     : false,
                 mouseDragEvents     : false, // Disabling touch-scroll pages
                 touchEvents         : true,
@@ -49,6 +49,12 @@ document.addEventListener("DOMContentLoaded", function () {
         var html = document.querySelector('html');
         html.classList.remove('fsvs');
     };
+
+    window.addEventListener('resize', function() {
+        if(window.innerWidth <= 1024 && window.innerWidth >= 950) {
+            location.reload();
+        };
+    });
 
     //Enabling touch-scroll event
     if( window.innerWidth <= 1280 && window.innerWidth > 1024) {
@@ -413,12 +419,12 @@ $(document).ready(function() {
 
     
     //Show - hide .nav-menu
-    $('.nav-menu .burger-btn').bind('touchend', function() {
+    $('.nav-menu .burger-btn').bind('click', function() {
         $(this).toggleClass('active');
         $('.fixed-navigation').toggleClass('active');
         $('.nav-menu ul').slideToggle(200);
     });
-    $('.slide').bind('touchend', function() {
+    $('.slide').bind('click', function() {
         $('.nav-menu .burger-btn').removeClass('active');
         $('.fixed-navigation').removeClass('active');
         $('.nav-menu ul').slideUp(200);
