@@ -509,7 +509,7 @@ a, a:hover {
   overflow: hidden; }
   .web-content .left-col {
     width: 49.4%;
-    height: 470px;
+    height: 500px;
     float: left;
     padding-bottom: 25px;
     background: url(../images/web-bg-1.jpg) 0 0 no-repeat;
@@ -523,7 +523,7 @@ a, a:hover {
       color: #fff;
       text-transform: uppercase;
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       padding: 25px 10px 0 10px;
       position: relative; }
     .web-content .left-col .mac {
@@ -535,13 +535,17 @@ a, a:hover {
         display: block;
         width: 100%; }
     .web-content .left-col .text {
-      line-height: 25px;
+      line-height: 23px;
       padding: 0 25px; }
       .web-content .left-col .text p {
-        margin-bottom: 20px; }
+        margin-bottom: 10px; }
+      .web-content .left-col .text ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-bottom: 10px; }
   .web-content .right-col {
     width: 49.4%;
-    height: 470px;
+    height: 500px;
     float: right;
     padding-bottom: 25px;
     position: relative;
@@ -551,7 +555,7 @@ a, a:hover {
       background-size: cover;
       background-position: 50%;
       margin-bottom: 6px;
-      padding: 40px 0 75px;
+      padding: 65px 0 100px;
       position: relative; }
       .web-content .right-col .carousel-dom-wf-holder .carousel-container {
         width: 332px !important;
@@ -703,7 +707,7 @@ a, a:hover {
   .behance-btn strong {
     display: block;
     font-size: 24px;
-    padding-bottom: 55px;
+    padding-bottom: 35px;
     position: relative; }
   .behance-btn .icon-be {
     display: none;
@@ -791,7 +795,7 @@ a, a:hover {
     width: 49.4%;
     float: left; }
     .mobile-content .left-col .text-holder {
-      height: 390px;
+      height: 435px;
       overflow: hidden;
       background: url(../images/mob-bg-1.jpg) 0 0 no-repeat;
       background-size: cover;
@@ -804,7 +808,7 @@ a, a:hover {
         text-transform: uppercase;
         color: #fff;
         text-align: center;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         padding: 25px 10px 0 10px;
         position: relative; }
       .mobile-content .left-col .text-holder .iphone_sm {
@@ -816,10 +820,10 @@ a, a:hover {
           display: block;
           width: 100%; }
       .mobile-content .left-col .text-holder .text {
-        line-height: 26px;
+        line-height: 23px;
         padding: 0 25px; }
         .mobile-content .left-col .text-holder .text p {
-          margin-bottom: 20px; }
+          margin-bottom: 10px; }
     .mobile-content .left-col .behance-btn {
       background: url(../images/mob-bg-2.jpg) 0 0 no-repeat;
       background-size: cover;
@@ -830,11 +834,11 @@ a, a:hover {
     background: url(../images/mob-bg-3.jpg) 0 0 no-repeat;
     background-size: cover;
     background-position: 50%;
-    padding-bottom: 103px;
+    padding-bottom: 110px;
     overflow: hidden;
     position: relative; }
     .mobile-content .right-col .carousel-iphone-holder {
-      padding-top: 55px;
+      padding-top: 73px;
       position: relative; }
       .mobile-content .right-col .carousel-iphone-holder .carousel-container {
         width: 186px !important;
@@ -1058,14 +1062,14 @@ a, a:hover {
     .marketing-content .text-holder .colum {
       width: 32.8%;
       font-size: 14px;
-      line-height: 26px;
-      padding-bottom: 40px;
+      line-height: 24px;
+      padding-bottom: 35px;
       position: relative; }
       .marketing-content .text-holder .colum h2 {
-        padding-top: 30px;
-        margin-bottom: 20px; }
+        padding-top: 25px;
+        margin-bottom: 15px; }
       .marketing-content .text-holder .colum p {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         padding: 0 25px; }
     .marketing-content .text-holder .seo {
       background: url(../images/market-bg-2.jpg) 0 0 no-repeat;
@@ -1075,6 +1079,9 @@ a, a:hover {
       background: url(../images/market-bg-3.jpg) 0 0 no-repeat;
       background-size: cover;
       background-position: 50%; }
+      .marketing-content .text-holder .ppc ul {
+        list-style-type: disc;
+        padding-left: 42px; }
     .marketing-content .text-holder .smm {
       background: url(../images/market-bg-4.jpg) 0 0 no-repeat;
       background-size: cover;
@@ -1204,7 +1211,7 @@ a, a:hover {
       .portfolio-content .portfolio-list li .blur {
         width: 100%;
         height: 100%;
-        background: url(../images/portf-img-1.jpg) 0 0 no-repeat;
+        background: url(../images/portf-img-1.png) 0 0 no-repeat;
         background-size: cover;
         position: absolute;
         top: 0;
@@ -1228,7 +1235,8 @@ a, a:hover {
         transition: all .3s ease-in-out;
         position: absolute;
         top: 30%;
-        left: 0; }
+        left: 0;
+        text-shadow: 0 0 9px #000; }
         .portfolio-content .portfolio-list li .text strong {
           font-size: 18px;
           font-weight: 400;
@@ -1236,6 +1244,36 @@ a, a:hover {
           margin-bottom: 10px; }
       .portfolio-content .portfolio-list li:hover .text {
         opacity: 1; }
+      .portfolio-content .portfolio-list li a {
+        display: block;
+        height: 100%; }
+      .portfolio-content .portfolio-list li .dom-wf .blur {
+        background: url(../images/portf-img-5.jpg) 0 0 no-repeat;
+        background-size: cover; }
+      .portfolio-content .portfolio-list li .sfera .blur {
+        background: url(../images/portf-img-2.png) 0 0 no-repeat;
+        background-size: cover; }
+      .portfolio-content .portfolio-list li .pizza .blur {
+        background: url(../images/portf-img-4.png) 0 0 no-repeat;
+        background-size: cover; }
+      .portfolio-content .portfolio-list li .stuffex .blur {
+        background: url(../images/portf-img-7.png) 0 0 no-repeat;
+        background-size: cover; }
+      .portfolio-content .portfolio-list li .elasar .blur {
+        background: url(../images/portf-img-8.png) 0 0 no-repeat;
+        background-size: cover; }
+      .portfolio-content .portfolio-list li .parking .blur {
+        background: url(../images/portf-img-9.png) 0 0 no-repeat;
+        background-size: cover; }
+      .portfolio-content .portfolio-list li .travel .blur {
+        background: url(../images/portf-img-10.png) 0 0 no-repeat;
+        background-size: cover; }
+      .portfolio-content .portfolio-list li .guido .blur {
+        background: url(../images/portf-img-11.png) 0 0 no-repeat;
+        background-size: cover; }
+      .portfolio-content .portfolio-list li .home .blur {
+        background: url(../images/portf-img-3.png) 0 0 no-repeat;
+        background-size: cover; }
     .portfolio-content .portfolio-list li:last-child {
       width: 49.1%; }
       .portfolio-content .portfolio-list li:last-child .behance-btn {
@@ -1621,7 +1659,7 @@ a, a:hover {
   .framework-content .left-col {
     width: 49.4%;
     float: left;
-    padding-bottom: 40px;
+    padding-bottom: 15px;
     background: url(../images/frame-bg-1.jpg) 0 0 no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -1633,7 +1671,7 @@ a, a:hover {
       color: #fff;
       text-align: center;
       text-transform: uppercase;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       padding: 25px 10px 0 10px;
       position: relative; }
     .framework-content .left-col .mac {
@@ -1655,7 +1693,7 @@ a, a:hover {
     background: url(../images/frame-bg-2.jpg) 0 0 no-repeat;
     background-size: cover;
     background-position: 50%;
-    padding-bottom: 110.5px;
+    padding-bottom: 118.5px;
     position: relative; }
     .framework-content .right-col .framework-carousel-holder {
       padding-top: 106px;
@@ -2120,6 +2158,8 @@ a, a:hover {
     .reviews-content .bxslider-reviews li:before, .reviews-content .bxslider-reviews li:after {
       display: none; }
     .reviews-content .bxslider-reviews li .review {
+      font-size: 14px;
+      line-height: 22px;
       text-align: justify;
       font-style: normal;
       background: none; }

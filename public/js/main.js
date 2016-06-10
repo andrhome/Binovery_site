@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     window.addEventListener('resize', function() {
-        if(window.innerWidth <= 1024 && window.innerWidth >= 950) {
+        if(window.innerWidth < 1024 && window.innerWidth > 950) {
             location.reload();
         };
     });
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             var fsvsPagination = document.getElementById('fsvs-pagination'),
                 li = fsvsPagination.children,
-                liText = ["Home", "Web", "Mobile", "Marketing", "Portfolio", "Team", "Framework", "Blog", "Reviews", "Contacts"];
+                liText = ["Home", "Web", "Mobile", "Marketing", "Portfolio", "Framework", "Blog", "Recensioni", "Contatti"];
             
             if(navWrap.classList.contains('open')) {
                 for(var i = 0; i < li.length; i++) {
@@ -462,7 +462,7 @@ $(document).ready(function() {
     //Mobile version: "Go to top" button
     if( $(window).width() < 1024 ) {
 
-        $(window).scroll(function() {
+        $(window).on('scroll', function() {
             if( $(this).scrollTop() > 100 ) {
                 $('#go-to-top').fadeIn();
             } else {
@@ -470,7 +470,7 @@ $(document).ready(function() {
             };
         });
 
-        $('#go-to-top').bind('click', function() {
+        $('#go-to-top').on('click', function() {
             $('body, html').animate({
                 scrollTop: 0
             }, 400);

@@ -575,7 +575,7 @@ a, a:hover{
 	overflow: hidden;	
 	.left-col{
 		width: 49.4%;
-		height: 470px;
+		height: 500px;
 		float: left;
 		padding-bottom: 25px;
 		background: url(../images/web-bg-1.jpg) 0 0 no-repeat;
@@ -595,7 +595,7 @@ a, a:hover{
 			color: #fff;
 			text-transform: uppercase;
 			text-align: center;
-			margin-bottom: 25px;
+			margin-bottom: 20px;
 			padding: 25px 10px 0 10px;
 			position: relative;
 			&:before{
@@ -616,16 +616,21 @@ a, a:hover{
 			}
 		}
 		.text{
-			line-height: 25px;
+			line-height: 23px;
 			padding: 0 25px;
 			p{
-				margin-bottom: 20px;
+				margin-bottom: 10px;
+			}
+			ul{
+				list-style-type: disc;
+				padding-left: 20px;
+				margin-bottom: 10px;
 			}
 		}
 	}
 	.right-col{
 		width: 49.4%;
-		height: 470px;
+		height: 500px;
 		float: right;
 		padding-bottom: 25px;
 		position: relative;
@@ -641,7 +646,7 @@ a, a:hover{
 			background-size: cover;
 			background-position: 50%;
 			margin-bottom: 6px;
-			padding: 40px 0 75px;
+			padding: 65px 0 100px;
 			position: relative;
 			&:before{
 				@extend .beforePointBottom;
@@ -838,7 +843,7 @@ a, a:hover{
 	strong{
 		display: block;
 		font-size: 24px;
-		padding-bottom: 55px;
+		padding-bottom: 35px;
 		position: relative;
 		&:before{
 			@extend .beforePointBottom;
@@ -936,7 +941,7 @@ a, a:hover{
 		width: 49.4%;
 		float: left;	
 		.text-holder{
-			height: 390px;
+			height: 435px;
 			overflow: hidden;
 			background: url(../images/mob-bg-1.jpg) 0 0 no-repeat;
 			background-size: cover;
@@ -955,7 +960,7 @@ a, a:hover{
 				text-transform: uppercase;
 				color: #fff;
 				text-align: center;
-				margin-bottom: 25px;
+				margin-bottom: 20px;
 				padding: 25px 10px 0 10px;
 				position: relative;
 				&:before{
@@ -976,10 +981,10 @@ a, a:hover{
 				}
 			}
 			.text{
-				line-height: 26px;
+				line-height: 23px;
 				padding: 0 25px;
 				p{
-					margin-bottom: 20px;
+					margin-bottom: 10px;
 				}
 			}
 		}
@@ -995,7 +1000,7 @@ a, a:hover{
 		background: url(../images/mob-bg-3.jpg) 0 0 no-repeat;
 		background-size: cover;
 		background-position: 50%;
-		padding-bottom: 103px;
+		padding-bottom: 110px;
 		overflow: hidden;
 		position: relative;
 		&:before{
@@ -1005,7 +1010,7 @@ a, a:hover{
 			@extend .afterPointBottom; 
 		}
 		.carousel-iphone-holder{
-			padding-top: 55px;
+			padding-top: 73px;
 			position: relative;
 			&:before{
 				@extend .beforePointTop;
@@ -1287,8 +1292,8 @@ a, a:hover{
 		.colum{
 			width: 32.8%;
 			font-size: 14px;
-			line-height: 26px;
-			padding-bottom: 40px;
+			line-height: 24px;
+			padding-bottom: 35px;
 			position: relative;
 			&:before{
 				@extend .beforePointBottom;
@@ -1298,12 +1303,12 @@ a, a:hover{
 			}
 
 			h2{
-				padding-top: 30px;
-				margin-bottom: 20px;
+				padding-top: 25px;
+				margin-bottom: 15px;
 			}
 
 			p{
-				margin-bottom: 20px;
+				margin-bottom: 10px;
 				padding: 0 25px;
 			}
 		}
@@ -1316,6 +1321,10 @@ a, a:hover{
 			background: url(../images/market-bg-3.jpg) 0 0 no-repeat;
 			background-size: cover;
 			background-position: 50%;
+			ul{
+				list-style-type: disc;
+				padding-left: 42px;
+			}
 		}
 		.smm{
 			background: url(../images/market-bg-4.jpg) 0 0 no-repeat;
@@ -1475,7 +1484,7 @@ a, a:hover{
 			.blur{
 				width: 100%;
 				height: 100%;
-				background: url(../images/portf-img-1.jpg) 0 0 no-repeat;
+				background: url(../images/portf-img-1.png) 0 0 no-repeat;
 				background-size: cover;
 				position: absolute;
 				top: 0;
@@ -1502,6 +1511,7 @@ a, a:hover{
 				position: absolute;
 				top: 30%;
 				left: 0;
+				text-shadow: 0 0 9px #000;
 				strong{
 					font-size: 18px;
 					font-weight: 400;
@@ -1511,6 +1521,46 @@ a, a:hover{
 			}
 			&:hover .text{
 				opacity: 1;
+			}
+			a{
+				display: block;
+    			height: 100%;
+			}
+			.dom-wf .blur{
+				background: url(../images/portf-img-5.jpg) 0 0 no-repeat;
+				background-size: cover;
+			}
+			.sfera .blur{
+				background: url(../images/portf-img-2.png) 0 0 no-repeat;
+				background-size: cover;
+			}
+			.pizza .blur{
+				background: url(../images/portf-img-4.png) 0 0 no-repeat;
+				background-size: cover;
+			}
+			.stuffex .blur{
+				background: url(../images/portf-img-7.png) 0 0 no-repeat;
+				background-size: cover;
+			}
+			.elasar .blur{
+				background: url(../images/portf-img-8.png) 0 0 no-repeat;
+				background-size: cover;
+			}
+			.parking .blur{
+				background: url(../images/portf-img-9.png) 0 0 no-repeat;
+				background-size: cover;
+			}
+			.travel .blur{
+				background: url(../images/portf-img-10.png) 0 0 no-repeat;
+				background-size: cover;
+			}
+			.guido .blur{
+				background: url(../images/portf-img-11.png) 0 0 no-repeat;
+				background-size: cover;
+			}
+			.home .blur{
+				background: url(../images/portf-img-3.png) 0 0 no-repeat;
+				background-size: cover;
 			}
 		}
 		li:last-child{
@@ -1987,7 +2037,7 @@ a, a:hover{
 	.left-col{
 		width: 49.4%;
 		float: left;
-		padding-bottom: 40px;
+		padding-bottom: 15px;
 		background: url(../images/frame-bg-1.jpg) 0 0 no-repeat;
 		background-size: cover;
 		background-position: 50%;
@@ -2005,7 +2055,7 @@ a, a:hover{
 			color: #fff;
 			text-align: center;
 			text-transform: uppercase;
-			margin-bottom: 25px;
+			margin-bottom: 20px;
 			padding: 25px 10px 0 10px;
 			position: relative;
 			&:before{
@@ -2039,7 +2089,7 @@ a, a:hover{
 		background: url(../images/frame-bg-2.jpg) 0 0 no-repeat;
 		background-size: cover;
 		background-position: 50%;
-		padding-bottom: 110.5px;
+		padding-bottom: 118.5px;
 		position: relative;
 		&:before{
 			@extend .beforePointBottom;
@@ -2613,6 +2663,8 @@ a, a:hover{
 		.bxslider-reviews li{
 			&:before, &:after{display: none;}
 			.review{
+				font-size: 14px;
+				line-height: 22px;
 				text-align: justify;
 				font-style: normal;
 				background: none;
