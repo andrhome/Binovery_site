@@ -484,14 +484,14 @@ a, a:hover{
 	position: fixed;
 	right: 15px;
 	bottom: 13px;
-    z-index: 10000;
+    z-index: 1000;
     cursor: pointer;
 	img{
 		display: inline-block;
 		vertical-align: top;
 		width: 24px;
 		height: 24px;
-	}
+	} 
 }
 @media screen and (max-width: 1024px){
 	#wrapper{overflow-x: hidden;}
@@ -1000,7 +1000,7 @@ a, a:hover{
 		background: url(../images/mob-bg-3.jpg) 0 0 no-repeat;
 		background-size: cover;
 		background-position: 50%;
-		padding-bottom: 110px;
+		padding-bottom: 122px;
 		overflow: hidden;
 		position: relative;
 		&:before{
@@ -1010,7 +1010,7 @@ a, a:hover{
 			@extend .afterPointBottom; 
 		}
 		.carousel-iphone-holder{
-			padding-top: 73px;
+			padding-top: 85px;
 			position: relative;
 			&:before{
 				@extend .beforePointTop;
@@ -1019,14 +1019,13 @@ a, a:hover{
 				@extend .afterPointTop; 
 			}
 			.carousel-container{
-				width: 186px !important;
-				height: 396px;
+				width: 197px !important;
 				margin: 0 auto;
-				background: url(../images/iphone-bg.png) 0 0 no-repeat;
+				background: url(../images/iphone-bg-2.png) 0 0 no-repeat;
 				background-size: contain;
 				background-position: 50%;
 				position: relative;
-				padding: 58px 13px 55px 13px;
+				padding: 45px 14px 44px;
 				&:after{
 					content: '';
 					width: 167%;
@@ -1112,12 +1111,11 @@ a, a:hover{
 		}
 		.carousel-mob-popup-holder{
 			width: 350px;
-			height: 610px;
 			position: relative;
-			background: url(../images/iphone-bg.png) 0 0 no-repeat;
+			background: url(../images/iphone-bg-2.png) 0 0 no-repeat;
 			background-size: contain;
 			background-position: 50%;
-			padding: 80px 49px;
+			padding: 70px 49px;
 			&:after{
 				content: '';
 				width: 137%;
@@ -2378,9 +2376,9 @@ a, a:hover{
 						.title{
 							display: inline-block;
 							color: #fff;
-							font-size: 18px;
-							line-height: 28px;
-							height: 30px;
+							font-size: 16px;
+						    line-height: 23px;
+						    height: 45px;
 							overflow: hidden;
 							text-decoration: none;
 							margin-bottom: 3px;
