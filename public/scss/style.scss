@@ -2356,23 +2356,39 @@ a, a:hover{
 			a{
 				display: block;
 				color: #fff;
-				&:hover{opacity: .9}
+				overflow: hidden;
+				&:hover{box-shadow: 0 0 13px 3px #40567c}
 				article{
 					min-height: 290px;
-					background: url(../images/blog-img-1.jpg) 0 0 no-repeat;
+					background: url(../images/art-1-prev.jpg) 0 0 no-repeat;
 					background-size: cover;
 					position: relative;
+					.blur{
+						width: 100%;
+						height: 112px;
+						background: url(../images/art-1-blur.jpg) 0 0 no-repeat;
+						background-size: cover;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						-webkit-filter: blur(4px);
+						-moz-filter: blur(4px);
+						-ms-filter: blur(4px);
+						-o-filter: blur(4px);
+						filter: blur(4px);
+					}
 					.info-block{
 						width: 100%;
 						font-size: 12px;
 						line-height: normal;
-						background: url(../images/blog-blur-1.jpg) 0 0 no-repeat;
-						background-size: cover;
 						letter-spacing: 0.5px;
+						background: rgba(170,170,170, .4);
+						text-shadow: 0 0 11px #222;
 						padding: 8px 10px;
 						position: absolute;
 						bottom: 0;
 						left: 0;
+						z-index: 1;
 						.title{
 							display: inline-block;
 							color: #fff;
@@ -2433,6 +2449,37 @@ a, a:hover{
 								left: 0;
 							}
 						}
+					}
+				}
+				.article2{
+					background: url(../images/art-2-prev.jpg) 0 0 no-repeat;
+					background-size: cover;
+					.blur{
+						background: url(../images/art-2-blur.jpg) 0 0 no-repeat;
+						background-size: cover;
+					}
+				}
+				.article3{
+					background: url(../images/art-3-prev.jpg) 0 0 no-repeat;
+					.blur{
+						background: url(../images/art-3-blur.jpg) 0 0 no-repeat;
+						background-size: cover;
+					}
+				}
+				.article4{
+					background: url(../images/art-4-prev.jpg) 0 0 no-repeat;
+					background-size: cover;
+					.blur{
+						background: url(../images/art-4-blur.jpg) 0 0 no-repeat;
+						background-size: cover;
+					}
+				}
+				.article5{
+					background: url(../images/art-5-prev.jpg) 0 0 no-repeat;
+					background-size: cover;
+					.blur{
+						background: url(../images/art-5-blur.jpg) 0 0 no-repeat;
+						background-size: cover;
 					}
 				}
 			}
