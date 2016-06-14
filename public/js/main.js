@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
 
         //Adding language navigation
-        var langLinks = "<div id='langNavHolder'><a href='#' class='engl'>EN</a><a href='#' class='ital'>IT</a></div>";
+        var langLinks = "<div id='langNavHolder'><a href='#' class='ital'>IT</a></div>";
         burgerBtn.insertAdjacentHTML('afterEnd', langLinks);
 
         //Adding links of social networks (f, in, Be)
@@ -112,94 +112,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Vertical Alignment 
     if(window.innerWidth > 1024) {
-        //MarginTop for '.web-content' on the slide2
-        ;(function() {
-            var webContent = document.querySelector('.web-content'),
-                slide2Height = document.getElementById('slide2').offsetHeight,
-                webContHeight = webContent.offsetHeight,
+        
+        function setMarginTop(contentBlock, slide) {
+            var contentBlock = contentBlock,
+                slideHeight = slide.offsetHeight,
+                contHeight = contentBlock.offsetHeight,
                 logoHeight = document.querySelector('.logo').offsetHeight;
 
-            webContent.style.cssText = "margin-top:" + parseInt((slide2Height / 2) - (webContHeight / 2) - (logoHeight)) + "px";
-            
-            window.addEventListener('resize', function() {
-                webContent.style.cssText = "margin-top:" + parseInt((slide2Height / 2) - (webContHeight / 2) - (logoHeight)) + "px";
-            });
-        }());
+            contentBlock.style.cssText = "margin-top:" + parseInt((slideHeight / 2) - (contHeight / 2) - (logoHeight)) + "px";
+        };
 
+        //MarginTop for '.web-content' on the slide2
+        setMarginTop(document.querySelector('.web-content'), document.getElementById('slide2'));
 
         //MarginTop for '.mobile-content' on the slide3
-        ;(function() {
-            var mobileContent = document.querySelector('.mobile-content'),
-                slide3Height = document.getElementById('slide3').offsetHeight,
-                mobileContHeight = mobileContent.offsetHeight,
-                logoHeight = document.querySelector('.logo').offsetHeight;
-
-            mobileContent.style.cssText = "margin-top:" + parseInt((slide3Height / 2) - (mobileContHeight / 2) - (logoHeight)) + "px";
-            
-            window.addEventListener('resize', function() {
-                mobileContent.style.cssText = "margin-top:" + parseInt((slide3Height / 2) - (mobileContHeight / 2) - (logoHeight)) + "px";
-            });
-        }());
-
+        setMarginTop(document.querySelector('.mobile-content'), document.getElementById('slide3'));
 
         //MarginTop for '.marketing-content' on the slide4
-        ;(function() {
-            var marketingContent = document.querySelector('.marketing-content'),
-                slide4Height = document.getElementById('slide4').offsetHeight,
-                marketingContHeight = marketingContent.offsetHeight,
-                logoHeight = document.querySelector('.logo').offsetHeight;
-
-            marketingContent.style.cssText = "margin-top:" + parseInt((slide4Height / 2) - (marketingContHeight / 2) - (logoHeight)) + "px";
-            
-            window.addEventListener('resize', function() {
-                marketingContent.style.cssText = "margin-top:" + parseInt((slide4Height / 2) - (marketingContHeight / 2) - (logoHeight)) + "px";
-            });
-        }());
-
+        setMarginTop(document.querySelector('.marketing-content'), document.getElementById('slide4'));
 
         //MarginTop for '.portfolio-content' on the slide5
-        ;(function() {
-            var portfolioContent = document.querySelector('.portfolio-content'),
-                slide5Height = document.getElementById('slide5').offsetHeight,
-                portfolioContHeight = portfolioContent.offsetHeight,
-                logoHeight = document.querySelector('.logo').offsetHeight;
-
-            portfolioContent.style.cssText = "margin-top:" + parseInt((slide5Height / 2) - (portfolioContHeight / 2) - (logoHeight)) + "px";
-            
-            window.addEventListener('resize', function() {
-                portfolioContent.style.cssText = "margin-top:" + parseInt((slide5Height / 2) - (portfolioContHeight / 2) - (logoHeight)) + "px";
-            });
-        }());
-
+        setMarginTop(document.querySelector('.portfolio-content'), document.getElementById('slide5'));
 
         //MarginTop for '.framework-content' on the slide7
-        ;(function() {
-            var frameworkContent = document.querySelector('.framework-content'),
-                slide7Height = document.getElementById('slide7').offsetHeight,
-                frameworkContHeight = frameworkContent.offsetHeight,
-                logoHeight = document.querySelector('.logo').offsetHeight;
-
-            frameworkContent.style.cssText = "margin-top:" + parseInt((slide7Height / 2) - (frameworkContHeight / 2) - (logoHeight)) + "px";
-            
-            window.addEventListener('resize', function() {
-                frameworkContent.style.cssText = "margin-top:" + parseInt((slide7Height / 2) - (frameworkContHeight / 2) - (logoHeight)) + "px";
-            });
-        }());
-
+        setMarginTop(document.querySelector('.framework-content'), document.getElementById('slide7'));
 
         //MarginTop for '.blog-content' on the slide8
-        ;(function() {
-            var blogContent = document.querySelector('.blog-content'),
-                slide8Height = document.getElementById('slide8').offsetHeight,
-                blogContHeight = blogContent.offsetHeight,
-                logoHeight = document.querySelector('.logo').offsetHeight;
-
-            blogContent.style.cssText = "margin-top:" + parseInt((slide8Height / 2) - (blogContHeight / 2) - (logoHeight)) + "px";
-            
-            window.addEventListener('resize', function() {
-                blogContent.style.cssText = "margin-top:" + parseInt((slide8Height / 2) - (blogContHeight / 2) - (logoHeight)) + "px";
-            });
-        }());    
+        setMarginTop(document.querySelector('.blog-content'), document.getElementById('slide8'));
     };
     //END
 
