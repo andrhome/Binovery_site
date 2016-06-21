@@ -101,8 +101,8 @@ document.addEventListener("DOMContentLoaded", function () {
         
 
         //Adding language navigation
-        var langLinks = "<div id='langNavHolder'><a href='#' class='ital'>IT</a></div>";
-        burgerBtn.insertAdjacentHTML('afterEnd', langLinks);
+        // var langLinks = "<div id='langNavHolder'><a href='#' class='ital'>IT</a><a href='#' class='engl'>EN</a></div>";
+        // burgerBtn.insertAdjacentHTML('afterEnd', langLinks);
 
         //Adding links of social networks (f, in, Be)
         var socialLinks = "<div id='socialLinksBox'><a href='#' class='fb'><i class='fa fa-facebook' aria-hidden='true'></i></a><a href='#' class='in'><i class='fa fa-linkedin' aria-hidden='true'></i></a><a href='#'><i class='fa fa-behance' aria-hidden='true'></i></a></div>"
@@ -393,6 +393,14 @@ $(document).ready(function() {
         slideMargin: 5
     });
 
+    //Fancybox init for WEB
+    $(".fancybox-web").fancybox();
+
+    //Fancybox init for MOB
+    $(".fancybox-mob").fancybox();
+
+    //Fancybox init for FRAME
+    $(".fancybox-frame").fancybox();
 
     //Fancybox init
     $(".fancybox").fancybox();

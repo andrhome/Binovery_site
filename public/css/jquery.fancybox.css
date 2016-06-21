@@ -98,12 +98,12 @@
 }
 
 .fancybox-close {
-	background-image: url('../images/close-icon.svg') no-repeat;
+	background: url('../images/close-icon.svg') no-repeat;
 	background-size: cover;
 	background-position: 50%;
 	position: absolute;
-	top: -18px;
-    right: -18px;
+	top: -22px;
+    right: -22px;
     width: 17px;
     height: 17.5px;
     opacity: .6;
@@ -191,7 +191,7 @@
 	overflow: hidden;
 	display: none;
 	z-index: 8010;
-	background: url('../images/fancybox_overlay.png');
+	background: rgba(0,0,0, .8);
 }
 
 .fancybox-overlay-fixed {

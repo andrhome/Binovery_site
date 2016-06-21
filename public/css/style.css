@@ -700,8 +700,7 @@ a, a:hover {
   padding: 30px 0 0;
   position: relative; }
   .behance-btn:hover {
-    opacity: .9;
-    color: #ccc; }
+    color: #555; }
   .behance-btn p {
     margin-bottom: 16px; }
   .behance-btn strong {
