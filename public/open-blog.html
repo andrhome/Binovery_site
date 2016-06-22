@@ -20,109 +20,37 @@
                         </div>
                         <div class="articles-nav">
                             <h5>Section</h5>
-                            <ul>
-                                <li><a href="#" class="active">E-mail marketing</a></li>
-                                <!-- <li><a href="#">E-mail marketing</a></li>
-                                <li><a href="#">E-mail marketing</a></li>
-                                <li><a href="#">E-mail marketing</a></li> -->
+                            <ul id="articleNav">
+                                <li><a href="javascript: void(0);" class="active" data-id="tab1">Usabilità</a></li>
+                                <li><a href="javascript: void(0);" data-id="tab2">E-mail marketing</a></li>
+                                <li><a href="javascript: void(0);" data-id="tab3">Mobile</a></li>
+                                <li><a href="javascript: void(0);" data-id="tab4">Web</a></li>
+                                <li><a href="javascript: void(0);" data-id="tab5">Design</a></li>
+                                <li><a href="javascript: void(0);" data-id="tab6">L'esperienza personale</a></li>
+                                <li><a href="javascript: void(0);" data-id="tab7">Raccolta</a></li>
                             </ul>
-                            <h5>Recent articles</h5>
+                            <!-- <h5>Recent articles</h5>
                             <ul>
                                 <li><a href="#">Value of trigger letters</a></li>
                                 <li><a href="#">Value of trigger letters</a></li>
                                 <li><a href="#">Value of trigger letters</a></li>
                                 <li><a href="#">Value of trigger letters</a></li>
-                            </ul>
+                            </ul> -->
                             <div class="recent-comments">
                                 <h5>Recent comments</h5>
                                 <!-- <a href="#">Mark on Value of trigger letters</a> -->
                             </div>
                         </div>
                         <div class="articles-list">
-                            <ul>
+                            <ul id="tab1" class="tab-list active">
                                 <li>
-                                <a href="full-article.html">
-                                    <article class="article1">
-                                        <div class="blur"></div>
-                                        <div class="info-block">
-                                            <div class="title">Cosa attira l`attenzione del visitatore, oppure come aumentare la conversione del sito?</div>
-                                            <div class="date-and-comments">
-                                                <span class="date">04.06.2016</span>
-                                                <span class="comments">0 Comments</span>
-                                            </div>
-                                            <div class="section">E-mail Marketing</div>
-                                        </div>
-                                    </article>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="full-article_2.html">
-                                    <article class="article2">
-                                        <div class="blur"></div>
-                                        <div class="info-block">
-                                            <div class="title">Corporate Identity del sito: qual è la sua importanza?</div>
-                                            <div class="date-and-comments">
-                                                <span class="date">01.06.2016</span>
-                                                <span class="comments">0 Comments</span>
-                                            </div>
-                                            <div class="section">E-mail Marketing</div>
-                                        </div>
-                                    </article>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="full-article_3.html">
-                                    <article class="article3">
-                                        <div class="blur"></div>
-                                        <div class="info-block">
-                                            <div class="title">10 servizi utili sul time management: siamo in tempo!</div>
-                                            <div class="date-and-comments">
-                                                <span class="date">28.05.2016</span>
-                                                <span class="comments">0 Comments</span>
-                                            </div>
-                                            <div class="section">E-mail Marketing</div>
-                                        </div>
-                                    </article>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="full-article_4.html">
-                                    <article class="article4">
-                                        <div class="blur"></div>
-                                        <div class="info-block">
-                                            <div class="title">Architettura dell' informazione: perché non si può costruire un sito web in 3 giorni?</div>
-                                            <div class="date-and-comments">
-                                                <span class="date">14.05.2016</span>
-                                                <span class="comments">2 Comments</span>
-                                            </div>
-                                            <div class="section">E-mail Marketing</div>
-                                        </div>
-                                    </article>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="full-article_5.html">
-                                    <article class="article5">
-                                        <div class="blur"></div>
-                                        <div class="info-block">
-                                            <div class="title">Migliorare il tasso di conversione del sito: le lettere trigger</div>
-                                            <div class="date-and-comments">
-                                                <span class="date">10.05.2016</span>
-                                                <span class="comments">0 Comments</span>
-                                            </div>
-                                            <div class="section">E-mail Marketing</div>
-                                        </div>
-                                    </article>
-                                </a>
-                            </li>
-                                <li>
-                                    <a href="full-article_6.html">
-                                        <article class="article6">
+                                    <a href="full-article.html">
+                                        <article class="article1">
                                             <div class="blur"></div>
                                             <div class="info-block">
-                                                <div class="title">Come scegliere l'immagine per il sito?</div>
+                                                <div class="title">Cosa attira l`attenzione del visitatore, oppure come aumentare la conversione del sito?</div>
                                                 <div class="date-and-comments">
-                                                    <span class="date">08.05.2016</span>
+                                                    <span class="date">04.06.2016</span>
                                                     <span class="comments">0 Comments</span>
                                                 </div>
                                                 <div class="section">E-mail Marketing</div>
@@ -145,6 +73,25 @@
                                         </article>
                                     </a>
                                 </li>
+                            </ul>
+                            <ul id="tab2" class="tab-list">
+                                <li>
+                                    <a href="full-article_5.html">
+                                        <article class="article5">
+                                            <div class="blur"></div>
+                                            <div class="info-block">
+                                                <div class="title">Migliorare il tasso di conversione del sito: le lettere trigger</div>
+                                                <div class="date-and-comments">
+                                                    <span class="date">10.05.2016</span>
+                                                    <span class="comments">0 Comments</span>
+                                                </div>
+                                                <div class="section">E-mail Marketing</div>
+                                            </div>
+                                        </article>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul id="tab3" class="tab-list">
                                 <li>
                                     <a href="full-article_8.html">
                                         <article class="article8">
@@ -154,6 +101,23 @@
                                                 <div class="date-and-comments">
                                                     <span class="date">01.05.2016</span>
                                                     <span class="comments">0 Comments</span>
+                                                </div>
+                                                <div class="section">E-mail Marketing</div>
+                                            </div>
+                                        </article>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul id="tab4" class="tab-list">
+                                <li>
+                                    <a href="full-article_4.html">
+                                        <article class="article4">
+                                            <div class="blur"></div>
+                                            <div class="info-block">
+                                                <div class="title">Architettura dell' informazione: perché non si può costruire un sito web in 3 giorni?</div>
+                                                <div class="date-and-comments">
+                                                    <span class="date">14.05.2016</span>
+                                                    <span class="comments">2 Comments</span>
                                                 </div>
                                                 <div class="section">E-mail Marketing</div>
                                             </div>
@@ -175,6 +139,55 @@
                                         </article>
                                     </a>
                                 </li>
+                            </ul>
+                            <ul id="tab5" class="tab-list">
+                                <li>
+                                    <a href="full-article_2.html">
+                                        <article class="article2">
+                                            <div class="blur"></div>
+                                            <div class="info-block">
+                                                <div class="title">Corporate Identity del sito: qual è la sua importanza?</div>
+                                                <div class="date-and-comments">
+                                                    <span class="date">01.06.2016</span>
+                                                    <span class="comments">0 Comments</span>
+                                                </div>
+                                                <div class="section">E-mail Marketing</div>
+                                            </div>
+                                        </article>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="full-article_6.html">
+                                        <article class="article6">
+                                            <div class="blur"></div>
+                                            <div class="info-block">
+                                                <div class="title">Come scegliere l'immagine per il sito?</div>
+                                                <div class="date-and-comments">
+                                                    <span class="date">08.05.2016</span>
+                                                    <span class="comments">0 Comments</span>
+                                                </div>
+                                                <div class="section">E-mail Marketing</div>
+                                            </div>
+                                        </article>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="full-article_12.html">
+                                        <article class="article12">
+                                            <div class="blur"></div>
+                                            <div class="info-block">
+                                                <div class="title">6 principi efficaci del design di un logo.</div>
+                                                <div class="date-and-comments">
+                                                    <span class="date">11.04.2016</span>
+                                                    <span class="comments">0 Comments</span>
+                                                </div>
+                                                <div class="section">E-mail Marketing</div>
+                                            </div>
+                                        </article>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul id="tab6" class="tab-list">
                                 <li>
                                     <a href="full-article_10.html">
                                         <article class="article10">
@@ -205,14 +218,16 @@
                                         </article>
                                     </a>
                                 </li>
+                            </ul>
+                            <ul id="tab7" class="tab-list">
                                 <li>
-                                    <a href="full-article_12.html">
-                                        <article class="article12">
+                                    <a href="full-article_3.html">
+                                        <article class="article3">
                                             <div class="blur"></div>
                                             <div class="info-block">
-                                                <div class="title">6 principi efficaci del design di un logo.</div>
+                                                <div class="title">10 servizi utili sul time management: siamo in tempo!</div>
                                                 <div class="date-and-comments">
-                                                    <span class="date">11.04.2016</span>
+                                                    <span class="date">28.05.2016</span>
                                                     <span class="comments">0 Comments</span>
                                                 </div>
                                                 <div class="section">E-mail Marketing</div>

@@ -105,7 +105,15 @@ document.addEventListener("DOMContentLoaded", function () {
         // burgerBtn.insertAdjacentHTML('afterEnd', langLinks);
 
         //Adding links of social networks (f, in, Be)
-        var socialLinks = "<div id='socialLinksBox'><a href='#' class='fb'><i class='fa fa-facebook' aria-hidden='true'></i></a><a href='#' class='in'><i class='fa fa-linkedin' aria-hidden='true'></i></a><a href='#'><i class='fa fa-behance' aria-hidden='true'></i></a></div>"
+        var socialLinks = "<div id='socialLinksBox'>" +
+                            "<a href='https://www.facebook.com/binovery/'  target='_blank' class='fb'><i class='fa fa-facebook' aria-hidden='true'></i></a>" +
+                            "<a href='https://www.linkedin.com/company/binovery'  target='_blank' class='in'><i class='fa fa-linkedin' aria-hidden='true'></i></a>" +
+                            "<a href='https://www.behance.net/Binovery' target='_blank' ><i class='fa fa-behance' aria-hidden='true'></i></a>" +
+                          "</div>" + 
+                          "<a href='open-positions.html' class='open-positions' title='Offerte di lavoro' target='_blank'>" +
+                            "<img src='images/people-searcher.svg'>" +
+                          "</a>";
+
         navWrap.insertAdjacentHTML('beforeEnd', socialLinks);
     };
     //END
@@ -168,7 +176,6 @@ document.addEventListener("DOMContentLoaded", function () {
             outside.style.cssText = 'width:' + (pagerWidth + 36) + 'px';
     }());
     
-
 
     
     

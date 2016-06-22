@@ -9,7 +9,7 @@ a, a:hover {
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out; }
 
-.beforePointTop, .web-content .left-col h2:before, .web-content .right-col:before, .behance-btn:before, .mobile-content .left-col .text-holder h2:before, .mobile-content .right-col .carousel-iphone-holder:before, .marketing-content h2:before, .team-content .top-section h2:before, .framework-content .left-col h2:before, .framework-content .right-col .framework-carousel-holder:before, .blog-content ul li .view-all:before, .reviews-content .bxslider-reviews li:before, #slide10 .rolers-holder .open-roles:before {
+.beforePointTop, .web-content .left-col h2:before, .web-content .right-col:before, .behance-btn:before, .mobile-content .left-col .text-holder h2:before, .mobile-content .right-col .carousel-iphone-holder:before, .marketing-content h2:before, .team-content .top-section h2:before, .framework-content .left-col h2:before, .framework-content .right-col .framework-carousel-holder:before, .blog-content ul li .view-all:before, .reviews-content .bxslider-reviews li:before {
   content: '';
   width: 5px;
   height: 5px;
@@ -21,7 +21,7 @@ a, a:hover {
   left: 5px;
   z-index: 1; }
 
-.afterPointTop, .web-content .left-col h2:after, .web-content .right-col:after, .behance-btn:after, .mobile-content .left-col .text-holder h2:after, .mobile-content .right-col .carousel-iphone-holder:after, .marketing-content h2:after, .team-content .top-section h2:after, .framework-content .left-col h2:after, .framework-content .right-col .framework-carousel-holder:after, .blog-content ul li .view-all:after, .reviews-content .bxslider-reviews li:after, #slide10 .rolers-holder .open-roles:after {
+.afterPointTop, .web-content .left-col h2:after, .web-content .right-col:after, .behance-btn:after, .mobile-content .left-col .text-holder h2:after, .mobile-content .right-col .carousel-iphone-holder:after, .marketing-content h2:after, .team-content .top-section h2:after, .framework-content .left-col h2:after, .framework-content .right-col .framework-carousel-holder:after, .blog-content ul li .view-all:after, .reviews-content .bxslider-reviews li:after {
   content: '';
   width: 5px;
   height: 5px;
@@ -33,7 +33,7 @@ a, a:hover {
   right: 5px;
   z-index: 1; }
 
-.beforePointBottom, .web-content .left-col:before, .web-content .right-col .carousel-dom-wf-holder:before, .behance-btn strong:before, .mobile-content .left-col .text-holder:before, .mobile-content .right-col:before, .marketing-content .title-block:before, .marketing-content .text-holder .colum:before, .team-content .top-section:before, .framework-content .left-col:before, .framework-content .right-col:before, .blog-content ul li .view-all span:before, .reviews-content .bxslider-reviews li .review:before, #slide10 .rolers-holder .open-roles span:before {
+.beforePointBottom, .web-content .left-col:before, .web-content .right-col .carousel-dom-wf-holder:before, .behance-btn strong:before, .mobile-content .left-col .text-holder:before, .mobile-content .right-col:before, .marketing-content .title-block:before, .marketing-content .text-holder .colum:before, .team-content .top-section:before, .framework-content .left-col:before, .framework-content .right-col:before, .blog-content ul li .view-all span:before, .reviews-content .bxslider-reviews li .review:before {
   content: '';
   width: 5px;
   height: 5px;
@@ -45,7 +45,7 @@ a, a:hover {
   left: 5px;
   z-index: 1; }
 
-.afterPointBottom, .web-content .left-col:after, .web-content .right-col .carousel-dom-wf-holder:after, .behance-btn strong:after, .mobile-content .left-col .text-holder:after, .mobile-content .right-col:after, .marketing-content .title-block:after, .marketing-content .text-holder .colum:after, .team-content .top-section:after, .framework-content .left-col:after, .framework-content .right-col:after, .blog-content ul li .view-all span:after, .reviews-content .bxslider-reviews li .review:after, #slide10 .rolers-holder .open-roles span:after {
+.afterPointBottom, .web-content .left-col:after, .web-content .right-col .carousel-dom-wf-holder:after, .behance-btn strong:after, .mobile-content .left-col .text-holder:after, .mobile-content .right-col:after, .marketing-content .title-block:after, .marketing-content .text-holder .colum:after, .team-content .top-section:after, .framework-content .left-col:after, .framework-content .right-col:after, .blog-content ul li .view-all span:after, .reviews-content .bxslider-reviews li .review:after {
   content: '';
   width: 5px;
   height: 5px;
@@ -1940,8 +1940,7 @@ a, a:hover {
             font-size: 12px;
             line-height: normal;
             letter-spacing: 0.5px;
-            background: rgba(170, 170, 170, 0.4);
-            text-shadow: 0 0 11px #222;
+            background: rgba(153, 153, 153, 0.6);
             padding: 8px 10px;
             position: absolute;
             bottom: 0;
@@ -2035,8 +2034,6 @@ a, a:hover {
         background-size: cover;
         padding-top: 112px;
         position: relative; }
-        .blog-content ul li .view-all:hover {
-          opacity: .95; }
         .blog-content ul li .view-all span {
           display: inline-block;
           width: 100%;
@@ -2336,27 +2333,6 @@ a, a:hover {
     top: 12px;
     left: 125px;
     z-index: 1; }
-  #slide10 .rolers-holder {
-    position: absolute;
-    top: 15px;
-    right: 60px;
-    z-index: 1; }
-    #slide10 .rolers-holder .open-roles {
-      display: inline-block;
-      background: url(../images/roles-bg-1.jpg) 0 0 no-repeat;
-      background-size: cover;
-      -webkit-transition: all .2s ease-in-out;
-      transition: all .2s ease-in-out;
-      position: relative; }
-      #slide10 .rolers-holder .open-roles:hover {
-        opacity: .8; }
-      #slide10 .rolers-holder .open-roles span {
-        display: inline-block;
-        width: 223px;
-        text-align: center;
-        color: #000;
-        padding: 17px 5px;
-        position: relative; }
   #slide10 #map {
     width: 100%;
     height: 100%;
@@ -2444,6 +2420,26 @@ a, a:hover {
     position: absolute;
     bottom: 19px;
     right: 45px; }
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1); }
+  50% {
+    -webkit-transform: scale(1.3, 1.3);
+    transform: scale(1.3, 1.3); } }
+
+.open-positions {
+  width: 25px;
+  display: block;
+  position: absolute;
+  left: 9px;
+  bottom: 24%; }
+  .open-positions:hover {
+    -webkit-animation: pulse .9s ease-in-out infinite;
+    animation: pulse .9s ease-in-out infinite; }
+  .open-positions img {
+    width: 100%; }
 
 @media screen and (max-width: 1024px) {
   #slide10 .rolers-holder, #slide10 #map {
