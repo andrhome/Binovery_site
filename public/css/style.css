@@ -2442,7 +2442,7 @@ a, a:hover {
     width: 100%; }
 
 @media screen and (max-width: 1024px) {
-  #slide10 .rolers-holder, #slide10 #map {
+  #slide10 .rolers-holder, #slide10 #map, #slide10 .feedback-holder {
     display: none; }
   .contacts_sm {
     display: block; } }

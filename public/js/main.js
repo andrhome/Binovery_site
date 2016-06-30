@@ -110,8 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             "<a href='https://www.linkedin.com/company/binovery'  target='_blank' class='in'><i class='fa fa-linkedin' aria-hidden='true'></i></a>" +
                             "<a href='https://www.behance.net/Binovery' target='_blank' ><i class='fa fa-behance' aria-hidden='true'></i></a>" +
                           "</div>" + 
-                          "<a href='open-positions.html' class='open-positions' title='Offerte di lavoro' target='_blank'>" +
-                            "<img src='images/people-searcher.svg'>" +
+                          // "<a href='open-positions.html' class='open-positions' title='Offerte di lavoro' target='_blank'>" +
+                          //   "<img src='images/people-searcher.svg'>" +
                           "</a>";
 
         navWrap.insertAdjacentHTML('beforeEnd', socialLinks);
