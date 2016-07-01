@@ -165,7 +165,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // Stylse for slider pagination at the Team page (Mobile version)
-    ;(function() {
+    ;(function(slider) {
+        if(!slider) return;
+
         var teamSlider = document.querySelector('.team-slider_sm'),
             outside = teamSlider.querySelector('.outside'),
             teamfNext = teamSlider.querySelector('.team-nt'),
@@ -174,11 +176,106 @@ document.addEventListener("DOMContentLoaded", function () {
             sliderWidth = teamSlider.clientWidth,
             pagerWidth = pagerItem.clientWidth * bxPagerItems.length;
             outside.style.cssText = 'width:' + (pagerWidth + 36) + 'px';
-    }());
+    }(document.querySelector('.team-slider_sm')));
     
 
+    //Feedback form validation
+    ;(function() {
+        function FormValidation(form) {
+            if(!form) return;
+
+            this.formBlock = form;
+            this.formField = this.formBlock.querySelectorAll('.form-field');
+            this.fieldName = this.formBlock.querySelector('.name');
+            this.fieldEmail = this.formBlock.querySelector('.email');
+            this.fieldMessage = this.formBlock.querySelector('.message');
+            this.btn = this.formBlock.querySelector('.btn');
+
+            this.btn.addEventListener('click', this.checkEmptyFields.bind(this));
+            this.fieldName.addEventListener('change', this.changeField.bind(this));
+            this.fieldEmail.addEventListener('change', this.changeField.bind(this));
+            this.fieldMessage.addEventListener('change', this.changeField.bind(this));
+        };
+
+        FormValidation.prototype.checkEmptyFields = function() {
+            for (var i = 0; i < this.formField.length; i++) {
+                if(!this.formField[i].value) {
+                    this.formField[i].style.cssText = 'border-color: #f00;';
+                    this.formField[i].focus();
+
+                    event.preventDefault();
+                    return false;                
+                } else if (this.fieldEmail.value){
+                    this.checkEmail();
+                } else{
+                    this.formField[i].style.cssText = 'border-color: #5df768;';
+                };            
+            };
+        };
+
+        FormValidation.prototype.changeField = function() {
+            for(var i = 0; i < this.formField.length; i++) {
+                if(!this.formField[i].value) {
+                    this.formField[i].style.cssText = 'border-color: #f00;';
+                    return false;
+                } else{
+                    this.formField[i].style.cssText = 'border-color: #5df768;';
+                };
+            };
+        };
+
+        FormValidation.prototype.checkEmail = function() {
+            var regExp = /[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,4}/i;
+
+            this.match = regExp.test(this.fieldEmail.value);
+
+            if(this.match) {
+                this.fieldEmail.style.cssText = 'border-color: #5df768;';
+            } else{
+                this.fieldEmail.style.cssText = 'border-color: #f00;';
+                this.fieldEmail.focus();
+
+                event.preventDefault();
+            };
+        };
+
+        new FormValidation(document.querySelector('.feedback-form'));
+    })();
     
-    
+
+    //Ajax request for feedback form
+    $('.feedback-form').submit(function() {
+        var data = $(this).serialize();
+        var successBlock = '<div class="feedback-success">' +  
+                                '<p>La tua richiesta è stata correttamente inviata!<br> Nostro team si metterà in contatto con te il prima possibile</p>' +
+                                '<a href="javascript: void(0);" class="ok">OK</a>' +
+                            '</div>',
+            errorBlock = '<div class="feedback-error">' +
+                                '<p>Errore! Riprova più tardi!</p>' +
+                                '<a href="javascript: void(0);" class="ok">OK</a>' +
+                            '</div>';
+        console.log(data);
+
+        $.ajax({
+            type: 'POST',
+            data: data,
+            url: 'feedback.php',
+
+            success: function(data) {
+                if(data == 1) {
+                    $('.feedback-form').html(successBlock);
+                    $('.feedback-form .ok').click(function() {
+                        $('.feedback-holder').fadeOut();
+                    });
+                }else{
+                    $('.feedback-form').html(errorBlock);
+                };
+            }
+        });
+
+        return false;
+    });
+
  
 
 
@@ -432,9 +529,6 @@ $(document).ready(function() {
         });
 
     };
-
-
-    
 
 
 

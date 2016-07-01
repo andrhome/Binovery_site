@@ -1921,7 +1921,8 @@ a, a:hover {
           min-height: 290px;
           background: url(../images/art-1-prev.jpg) 0 0 no-repeat;
           background-size: cover;
-          position: relative; }
+          position: relative;
+          overflow: hidden; }
           .blog-content ul li a article .blur {
             width: 100%;
             height: 112px;
@@ -1937,6 +1938,7 @@ a, a:hover {
             filter: blur(8px); }
           .blog-content ul li a article .info-block {
             width: 100%;
+            height: 112px;
             font-size: 12px;
             line-height: normal;
             letter-spacing: 0.5px;
@@ -2005,7 +2007,8 @@ a, a:hover {
             background: url(../images/art-2-blur.jpg) 0 0 no-repeat;
             background-size: cover; }
         .blog-content ul li a .article3 {
-          background: url(../images/art-3-prev.jpg) 0 0 no-repeat; }
+          background: url(../images/art-3-prev.jpg) 0 0 no-repeat;
+          background-size: cover; }
           .blog-content ul li a .article3 .blur {
             background: url(../images/art-3-blur.jpg) 0 0 no-repeat;
             background-size: cover; }
@@ -2067,21 +2070,25 @@ a, a:hover {
     width: 199px; }
     .blog-content ul li a article {
       min-height: 199px; }
-      .blog-content ul li a article .info-block .title {
-        font-size: 14px;
-        line-height: 18px;
-        height: 20px; }
-      .blog-content ul li a article .info-block .date-and-comments .date {
-        font-size: 10px;
-        margin-right: 7px; }
-        .blog-content ul li a article .info-block .date-and-comments .date:after {
-          top: 0.5px; }
-      .blog-content ul li a article .info-block .date-and-comments .comments {
-        font-size: 10px; }
-      .blog-content ul li a article .info-block .section {
-        font-size: 10px; }
-        .blog-content ul li a article .info-block .section:after {
-          top: 0; }
+      .blog-content ul li a article .blur {
+        height: 84px; }
+      .blog-content ul li a article .info-block {
+        height: 84px; }
+        .blog-content ul li a article .info-block .title {
+          font-size: 14px;
+          line-height: 18px;
+          height: 20px; }
+        .blog-content ul li a article .info-block .date-and-comments .date {
+          font-size: 10px;
+          margin-right: 7px; }
+          .blog-content ul li a article .info-block .date-and-comments .date:after {
+            top: 0.5px; }
+        .blog-content ul li a article .info-block .date-and-comments .comments {
+          font-size: 10px; }
+        .blog-content ul li a article .info-block .section {
+          font-size: 10px; }
+          .blog-content ul li a article .info-block .section:after {
+            top: 0; }
     .blog-content ul li .view-all {
       font-size: 18px;
       height: 199px;
@@ -2097,14 +2104,17 @@ a, a:hover {
   .blog-content {
     padding: 50px 15px 50px; }
     .blog-content ul {
-      width: 270px;
+      width: 350px;
       display: inline-block;
-      margin-left: -6px; }
+      margin-left: -13px; }
       .blog-content ul li {
-        width: 129px; }
+        width: 168px; }
         .blog-content ul li a article {
-          min-height: 129px; }
+          min-height: 168px; }
+          .blog-content ul li a article .blur {
+            height: 48px; }
           .blog-content ul li a article .info-block {
+            height: 48px;
             padding: 7px; }
             .blog-content ul li a article .info-block .title {
               font-size: 12px;
@@ -2119,8 +2129,19 @@ a, a:hover {
               display: none; }
         .blog-content ul li .view-all {
           font-size: 16px;
-          height: 129px;
-          padding-top: 47px; } }
+          height: 168.5px;
+          padding-top: 61px; } }
+
+@media screen and (max-width: 360px) {
+  .blog-content ul {
+    width: 270px; }
+    .blog-content ul li {
+      width: 129px; }
+      .blog-content ul li a article {
+        min-height: 129px; }
+      .blog-content ul li .view-all {
+        height: 130px;
+        padding-top: 47px; } }
 
 #slide9 {
   position: relative; }
@@ -2192,19 +2213,16 @@ a, a:hover {
     .reviews-content .bxslider-reviews li .review {
       font-size: 14px;
       line-height: 22px;
-      text-align: justify;
       font-style: normal;
       background: none; }
       .reviews-content .bxslider-reviews li .review:before, .reviews-content .bxslider-reviews li .review:after {
         display: none; }
       .reviews-content .bxslider-reviews li .review img {
         display: block; }
-      .reviews-content .bxslider-reviews li .review .author {
-        text-align: right; }
-        .reviews-content .bxslider-reviews li .review .author i {
-          display: none; }
-        .reviews-content .bxslider-reviews li .review .author span {
-          display: block; }
+      .reviews-content .bxslider-reviews li .review .author i {
+        display: none; }
+      .reviews-content .bxslider-reviews li .review .author span {
+        display: block; }
     .reviews-content .bx-wrapper .bx-pager.bx-default-pager a {
       width: 10px;
       height: 10px;
@@ -2440,6 +2458,85 @@ a, a:hover {
     animation: pulse .9s ease-in-out infinite; }
   .open-positions img {
     width: 100%; }
+
+.feedback-holder {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+  .feedback-holder .feedback-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .feedback-holder .feedback-form {
+    width: 300px;
+    padding: 20px;
+    background: url(../images/feedback-bg.jpg) 0 0 no-repeat;
+    background-size: cover;
+    color: #000;
+    text-align: center;
+    z-index: 1; }
+    .feedback-holder .feedback-form h6 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 700; }
+    .feedback-holder .feedback-form label {
+      text-align: left; }
+    .feedback-holder .feedback-form input {
+      width: 100%;
+      height: 36px;
+      border-radius: 4px;
+      border: 2px solid #fff;
+      background: transparent;
+      padding: 0 7px 0 5px;
+      margin-bottom: 15px; }
+    .feedback-holder .feedback-form p {
+      margin-bottom: 7px; }
+    .feedback-holder .feedback-form textarea {
+      width: 100%;
+      height: 80px;
+      font-family: 'Open Sans', Arial, sans-serif;
+      border: 2px solid #fff;
+      background: transparent;
+      resize: none;
+      padding: 7px;
+      margin-bottom: 25px; }
+    .feedback-holder .feedback-form input[type="submit"] {
+      height: 46px;
+      background: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 16px; }
+      .feedback-holder .feedback-form input[type="submit"]:hover {
+        background: #f3f3f3;
+        border-color: #f3f3f3; }
+    .feedback-holder .feedback-form .feedback-success, .feedback-holder .feedback-form .feedback-error {
+      text-align: center;
+      font-weight: 600;
+      line-height: 24px; }
+      .feedback-holder .feedback-form .feedback-success p, .feedback-holder .feedback-form .feedback-error p {
+        margin-bottom: 15px; }
+      .feedback-holder .feedback-form .feedback-success a, .feedback-holder .feedback-form .feedback-error a {
+        display: inline-block;
+        background: #fff;
+        border-radius: 4px;
+        text-decoration: none;
+        color: #000;
+        padding: 5px 22px; }
+        .feedback-holder .feedback-form .feedback-success a:hover, .feedback-holder .feedback-form .feedback-error a:hover {
+          background: #f5f5f5; }
+  .feedback-holder .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4); }
 
 @media screen and (max-width: 1024px) {
   #slide10 .rolers-holder, #slide10 #map, #slide10 .feedback-holder {

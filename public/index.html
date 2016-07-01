@@ -338,18 +338,18 @@
                             <h2>Portfolio</h2>
                             <ul class="bxslider-potrfolio">
                                 <li>
-                                    <a href="http://dom-wifi.ru/"><img src="images/portf-img-5.jpg" alt="Img"></a>
-                                    <a href="http://sferanova.ru/"><img src="images/portf-img-2.png" alt="Img"></a>
-                                    <a href="#"><img src="images/portf-img-4.png" alt="Img"></a>
-                                    <a href="#"><img src="images/portf-img-7.png" alt="Img"></a>
-                                    <a href="http://stuffex.com.ua/"><img src="images/portf-img-8.png" alt="Img"></a>
-                                    <a href="#"><img src="images/portf-img-9.png" alt="Img"></a>
+                                    <a href="http://dom-wifi.ru/" target="_blank"><img src="images/portf-img-5.jpg" alt="Img"></a>
+                                    <a href="http://sferanova.ru/" target="_blank"><img src="images/portf-img-2.png" alt="Img"></a>
+                                    <a href="http://pizzeriaristorantevergreen.it/" target="_blank"><img src="images/portf-img-4.png" alt="Img"></a>
+                                    <a href="http://stuffex.com.ua/" target="_blank"><img src="images/portf-img-7.png" alt="Img"></a>
+                                    <a href="https://www.behance.net/gallery/38833745/Elasar-iOSAndroid-App" target="_blank"><img src="images/portf-img-8.png" alt="Img"></a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.parking.full" target="_blank"><img src="images/portf-img-9.png" alt="Img"></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="images/portf-img-10.png" alt="Img"></a>
-                                    <a href="#"><img src="images/portf-img-11.png" alt="Img"></a>
-                                    <a href="#"><img src="images/portf-img-3.png" alt="Img"></a>
-                                    <a href="#"><img src="images/portf-img-6.png" alt="Img"></a>
+                                    <a href="https://www.behance.net/gallery/37543295/TravelTime-iOS-App" target="_blank"><img src="images/portf-img-10.png" alt="Img"></a>
+                                    <a href="http://guidacibo.it/" target="_blank"><img src="images/portf-img-11.png" alt="Img"></a>
+                                    <a href="http://stil92.ru/" target="_blank"><img src="images/portf-img-3.png" alt="Img"></a>
+                                    <!-- <a href="#"><img src="images/portf-img-6.png" alt="Img"></a> -->
                                 </li>
                             </ul>
                             <div class="outside">
@@ -745,27 +745,38 @@
                                 icon: image
                             });
 
-                            // var overlay = document.querySelector('.feedback-content .overlay');
+                            var overlay = document.querySelector('.feedback-content .overlay');
 
-                            // beachMarker.addListener('click', function() {
-                            //     $('.feedback-holder').fadeIn();
-                            //     event.stopPropagation();
-                            // });
-                            // overlay.addEventListener('click', function() {
-                            //     $('.feedback-holder').fadeOut();
-                            // });
+                            beachMarker.addListener('click', function() {
+                                $('.feedback-holder').fadeIn();
+                                event.stopPropagation();
+                            });   
+                            overlay.addEventListener('click', function() {
+                                $('.feedback-holder').fadeOut();
+                            });                         
                         };
                     </script>
-                    <!-- <div class="feedback-holder">
+                    <div class="feedback-holder">
                         <div class="feedback-content">
-                            <div class="feedback-box">
-                                <h6>Contattateci:</h6>
-                                <a href="tel:+390282951485">+39 (028) 295 14 85</a>
-                                <a href="mailto: cm@binovery.com">cm@binovery.com</a>
-                            </div>
+                            <form action="#" class="feedback-form">
+                                <h6>Contattaci ora:</h6>
+                                <label>
+                                    <p>Nome:</p>
+                                    <input type="text" name="name" class="form-field name">
+                                </label>
+                                <label>
+                                    <p>E-mail:</p>
+                                    <input type="text" name="email" class="form-field email">
+                                </label>
+                                <label>
+                                    <p>Messagio:</p>
+                                    <textarea name="message" class="form-field message"></textarea>
+                                </label>                                
+                                <input type="submit" value="Invia" class="btn">
+                            </form>
                             <div class="overlay"></div>
                         </div>
-                    </div> -->
+                    </div>
                     <script async defer
                     src="https://maps.googleapis.com/maps/api/js?hl=it&key=AIzaSyDfR3kbtjmKagOM877Hzsoa8C_RN0n6kzY&signed_in=true&callback=initMap"></script>
                     <div class="contacts_sm">
@@ -776,7 +787,7 @@
                                     <h6>Contattateci</h6>
                                     <address>Via Ampere, 61/A,<br> 20131 - Milano (Italy)</address>
                                     <a href="tel:+390282951485">+39 (028) 295 14 85</a>
-                                    <p>+39(327) 977 60 68 (Viber, WhatsApp)</p>
+                                    <p>+39 (327) 977 60 68 (Viber, WhatsApp)</p>
                                     <a href="mailto: cm@binovery.com">cm@binovery.com</a>
                                 </div>
                                 <div class="social-box">
@@ -809,6 +820,17 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Google Analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-69492045-38', 'auto');
+            ga('send', 'pageview');
+        </script>
 
         <script src="js/jquery-2.2.2.min.js"></script>
         <script src="js/bundle.js"></script>
